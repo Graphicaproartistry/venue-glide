@@ -1,0 +1,144 @@
+/* Sports Venue FAQ Section Styling - Dark Theme Format */
+.sports-venue-faq {
+  padding: 120px 0;
+  background-color: #00020f;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .sports-venue-faq {
+    padding: 70px 0;
+  }
+}
+
+.sports-venue-faq .faq-header-wrap {
+  position: sticky;
+  top: 120px;
+  margin-bottom: 40px;
+}
+
+.sports-venue-faq .faq-badge {
+  display: inline-block;
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.sports-venue-faq .faq-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 991px) {
+  .sports-venue-faq .faq-header-wrap {
+    position: static;
+    margin-bottom: 30px;
+  }
+  .sports-venue-faq .faq-title {
+    font-size: 32px;
+  }
+}
+
+/* Accordion Styling */
+.sports-venue-faq .faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sports-venue-faq .faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px 0;
+  transition: border-color 0.3s ease;
+}
+
+.sports-venue-faq .faq-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sports-venue-faq .faq-item:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+.sports-venue-faq .faq-question-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sports-venue-faq .faq-question-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+  padding-right: 20px;
+}
+
+.sports-venue-faq .faq-item.active .faq-question-text,
+.sports-venue-faq .faq-question-btn:hover .faq-question-text {
+  color: #60a5fa;
+}
+
+.sports-venue-faq .faq-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.sports-venue-faq .faq-item.active .faq-icon-box {
+  border-color: #60a5fa;
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.12);
+  transform: rotate(45deg);
+}
+
+.sports-venue-faq .faq-question-btn:hover .faq-icon-box {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+.sports-venue-faq .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), margin-top 0.3s ease;
+}
+
+.sports-venue-faq .faq-item.active .faq-answer {
+  max-height: 300px;
+  margin-top: 14px;
+  transition: max-height 0.4s ease-in-out, margin-top 0.3s ease;
+}
+
+.sports-venue-faq .faq-answer-content {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #94a3b8;
+  padding-right: 40px;
+}
