@@ -126,7 +126,9 @@ const JobSection: React.FC = () => {
           {jobs.map((job, i) => (
             <div
               key={job.id}
-              ref={(el) => (itemsRef.current[i] = el!)}
+              ref={(el) => {
+                itemsRef.current[i] = el!;
+              }}
               className="xb-career-item grid-item xb-border"
               data-category={job.category.join(" ")}
               style={{ opacity: 1 }} // default visible

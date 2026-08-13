@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo/VenueGlide-logo-white-text.png";
-import MegaMenu1 from "./MegaMenu1";
-import MegaMenuServices from "./MegaMenu2";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 const Header: React.FC = () => {

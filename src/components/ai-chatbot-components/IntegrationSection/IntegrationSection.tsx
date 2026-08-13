@@ -27,7 +27,6 @@ import shopify from "../../../images/integration/shopify.png";
 import loom from "../../../images/integration/loom.png";
 import snapchat from "../../../images/integration/snapchat.png";
 import discord from "../../../images/integration/discord.png";
-import subIcon from "../../../images/icon/sub-left-icon.png";
 
 const IntegrationComparisonSection: React.FC = () => {
     const logosRow1 = [microsoft, telegram, slack, line, mailchimp];

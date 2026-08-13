@@ -2,8 +2,6 @@ import React, { Fragment, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import HeroSection from "../../components/hero/Hero";
 import AboutSection from "../../components/about/about";
-import ServiceSection from "../../components/ServiceSection/ServiceSection";
-import FeatureSection from "../../components/FeatureSection/FeatureSection";
 import SportsVenueFeatures from "../../components/SportsVenueFeatures/SportsVenueFeatures";
 import SportsVenueFAQ from "../../components/SportsVenueFAQ/SportsVenueFAQ";
 import Footer from "../../components/footer/Footer";
@@ -15,7 +13,7 @@ import IntegrationSection from "../../components/ai-chatbot-components/Integrati
 
 const HomePage: React.FC = () => {
   useEffect(() => {
-    document.title = "Home | AI Agency & Technology React Template";
+    document.title = "Home | Venue Glide";
   }, []);
 
   return (

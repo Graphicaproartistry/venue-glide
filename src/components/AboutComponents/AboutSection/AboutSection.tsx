@@ -1,23 +1,14 @@
 import React from "react";
 
 // ==== Import Images ====
-import img05 from "../../../images/about/img05.jpg";
-import img06 from "../../../images/about/img06.jpg";
-import img07 from "../../../images/about/img07.jpg";
-import img08 from "../../../images/about/img08.jpg";
-
-import videoPoster from "../../../images/about/video-img.png";
-
 import gif1 from "../../../images/icon/original-66948a0d81d.gif";
 import gif2 from "../../../images/icon/0deec720000b2066289b.gif";
 import gif3 from "../../../images/icon/b10c3e43e836d32554bf.gif";
 
 import featureIcon1 from "../../../images/icon/feature-icon01.svg";
 import featureIcon2 from "../../../images/icon/feature-icon02.svg";
-import featureIcon3 from "../../../images/icon/feature-icon03.svg";
 
 import aboutBg from "../../../images/bg/about-bg02.png";
-import { Link } from "react-router-dom";
 
 const AboutSection: React.FC = () => {
   return (

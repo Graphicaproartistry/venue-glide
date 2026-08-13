@@ -9,7 +9,6 @@ import award05 from "../../../images/award/img05.png";
 import award06 from "../../../images/award/img06.png";
 import award07 from "../../../images/award/img07.png";
 import award08 from "../../../images/award/img08.png";
-import { Link } from "react-router-dom";
 
 const awards1 = [
     award01,

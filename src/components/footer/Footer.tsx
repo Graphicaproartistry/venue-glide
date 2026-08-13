@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 // Image imports
 import footerBg from "../../images/bg/footer-bg.png";
-import emailIcon from "../../images/icon/email-icon.svg";
 import locationIcon from "../../images/icon/location-icon.svg";
 import callIcon from "../../images/icon/call-icon.svg";
 

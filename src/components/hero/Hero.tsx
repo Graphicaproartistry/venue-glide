@@ -7,7 +7,6 @@ import heroBg from "../../images/bg/hero_bg.png";
 import heroIcon from "../../images/icon/animated-gif02.gif";
 import featureIcon1 from "../../images/icon/feature-icon01.svg";
 import featureIcon2 from "../../images/icon/feature-icon02.svg";
-import featureIcon3 from "../../images/icon/feature-icon03.svg";
 
 const HeroSection: React.FC = () => {
   return (
