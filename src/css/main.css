@@ -7839,12 +7839,13 @@ Drop Down menu end
 }
 
 .comparison-list .xb-item--title {
-  padding: 13px 0 6px;
   text-align: center;
   letter-spacing: -0.04em;
   background: #15192f;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 18px;
+  padding: 20px;
 }
 
 .comparison-list .xb-item--list {
@@ -18401,4 +18402,9 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 
 .my-image {
   filter: brightness(0) saturate(100%) invert(68%) sepia(96%) saturate(1800%) hue-rotate(160deg) brightness(103%) contrast(105%)
+}
+
+/* Ensure content is always visible immediately when opening any page */
+.wow {
+  visibility: visible !important;
 }

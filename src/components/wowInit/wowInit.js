@@ -10,9 +10,12 @@ const WowInit = () => {
       live: false,
     });
     wow.init();
+    window.dispatchEvent(new Event("scroll"));
+    window.dispatchEvent(new Event("resize"));
 
     const timer = setTimeout(() => {
       wow.init();
+      window.dispatchEvent(new Event("scroll"));
     }, 100);
 
     return () => {
