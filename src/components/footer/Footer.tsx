@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="xb-footer-bottom">
           <div className="contact-item">
-            <img src={locationIcon} alt="location" />
+            <img src={locationIcon} alt="location" className="my-image" />
             <span className="contact-method">4517 Washington, USA</span>
           </div>
 
@@ -196,7 +196,7 @@ const Footer: React.FC = () => {
 
           <div className="contact-item">
             <a href="tel:+112304528597">
-              <img src={callIcon} alt="call" />
+              <img src={callIcon} alt="call" className="my-image" />
             </a>
             <a className="contact-method" href="tel:+112304528597">
               +(1)1230 452 8597

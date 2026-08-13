@@ -24,9 +24,9 @@
   display: inline-block;
   padding: 8px 20px;
   background: rgba(0, 255, 151, 0.1);
-  border: 1px solid rgba(0, 255, 151, 0.25);
+  border: 1px solid #00D4ff;
   border-radius: 30px;
-  color: #00ff97;
+  color: #00D4ff;
   font-size: 13.5px;
   font-weight: 600;
   margin-bottom: 24px;
@@ -135,7 +135,7 @@
 .solution-grid-card:hover {
   transform: translateY(-6px);
   background: rgba(18, 28, 48, 0.88);
-  border-color: rgba(0, 255, 151, 0.35);
+  border-color: #00D4ff;
   box-shadow: 0 16px 36px rgba(0, 255, 151, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -148,8 +148,8 @@
   height: 48px;
   border-radius: 12px;
   background: rgba(0, 255, 151, 0.12);
-  border: 1px solid rgba(0, 255, 151, 0.3);
-  color: #00ff97;
+  border: 1px solid #00D4ff;
+  color: #00D4ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,7 +202,7 @@
   position: absolute;
   left: 2px;
   top: -1px;
-  color: #00ff97;
+  color: #00D4ff;
   font-size: 15px;
 }
 
@@ -258,7 +258,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #00ff97;
+  color: #00D4ff;
   font-weight: bold;
   font-size: 15px;
 }
@@ -311,7 +311,7 @@
 }
 
 .solution-faq-item.active {
-  border-color: rgba(0, 255, 151, 0.4);
+  border-color: #00D4ff;
 }
 
 .solution-faq-btn {
@@ -331,7 +331,7 @@
 }
 
 .solution-faq-btn:hover {
-  color: #00ff97;
+  color: #00D4ff;
 }
 
 .solution-faq-icon {
@@ -342,7 +342,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00ff97;
+  color: #00D4ff;
   font-size: 18px;
   transition: transform 0.3s ease;
 }
@@ -372,7 +372,7 @@
 .solution-cta-box {
   background: rgba(13, 20, 36, 0.85);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 255, 151, 0.25);
+  border: 1px solid #00D4ff;
   border-radius: 24px;
   padding: 60px 40px;
   max-width: 960px;
@@ -401,24 +401,31 @@
   .solution-section {
     padding: 60px 0;
   }
+
   .solution-hero-banner {
     padding: 100px 0 60px;
   }
+
   .solution-hero-banner .hero-title {
     font-size: 26px;
   }
+
   .solution-sec-title {
     font-size: 22px;
   }
+
   .solution-grid-card .card-title {
     font-size: 18px;
   }
+
   .solution-cta-box .title {
     font-size: 22px;
   }
+
   .solution-cta-box {
     padding: 32px 20px;
   }
+
   .solution-faq-btn {
     font-size: 15px;
     padding: 18px 20px;
@@ -429,9 +436,11 @@
   .solution-hero-banner .hero-title {
     font-size: 22px;
   }
+
   .solution-sec-title {
     font-size: 20px;
   }
+
   .solution-cta-box .title {
     font-size: 20px;
   }

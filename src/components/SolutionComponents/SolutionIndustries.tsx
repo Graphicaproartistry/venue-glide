@@ -59,7 +59,7 @@ const SolutionIndustries: React.FC = () => {
                       position: "absolute",
                       left: "2px",
                       top: "-1px",
-                      color: "#00ff97",
+                      color: "#00D4ff",
                       fontSize: "16px",
                     }}
                   >

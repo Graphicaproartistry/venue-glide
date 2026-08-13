@@ -24,9 +24,9 @@
   display: inline-block;
   padding: 8px 20px;
   background: rgba(0, 255, 151, 0.1);
-  border: 1px solid rgba(0, 255, 151, 0.25);
+  border: 1px solid #00D4ff;
   border-radius: 30px;
-  color: #00ff97;
+  color: #00D4ff;
   font-size: 13.5px;
   font-weight: 600;
   margin-bottom: 24px;
@@ -65,20 +65,20 @@
   align-items: center;
   justify-content: center;
   padding: 14px 32px;
-  background: linear-gradient(135deg, #00ff97 0%, #00c875 100%);
+  background: #00D4ff;
   color: #00020f;
   font-weight: 700;
   font-size: 15px;
   border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 255, 151, 0.3);
+  box-shadow: 0 4px 20px #00D4ff;
   border: none;
 }
 
 .btn-primary-green:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0, 255, 151, 0.45);
+  box-shadow: 0 8px 28px #00D4ff;
   color: #00020f;
 }
 
@@ -93,14 +93,14 @@
   font-size: 15px;
   border-radius: 30px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid #0a84ff;
   transition: all 0.3s ease;
 }
 
 .btn-outline-glow:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(0, 255, 151, 0.5);
-  color: #00ff97;
+  background: #0a84ff;
+  border-color: #0a84ff;
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -135,7 +135,7 @@
 .industry-grid-card:hover {
   transform: translateY(-6px);
   background: rgba(18, 28, 48, 0.88);
-  border-color: rgba(0, 255, 151, 0.35);
+  border-color: #00D4ff;
   box-shadow: 0 16px 36px rgba(0, 255, 151, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -224,14 +224,14 @@
   position: absolute;
   left: 2px;
   top: -1px;
-  color: #00ff97;
+  color: #00D4ff;
   font-size: 15px;
 }
 
 .industry-grid-card .learn-more-link {
   font-size: 14px;
   font-weight: 600;
-  color: #00ff97;
+  color: #0a84ff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -364,7 +364,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #00ff97;
+  color: #00D4ff;
   font-weight: bold;
 }
 
@@ -415,7 +415,7 @@
 .industry-faq-side-box .demo-link {
   font-size: 14px;
   font-weight: 700;
-  color: #00ff97;
+  color: #0a84ff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -464,24 +464,31 @@
   .industry-section {
     padding: 60px 0;
   }
+
   .industry-hero-banner {
     padding: 100px 0 60px;
   }
+
   .industry-hero-banner .hero-title {
     font-size: 26px;
   }
+
   .industry-sec-title {
     font-size: 22px;
   }
+
   .industry-grid-card .card-title {
     font-size: 18px;
   }
+
   .why-sports-card {
     padding: 28px 22px;
   }
+
   .why-sports-card .card-title {
     font-size: 22px;
   }
+
   .industry-cta-wrap .cta-title {
     font-size: 22px;
   }
@@ -491,12 +498,15 @@
   .industry-hero-banner .hero-title {
     font-size: 22px;
   }
+
   .industry-sec-title {
     font-size: 20px;
   }
+
   .why-sports-card .card-title {
     font-size: 20px;
   }
+
   .industry-cta-wrap .cta-title {
     font-size: 20px;
   }

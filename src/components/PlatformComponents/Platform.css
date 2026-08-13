@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: center;
   padding: 14px 32px;
-  background: linear-gradient(135deg, #00ff97 0%, #00c875 100%);
+  background: #00D4ff;
   color: #00020f;
   font-weight: 700;
   font-size: 15px;
@@ -173,7 +173,7 @@
 .platform-grid-card:hover {
   transform: translateY(-5px);
   background: rgba(18, 28, 48, 0.88);
-  border-color: rgba(0, 255, 151, 0.35);
+  border-color: #00D4ff;
   box-shadow: 0 16px 36px rgba(0, 255, 151, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -199,7 +199,7 @@
 .platform-grid-card .learn-more-link {
   font-size: 14px;
   font-weight: 600;
-  color: #00ff97;
+  color: #0a84ff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -263,7 +263,7 @@
 
 .mockup-stat-box .change {
   font-size: 11px;
-  color: #00ff97;
+  color: #00D4ff;
   margin-top: 4px;
 }
 
@@ -283,7 +283,7 @@
 }
 
 .platform-faq-item.active {
-  border-color: rgba(0, 255, 151, 0.4);
+  border-color: #00D4ff;
 }
 
 .platform-faq-btn {
@@ -303,7 +303,7 @@
 }
 
 .platform-faq-btn:hover {
-  color: #00ff97;
+  color: #00D4ff;
 }
 
 .platform-faq-icon {
@@ -314,7 +314,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00ff97;
+  color: #00D4ff;
   font-size: 18px;
   transition: transform 0.3s ease;
 }
@@ -344,7 +344,7 @@
 .platform-cta-box {
   background: rgba(13, 20, 36, 0.85);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 255, 151, 0.25);
+  border: 1px solid #00D4ff;
   border-radius: 24px;
   padding: 60px 40px;
   max-width: 960px;
@@ -373,24 +373,31 @@
   .platform-section {
     padding: 60px 0;
   }
+
   .platform-hero-banner {
     padding: 100px 0 60px;
   }
+
   .platform-hero-banner .hero-title {
     font-size: 26px;
   }
+
   .platform-sec-title {
     font-size: 22px;
   }
+
   .platform-grid-card .card-title {
     font-size: 17px;
   }
+
   .platform-cta-box .title {
     font-size: 22px;
   }
+
   .platform-cta-box {
     padding: 32px 20px;
   }
+
   .platform-faq-btn {
     font-size: 15px;
     padding: 18px 20px;
@@ -401,9 +408,11 @@
   .platform-hero-banner .hero-title {
     font-size: 22px;
   }
+
   .platform-sec-title {
     font-size: 20px;
   }
+
   .platform-cta-box .title {
     font-size: 20px;
   }

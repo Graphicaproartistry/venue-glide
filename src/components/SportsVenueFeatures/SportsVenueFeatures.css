@@ -34,15 +34,19 @@
   .sports-venue-features {
     padding: 60px 0;
   }
+
   .sports-venue-features .sec-title-wrap {
     margin-bottom: 30px;
   }
+
   .sports-venue-features .sec-title {
     font-size: 24px;
   }
+
   .venue-feature-card {
     padding: 24px 20px;
   }
+
   .venue-feature-card .card-title {
     font-size: 18px;
   }
@@ -84,7 +88,7 @@
 .venue-feature-card:hover {
   transform: translateY(-6px);
   background: rgba(18, 28, 48, 0.85);
-  border-color: rgba(0, 255, 151, 0.35);
+  border-color: #00D4ff;
   box-shadow: 0 16px 36px rgba(0, 255, 151, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -158,6 +162,6 @@
   position: absolute;
   left: 2px;
   top: -1px;
-  color: #00ff97;
+  color: #00D4ff;
   font-size: 16px;
 }

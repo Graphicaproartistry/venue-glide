@@ -34,7 +34,7 @@ const IndustryDesignedSupport: React.FC = () => {
                 <span
                   style={{
                     fontSize: "12px",
-                    color: "#00ff97",
+                    color: "#00D4ff",
                     background: "rgba(0,255,151,0.1)",
                     padding: "4px 10px",
                     borderRadius: "20px",
@@ -50,21 +50,21 @@ const IndustryDesignedSupport: React.FC = () => {
                   <div style={{ fontSize: "20px", fontWeight: 700, color: "#ffffff" }}>
                     12,325
                   </div>
-                  <div style={{ fontSize: "11px", color: "#00ff97" }}>↑ +12.4%</div>
+                  <div style={{ fontSize: "11px", color: "#00D4ff" }}>↑ +12.4%</div>
                 </div>
                 <div className="col-4 text-center">
                   <div style={{ fontSize: "12px", color: "#94a3b8" }}>Bookings</div>
                   <div style={{ fontSize: "20px", fontWeight: 700, color: "#ffffff" }}>
                     1,061
                   </div>
-                  <div style={{ fontSize: "11px", color: "#00ff97" }}>↑ +8.2%</div>
+                  <div style={{ fontSize: "11px", color: "#00D4ff" }}>↑ +8.2%</div>
                 </div>
                 <div className="col-4 text-center">
                   <div style={{ fontSize: "12px", color: "#94a3b8" }}>Total</div>
                   <div style={{ fontSize: "20px", fontWeight: 700, color: "#ffffff" }}>
                     $118,095
                   </div>
-                  <div style={{ fontSize: "11px", color: "#00ff97" }}>↑ +15.3%</div>
+                  <div style={{ fontSize: "11px", color: "#00D4ff" }}>↑ +15.3%</div>
                 </div>
               </div>
             </div>

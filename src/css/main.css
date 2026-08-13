@@ -52,7 +52,7 @@
 :root {
   --font-body: "DM Sans", sans-serif;
   --font-heading: 'SportingGrotesque';
-  --color-primary: #00ff97;
+  --color-primary: #00D4ff;
   --color-secondary: #00020f;
   --color-heading: #fff;
   --color-default: #414047;
@@ -7674,7 +7674,7 @@ Drop Down menu end
   height: 100%;
   width: 100%;
   border-radius: inherit;
-  background: radial-gradient(99.41% 174.01% at -2.12% 64.17%, #00ff97 0%, #00020f 100%);
+  background: #00D4ff;
 }
 
 .comparison-container {
@@ -7925,7 +7925,7 @@ Drop Down menu end
   height: 100%;
   width: 100%;
   border-radius: inherit;
-  background: radial-gradient(99.41% 174.01% at -2.12% 64.17%, #00ff97 0%, #00020f 100%);
+  background: #00D4ff;
 }
 
 .comparison-container {
@@ -18396,4 +18396,9 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 
 .IntegrationSection-custom .integration-btn {
   display: none;
+}
+
+
+.my-image {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(96%) saturate(1800%) hue-rotate(160deg) brightness(103%) contrast(105%)
 }

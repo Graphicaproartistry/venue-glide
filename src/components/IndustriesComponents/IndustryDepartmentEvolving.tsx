@@ -54,7 +54,7 @@ const IndustryDepartmentEvolving: React.FC = () => {
                       position: "absolute",
                       left: 0,
                       top: 0,
-                      color: "#00ff97",
+                      color: "#00D4ff",
                       fontWeight: "bold",
                     }}
                   >

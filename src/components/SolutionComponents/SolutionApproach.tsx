@@ -11,7 +11,7 @@ const SolutionApproach: React.FC = () => {
               style={{
                 fontSize: "13px",
                 fontWeight: 600,
-                color: "#00ff97",
+                color: "#00D4ff",
                 textTransform: "uppercase",
                 letterSpacing: "0.05em",
                 display: "inline-block",
@@ -48,7 +48,7 @@ const SolutionApproach: React.FC = () => {
               <div className="mockup-app-title">VenueGlide OS</div>
               <div className="mockup-input-box mb-3">
                 <span>Create Account</span>
-                <span style={{ color: "#00ff97" }}>✓</span>
+                <span style={{ color: "#00D4ff" }}>✓</span>
               </div>
               <div
                 style={{
@@ -62,12 +62,12 @@ const SolutionApproach: React.FC = () => {
               </div>
               <div className="mockup-input-box mb-4">
                 <span>venue@venueglide.com</span>
-                <span style={{ color: "#00ff97" }}>✓</span>
+                <span style={{ color: "#00D4ff" }}>✓</span>
               </div>
               <div
                 style={{
-                  background: "linear-gradient(135deg, #00ff97 0%, #00c875 100%)",
-                  color: "#00020f",
+                  background: "#0a84ff",
+                  color: "white",
                   fontWeight: 700,
                   fontSize: "14px",
                   padding: "12px",

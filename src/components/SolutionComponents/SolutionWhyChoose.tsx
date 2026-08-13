@@ -22,7 +22,7 @@ const SolutionWhyChoose: React.FC = () => {
               style={{
                 fontSize: "13px",
                 fontWeight: 600,
-                color: "#00ff97",
+                color: "#00D4ff",
                 textTransform: "uppercase",
                 letterSpacing: "0.05em",
                 display: "inline-block",

@@ -105,7 +105,7 @@ const IndustryFAQ: React.FC = () => {
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          color: "#00ff97",
+                          color: "#00D4ff",
                           fontSize: "18px",
                           transform: isOpen ? "rotate(45deg)" : "none",
                           transition: "transform 0.3s ease",

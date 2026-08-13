@@ -23,7 +23,7 @@ const PlatformBuiltSpecifically: React.FC = () => {
                 <span
                   style={{
                     fontSize: "12px",
-                    color: "#00ff97",
+                    color: "#00D4ff",
                     background: "rgba(0,255,151,0.1)",
                     padding: "4px 10px",
                     borderRadius: "20px",
@@ -70,7 +70,7 @@ const PlatformBuiltSpecifically: React.FC = () => {
                   }}
                 >
                   <span>Court Utilization Rate</span>
-                  <span style={{ color: "#00ff97", fontWeight: "bold" }}>
+                  <span style={{ color: "#00D4ff", fontWeight: "bold" }}>
                     89.4%
                   </span>
                 </div>
@@ -86,7 +86,7 @@ const PlatformBuiltSpecifically: React.FC = () => {
                     style={{
                       width: "89.4%",
                       height: "100%",
-                      background: "linear-gradient(90deg, #00ff97, #00c875)",
+                      background: "#00D4ff",
                     }}
                   ></div>
                 </div>
