@@ -1,0 +1,412 @@
+/* ==========================================
+   Book Demo Page Styling - VenueGlide OS
+   ========================================== */
+
+/* Main Section Wrapper */
+.book-demo-section {
+  padding: 100px 0;
+  background-color: #00020f;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* 1. Hero Banner */
+.book-demo-hero-banner {
+  padding: 150px 0 90px;
+  background-color: #00020f;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.book-demo-hero-banner .hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.book-demo-hero-banner .hero-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00D4ff;
+  max-width: 860px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+.book-demo-hero-banner .hero-desc {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #cbd5e1;
+  max-width: 900px;
+  margin: 0 auto 16px;
+}
+
+.book-demo-hero-banner .hero-btns {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 2. What You'll See Grid */
+.what-you-see-intro {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+.what-you-see-intro p {
+  font-size: 16px;
+  color: #00D4ff;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.what-you-see-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.what-you-see-card {
+  background: rgba(13, 20, 36, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 30px 24px;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.what-you-see-card:hover {
+  transform: translateY(-6px);
+  border-color: #00D4ff;
+  background: rgba(18, 28, 48, 0.9);
+  box-shadow: 0 16px 36px rgba(0, 255, 151, 0.1);
+}
+
+.card-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 255, 151, 0.1);
+  border: 1px solid rgba(0, 255, 151, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00D4ff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.what-you-see-card .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.what-you-see-card .card-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* 3. Who Should Book */
+.who-should-box {
+  background: rgba(13, 20, 36, 0.8);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 50px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.who-should-box .sub-intro {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00D4ff;
+  margin-bottom: 24px;
+}
+
+.who-should-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.who-should-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.who-should-item:hover {
+  background: rgba(0, 255, 151, 0.08);
+  border-color: rgba(0, 255, 151, 0.3);
+  transform: translateY(-2px);
+}
+
+.who-should-item i {
+  color: #00D4ff;
+  font-size: 16px;
+}
+
+.who-should-closing {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+}
+
+/* 4. Demo Steps Process */
+.demo-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.demo-step-card {
+  background: rgba(13, 20, 36, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.demo-step-card:hover {
+  transform: translateY(-6px);
+  border-color: #00D4ff;
+  box-shadow: 0 16px 40px rgba(0, 255, 151, 0.12);
+}
+
+.step-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #00D4ff 0%, #00b380 100%);
+  color: #00020f;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.step-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.step-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #cbd5e1;
+}
+
+/* 5. Why Book Grid */
+.why-book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.why-book-card {
+  background: rgba(13, 20, 36, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 22px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.why-book-card:hover {
+  transform: translateY(-4px);
+  border-color: #00D4ff;
+  background: rgba(18, 28, 48, 0.85);
+  box-shadow: 0 10px 25px rgba(0, 255, 151, 0.1);
+}
+
+.why-book-card i {
+  color: #00D4ff;
+  font-size: 18px;
+}
+
+/* 6. Form Styling */
+.demo-form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(13, 20, 36, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 151, 0.25);
+  border-radius: 24px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.form-group-section {
+  margin-bottom: 36px;
+}
+
+.form-group-section:last-child {
+  margin-bottom: 0;
+}
+
+.form-section-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00D4ff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-control-custom:focus {
+  border-color: #00D4ff;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px rgba(0, 255, 151, 0.2);
+}
+
+.form-control-custom option {
+  background-color: #00020f;
+  color: #ffffff;
+}
+
+textarea.form-control-custom {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.btn-submit-demo {
+  width: 100%;
+  padding: 16px 32px;
+  background: #00D4ff;
+  color: #00020f;
+  font-weight: 800;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 255, 151, 0.3);
+}
+
+.btn-submit-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 255, 151, 0.5);
+  background: #00e68a;
+}
+
+/* 7. Final CTA Box */
+.book-demo-final-cta-box {
+  background: rgba(13, 20, 36, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid #00D4ff;
+  border-radius: 24px;
+  padding: 60px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 255, 151, 0.08);
+}
+
+.book-demo-final-cta-box .title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.book-demo-final-cta-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .what-you-see-grid,
+  .who-should-grid,
+  .demo-steps-grid,
+  .why-book-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .book-demo-hero-banner .hero-title {
+    font-size: 36px;
+  }
+
+  .demo-form-wrapper,
+  .who-should-box {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-demo-hero-banner {
+    padding: 110px 0 60px;
+  }
+
+  .book-demo-hero-banner .hero-title {
+    font-size: 28px;
+  }
+
+  .book-demo-hero-banner .hero-subtitle {
+    font-size: 16px;
+  }
+}

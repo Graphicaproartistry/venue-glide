@@ -42,7 +42,7 @@ const menus: MenuItem[] = [
   {
     id: 6,
     title: "Pricing",
-    link: "#",
+    link: "/pricing",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const menus: MenuItem[] = [
   {
     id: 9,
     title: "Book Demo",
-    link: "#",
+    link: "/book-demo",
   },
 
 ];

@@ -108,26 +108,26 @@ const Header: React.FC = () => {
 
 
                   <li>
-                    <Link to="#" onClick={handleClick}>
+                    <Link to="/pricing" onClick={handleClick}>
                       <span>Pricing</span>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="#" onClick={handleClick}>
                       <span>Resources</span>
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
-                    <Link to="#" onClick={handleClick}>
-                      <span>Company</span>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="#" onClick={handleClick}>
+                    <Link to="/book-demo" onClick={handleClick}>
                       <span>Book Demo</span>
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/contact" onClick={handleClick}>
+                      <span>Contact</span>
+                    </Link>
+                  </li>
+
                 </ul>
               </nav>
             </div>
