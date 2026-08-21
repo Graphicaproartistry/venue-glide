@@ -8,7 +8,8 @@ const PlatformOverviewCards: React.FC = () => {
       style={{ backgroundImage: `url(${featureBg})`, background: "linear-gradient(180deg, #080D1F 0%, #00020F 100%)" }}
     >
       <div className="container">
-        <div className="row g-4 align-items-stretch">
+        {/* ROW 1: Card 1 & Card 2 */}
+        <div className="row g-4 align-items-stretch mb-4">
           {/* Card 1: Built for Every Sport */}
           <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
@@ -109,7 +110,10 @@ const PlatformOverviewCards: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
 
+        {/* ROW 2: Card 3 & Card 4 Side-by-Side */}
+        <div className="row g-4 align-items-stretch">
           {/* Card 3: Connect With Your Favourite Business Tools */}
           <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
@@ -212,6 +216,5 @@ const PlatformOverviewCards: React.FC = () => {
     </section>
   );
 };
-
 
 export default PlatformOverviewCards;
