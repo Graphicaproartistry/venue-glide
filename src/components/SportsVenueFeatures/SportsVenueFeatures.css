@@ -23,7 +23,7 @@
 .sports-venue-features .sub-title {
   font-size: 15px;
   font-weight: 600;
-  color: #00ff97;
+  color: #00D4FF;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   display: inline-block;
@@ -80,7 +80,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 151, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.6), transparent);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -89,7 +89,7 @@
   transform: translateY(-6px);
   background: rgba(18, 28, 48, 0.85);
   border-color: #00D4ff;
-  box-shadow: 0 16px 36px rgba(0, 255, 151, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 212, 255, 0.15), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .venue-feature-card:hover::before {
@@ -149,19 +149,10 @@
   line-height: 1.75;
   color: #94a3b8;
   position: relative;
-  padding-left: 18px;
+  padding-left: 0;
   transition: color 0.2s ease;
 }
 
 .venue-feature-card:hover .feature-list li {
   color: #e2e8f0;
-}
-
-.venue-feature-card .feature-list li::before {
-  content: "•";
-  position: absolute;
-  left: 2px;
-  top: -1px;
-  color: #00D4ff;
-  font-size: 16px;
 }

@@ -131,21 +131,12 @@
   line-height: 1.75;
   color: #94a3b8;
   position: relative;
-  padding-left: 18px;
+  padding-left: 0;
   transition: color 0.2s ease;
 }
 
 .why-venueglide-card:hover .feature-list li {
   color: #e2e8f0;
-}
-
-.why-venueglide-card .feature-list li::before {
-  content: "•";
-  position: absolute;
-  left: 2px;
-  top: -1px;
-  color: #00D4ff;
-  font-size: 16px;
 }
 
 .why-venueglide-card .card-footer-note {

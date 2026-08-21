@@ -4,220 +4,207 @@ import featureBg from "../../images/bg/features-gradient-bg.png";
 const PlatformOverviewCards: React.FC = () => {
   return (
     <section
-      className="venueglide-overview"
-      style={{ backgroundImage: `url(${featureBg})` }}
+      className="venueglide-overview py-5"
+      style={{ backgroundImage: `url(${featureBg})`, background: "linear-gradient(180deg, #080D1F 0%, #00020F 100%)" }}
     >
-      {/* Side Dot Grid Patterns */}
-      <svg
-        className="dot-grid-left"
-        viewBox="0 0 160 320"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <pattern
-          id="dot-pattern-platform-left"
-          x="0"
-          y="0"
-          width="20"
-          height="20"
-          patternUnits="userSpaceOnUse"
-        >
-          <circle cx="3" cy="3" r="2" fill="#00ff97" />
-        </pattern>
-        <rect width="160" height="320" fill="url(#dot-pattern-platform-left)" />
-      </svg>
-
-      <svg
-        className="dot-grid-right"
-        viewBox="0 0 160 320"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <pattern
-          id="dot-pattern-platform-right"
-          x="0"
-          y="0"
-          width="20"
-          height="20"
-          patternUnits="userSpaceOnUse"
-        >
-          <circle cx="3" cy="3" r="2" fill="#00ff97" />
-        </pattern>
-        <rect width="160" height="320" fill="url(#dot-pattern-platform-right)" />
-      </svg>
-
       <div className="container">
-        <div className="row g-4">
+        <div className="row g-4 align-items-stretch">
           {/* Card 1: Built for Every Sport */}
-          <div className="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-            <div className="venueglide-overview-card">
-              <div className="icon-badge blue">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                  <path d="M2 12h20" />
-                </svg>
+          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
+            <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
+              <div>
+                <div className="icon-badge blue mb-3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                    <path d="M2 12h20" />
+                  </svg>
+                </div>
+
+                <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
+                  Built for Every Sport
+                </h3>
+                <p className="card-desc" style={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.6", marginBottom: "16px", minHeight: "44px" }}>
+                  VenueGlide OS is tailored specifically for sports and recreation facilities across Australia:
+                </p>
+
+                <div className="card-sublabel" style={{ fontSize: "12px", color: "#00D4FF", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "12px" }}>
+                  SUPPORTED FACILITY TYPES:
+                </div>
+
+                <ul className="list-unstyled p-0 m-0 d-flex flex-column gap-2 mb-4">
+                  {[
+                    "Indoor Cricket Arenas & Nets",
+                    "Padel & Tennis Clubs",
+                    "Football & Futsal Turf Centres",
+                    "Basketball & Volleyball Facilities",
+                    "Badminton & Pickleball Clubs",
+                    "Squash & Racquetball Centres",
+                    "Junior & Pro Sports Academies",
+                    "Community Recreation Centres",
+                    "Multi-Sport Facility Complexes"
+                  ].map((item, idx) => (
+                    <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
+                      <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <h3 className="card-title">Built for Every Sport</h3>
-              <p className="card-desc">
-                VenueGlide supports a wide range of sports and recreation
-                facilities including:
-              </p>
-
-              <ul className="card-list bullets">
-                <li>Indoor Cricket Centres</li>
-                <li>Padel Clubs</li>
-                <li>Tennis Clubs</li>
-                <li>Football Centres</li>
-                <li>Basketball Facilities</li>
-                <li>Pickleball Clubs</li>
-                <li>Badminton Centres</li>
-                <li>Squash Facilities</li>
-                <li>Sports Academies</li>
-                <li>Recreation Centres</li>
-                <li>Multi-Sport Venues</li>
-              </ul>
-
-              <div className="card-footer-text">
-                Every venue can customise resources, pricing, availability rules and memberships to suit its unique requirements.
+              <div className="card-footer-text pt-3" style={{ borderTop: "1px solid rgba(255, 255, 255, 0.1)", fontSize: "12.5px", color: "rgba(255, 255, 255, 0.6)", fontStyle: "italic" }}>
+                Every venue can customise resources, pricing, availability rules and memberships.
               </div>
             </div>
           </div>
 
           {/* Card 2: A Platform That Grows With Your Business */}
-          <div className="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
-            <div className="venueglide-overview-card">
-              <div className="icon-badge orange">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                  <polyline points="17 6 23 6 23 12" />
-                </svg>
+          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
+            <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
+              <div>
+                <div className="icon-badge orange mb-3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    <polyline points="17 6 23 6 23 12" />
+                  </svg>
+                </div>
+
+                <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
+                  Scalable Enterprise Infrastructure
+                </h3>
+                <p className="card-desc" style={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.6", marginBottom: "16px", minHeight: "44px" }}>
+                  Whether operating one venue or a national network of facilities, VenueGlide scales with your business:
+                </p>
+
+                <div className="card-sublabel" style={{ fontSize: "12px", color: "#00D4FF", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "12px" }}>
+                  ENTERPRISE CAPABILITIES INCLUDE:
+                </div>
+
+                <ul className="list-unstyled p-0 m-0 d-flex flex-column gap-2 mb-4">
+                  {[
+                    "Multi-location cloud management",
+                    "Unlimited staff & coach accounts",
+                    "Role-based security permissions",
+                    "99.9% Uptime cloud hosting",
+                    "REST API & Webhook integrations",
+                    "Automated administrative workflows",
+                    "Real-time executive reporting",
+                    "Centralised member data & CRM",
+                    "High availability cloud architecture"
+                  ].map((item, idx) => (
+                    <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
+                      <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <h3 className="card-title">
-                A Platform That Grows With Your Business
-              </h3>
-              <p className="card-desc">
-                Whether you're operating one venue or managing a national network of sports facilities, VenueGlide provides the flexibility and scalability your business needs.
-              </p>
-
-              <div className="card-sublabel">Our enterprise-ready architecture supports:</div>
-              <ul className="card-list checks">
-                <li>Multi-location management</li>
-                <li>Unlimited staff accounts</li>
-                <li>Role-based permissions</li>
-                <li>Secure cloud hosting</li>
-                <li>API integrations</li>
-                <li>Automated workflows</li>
-                <li>Real-time reporting</li>
-                <li>Centralised customer data</li>
-                <li>High availability infrastructure</li>
-              </ul>
-              <div className="card-footer-text">
-                As your business expands, VenueGlide grows with you.
+              <div className="card-footer-text pt-3" style={{ borderTop: "1px solid rgba(255, 255, 255, 0.1)", fontSize: "12.5px", color: "rgba(255, 255, 255, 0.6)", fontStyle: "italic" }}>
+                As your sports business expands, VenueGlide seamlessly scales with you.
               </div>
             </div>
           </div>
 
           {/* Card 3: Connect With Your Favourite Business Tools */}
-          <div className="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-            <div className="venueglide-overview-card">
-              <div className="icon-badge pink">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                </svg>
+          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
+            <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
+              <div>
+                <div className="icon-badge pink mb-3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                  </svg>
+                </div>
+
+                <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
+                  Seamless Software Integrations
+                </h3>
+                <p className="card-desc" style={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.6", marginBottom: "16px", minHeight: "44px" }}>
+                  VenueGlide integrates seamlessly with your existing software stack and hardware:
+                </p>
+
+                <div className="card-sublabel" style={{ fontSize: "12px", color: "#00D4FF", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "12px" }}>
+                  INTEGRATIONS & COMPATIBILITY:
+                </div>
+
+                <ul className="list-unstyled p-0 m-0 d-flex flex-column gap-2 mb-4">
+                  {[
+                    "Stripe & Direct Debit Processing",
+                    "Xero & QuickBooks Sync",
+                    "Square POS & Hardware Terminals",
+                    "Google Calendar & iCal Booking Sync",
+                    "Microsoft 365 & Outlook Integration",
+                    "Zapier Automated Workflows",
+                    "Twilio SMS & Email Notifications",
+                    "Mailchimp Marketing Automation",
+                    "Smart Door Access & Turnstile Controls"
+                  ].map((item, idx) => (
+                    <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
+                      <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <h3 className="card-title">
-                Connect With Your Favourite Business Tools
-              </h3>
-              <p className="card-desc">
-                VenueGlide integrates seamlessly with the software you already use. <br />
-                Supported integrations include:
-              </p>
-
-              <div className="card-sublabel">Integrations & compatibility:</div>
-              <ul className="card-list bullets">
-                <li>Stripe</li>
-                <li>Xero</li>
-                <li>QuickBooks</li>
-                <li>Square</li>
-                <li>Google Calendar</li>
-                <li>Microsoft 365</li>
-                <li>Zapier</li>
-                <li>Twilio</li>
-                <li>Mailchimp</li>
-                <li>Door Access Systems</li>
-                <li>Accounting Software</li>
-                <li>Payment Gateways</li>
-              </ul>
+              <div className="card-footer-text pt-3" style={{ borderTop: "1px solid rgba(255, 255, 255, 0.1)", fontSize: "12.5px", color: "rgba(255, 255, 255, 0.6)", fontStyle: "italic" }}>
+                Unify your entire tech ecosystem into one single operating platform.
+              </div>
             </div>
           </div>
 
-          {/* Card 4: VenueGlide */}
-          <div className="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="600ms">
-            <div className="venueglide-overview-card">
-              <div className="icon-badge green">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
+          {/* Card 4: VenueGlide Advantages */}
+          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="400ms" data-wow-duration="600ms">
+            <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
+              <div>
+                <div className="icon-badge green mb-3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+
+                <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
+                  Proven Operational Impact
+                </h3>
+                <p className="card-desc" style={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.6", marginBottom: "16px", minHeight: "44px" }}>
+                  Thousands of daily venue operations managed smoothly through intelligent cloud automation:
+                </p>
+
+                <div className="card-sublabel" style={{ fontSize: "12px", color: "#00D4FF", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "12px" }}>
+                  BUSINESS BENEFITS:
+                </div>
+
+                <ul className="list-unstyled p-0 m-0 d-flex flex-column gap-2 mb-4">
+                  {[
+                    "Cut manual admin workload by 15+ hours weekly",
+                    "Maximize court occupancy & peak revenue",
+                    "Boost player retention & renewal rates",
+                    "Eliminate double-bookings with live scheduling",
+                    "Gain real-time financial visibility",
+                    "Enhance member & player booking experience",
+                    "Streamline staff & coach roster management",
+                    "Accelerate sports facility revenue growth",
+                    "24/7 Priority Australian customer support"
+                  ].map((item, idx) => (
+                    <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
+                      <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <h3 className="card-title">VenueGlide</h3>
-              <p className="card-desc">
-                Thousands of daily venue operations can be managed through one intelligent platform.
-              </p>
-
-              <div className="card-sublabel">
-                VenueGlide helps businesses:
+              <div className="card-footer-text pt-3" style={{ borderTop: "1px solid rgba(255, 255, 255, 0.1)", fontSize: "12.5px", color: "rgba(255, 255, 255, 0.6)", fontStyle: "italic" }}>
+                Built to deliver immediate ROI and operational peace of mind.
               </div>
-              <ul className="card-list checks">
-                <li>Reduce administration</li>
-                <li>Increase bookings</li>
-                <li>Improve member retention</li>
-                <li>Automate repetitive tasks</li>
-                <li>Gain real-time business insights</li>
-                <li>Improve customer experiences</li>
-                <li>Increase operational efficiency</li>
-                <li>Grow revenue</li>
-              </ul>
             </div>
           </div>
         </div>
@@ -225,5 +212,6 @@ const PlatformOverviewCards: React.FC = () => {
     </section>
   );
 };
+
 
 export default PlatformOverviewCards;
