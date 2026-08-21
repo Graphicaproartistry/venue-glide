@@ -69,9 +69,9 @@ const ComparisonSection: React.FC = () => {
             </div>
 
             {/* Center "VS / AI" badge */}
-            <span className="comparison-vs-logo xb-border d-none d-lg-flex align-items-center justify-content-center fw-bold" style={{ width: "48px", height: "48px", borderRadius: "50%", background: "linear-gradient(135deg, #00D4FF, #3b82f6)", color: "#000", fontSize: "14px", border: "3px solid #0a0f1e", position: "absolute", right: "-24px", top: "50%", transform: "translateY(-50%)", zIndex: 10, boxShadow: "0 0 20px rgba(0, 212, 255, 0.6)" }}>
+            {/* <span className="comparison-vs-logo xb-border d-none d-lg-flex align-items-center justify-content-center fw-bold" style={{ width: "48px", height: "48px", borderRadius: "50%", background: "linear-gradient(135deg, #00D4FF, #3b82f6)", color: "#000", fontSize: "14px", border: "3px solid #0a0f1e", position: "absolute", right: "-24px", top: "50%", transform: "translateY(-50%)", zIndex: 10, boxShadow: "0 0 20px rgba(0, 212, 255, 0.6)" }}>
               AI
-            </span>
+            </span> */}
           </div>
         </div>
 
