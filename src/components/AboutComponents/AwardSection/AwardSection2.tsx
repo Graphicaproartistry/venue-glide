@@ -9,60 +9,60 @@ import basketballImg from "../../../images/sports/basketball.png";
 import multisportImg from "../../../images/sports/multisport.png";
 
 const sportsVenues = [
-    { 
-        title: "Indoor Cricket Arena", 
-        sport: "Cricket", 
-        img: cricketImg, 
+    {
+        title: "Indoor Cricket Arena",
+        sport: "Cricket",
+        img: cricketImg,
         icon: (
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20" />
             </svg>
-        ), 
-        badge: "24/7 Nets & Pitch" 
+        ),
+        badge: "24/7 Nets & Pitch"
     },
-    { 
-        title: "Football Turf Pitch", 
-        sport: "Football", 
-        img: footballImg, 
+    {
+        title: "Football Turf Pitch",
+        sport: "Football",
+        img: footballImg,
         icon: (
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" /><polygon points="12 6 15 9 14 13 10 13 9 9" />
             </svg>
-        ), 
-        badge: "Floodlit Stadium" 
+        ),
+        badge: "Floodlit Stadium"
     },
-    { 
-        title: "Padel & Tennis Club", 
-        sport: "Padel", 
-        img: padelImg, 
+    {
+        title: "Padel & Tennis Club",
+        sport: "Padel",
+        img: padelImg,
         icon: (
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="9" /><path d="M12 3v18" strokeDasharray="2 2" />
             </svg>
-        ), 
-        badge: "Glass Court Tech" 
+        ),
+        badge: "Glass Court Tech"
     },
-    { 
-        title: "Basketball Stadium", 
-        sport: "Basketball", 
-        img: basketballImg, 
+    {
+        title: "Basketball Stadium",
+        sport: "Basketball",
+        img: basketballImg,
         icon: (
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" /><path d="M5.5 5.5A10 10 0 0 1 12 2" />
             </svg>
-        ), 
-        badge: "Hardwood Floor" 
+        ),
+        badge: "Hardwood Floor"
     },
-    { 
-        title: "Multi-Sport Complex", 
-        sport: "Multi-Sport", 
-        img: multisportImg, 
+    {
+        title: "Multi-Sport Complex",
+        sport: "Multi-Sport",
+        img: multisportImg,
         icon: (
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2z" />
             </svg>
-        ), 
-        badge: "Unified Operating System" 
+        ),
+        badge: "Unified Operating System"
     },
 ];
 
@@ -101,14 +101,13 @@ const AwardSection2: React.FC = () => {
                         <div className="row g-3">
                             {sportsVenues.map((item, idx) => (
                                 <div className={idx === 4 ? "col-12" : "col-6"} key={idx}>
-                                    <div 
+                                    <div
                                         className="position-relative overflow-hidden rounded-4 p-3 d-flex flex-column justify-content-end"
-                                        style={{ 
+                                        style={{
                                             height: idx === 4 ? "180px" : "160px",
                                             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(10,15,30,0.9) 100%), url(${item.img})`,
                                             backgroundSize: "cover",
                                             backgroundPosition: "center",
-                                            border: "1px solid rgba(255, 255, 255, 0.15)",
                                             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.4)",
                                             transition: "transform 0.3s ease, border-color 0.3s ease"
                                         }}
