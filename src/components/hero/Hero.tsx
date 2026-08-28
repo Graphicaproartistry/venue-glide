@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
           <div className="col-lg-9 col-md-9">
             <div className="hero-content">
               <h2 className="title scale-animation wow">
-                The Complete Sports Venue Management Software for Australian Sports
+                Complete Sports Venue Management Software for Australia
               </h2>
               <p className="sub-title scale-animation wow">
                 Everything your sports venue needs to manage bookings, memberships, coaching, payments, POS, reporting and customer relationships — all from one intelligent cloud platform.
