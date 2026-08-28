@@ -455,6 +455,7 @@ const HeroSection: React.FC = () => {
                     </div>
                   </div>
                 ))}
+
               </div>
             </div>
           </div>
@@ -516,7 +517,7 @@ const HeroSection: React.FC = () => {
                     )
                   },
                   {
-                    title: "AI Business Insights",
+                    title: "AI Business Insights (Beta)",
                     desc: "Instant revenue predictions and occupancy analytics.",
                     icon: (
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -539,6 +540,7 @@ const HeroSection: React.FC = () => {
                     </div>
                   </div>
                 ))}
+
               </div>
 
               <div className="mt-4 p-3 rounded-3 text-center d-flex align-items-center justify-content-center gap-2" style={{ background: "rgba(0, 212, 255, 0.08)", border: "1px solid rgba(0, 212, 255, 0.25)" }}>

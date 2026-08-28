@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo/VenueGlide-logo-white-text.png";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import { LuMenu, LuSearch } from "react-icons/lu";
+import { Icon } from "../common/Icon";
 
 const Header: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -16,12 +18,12 @@ const Header: React.FC = () => {
       // Scroll up → show sticky smoothly
       if (currentScroll < lastScrollY.current && currentScroll > 100) {
         setIsSticky(true);
-        setTimeout(() => setIsVisible(true), 10); // delay for smooth entrance
+        setTimeout(() => setIsVisible(true), 10);
       }
       // Scroll down → hide sticky instantly
       else if (currentScroll > lastScrollY.current) {
         setIsVisible(false);
-        setTimeout(() => setIsSticky(false), 100); // small delay for hide
+        setTimeout(() => setIsSticky(false), 100);
       }
 
       // Reset if near top
@@ -62,7 +64,6 @@ const Header: React.FC = () => {
             <div className="main-menu__wrap navbar navbar-expand-lg p-0">
               <nav className="main-menu collapse navbar-collapse">
                 <ul>
-
                   <li>
                     <Link to="/" onClick={handleClick}>
                       <span>Home</span>
@@ -85,38 +86,17 @@ const Header: React.FC = () => {
                     </Link>
                   </li>
 
-                  {/* MegaMenu */}
-                  {/* <li className="menu-item-has-children megamenu">
-                    <Link to="#" onClick={handleClick}>
-                      <span>Pages</span>
-                    </Link>
-                    <MegaMenu1 />
-                  </li>
-
-                  <li className="menu-item-has-children megamenu">
-                    <Link to="#" onClick={handleClick}>
-                      <span>Services</span>
-                    </Link>
-                    <MegaMenuServices />
-                  </li> */}
-
                   <li>
                     <Link to="/industries" onClick={handleClick}>
                       <span>Industries</span>
                     </Link>
                   </li>
 
-
                   <li>
                     <Link to="/pricing" onClick={handleClick}>
                       <span>Pricing</span>
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link to="#" onClick={handleClick}>
-                      <span>Resources</span>
-                    </Link>
-                  </li> */}
                   <li>
                     <Link to="/book-demo" onClick={handleClick}>
                       <span>Book Demo</span>
@@ -127,7 +107,6 @@ const Header: React.FC = () => {
                       <span>Contact</span>
                     </Link>
                   </li>
-
                 </ul>
               </nav>
             </div>
@@ -145,7 +124,7 @@ const Header: React.FC = () => {
                 className="xb-nav-mobile"
                 onClick={() => setMobileActive(!mobileActive)}
               >
-                <i className="far fa-bars"></i>
+                <Icon icon={LuMenu} size={22} />
               </button>
             </div>
           </div>
@@ -174,7 +153,7 @@ const Header: React.FC = () => {
                       className="search-field"
                     />
                     <button className="search-submit" type="submit">
-                      <i className="far fa-search"></i>
+                      <Icon icon={LuSearch} size={18} />
                     </button>
                   </form>
                 </div>

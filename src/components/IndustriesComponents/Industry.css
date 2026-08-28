@@ -23,7 +23,7 @@
 .industry-hero-banner .sub-title-badge {
   display: inline-block;
   padding: 8px 20px;
-  background: rgba(0, 255, 151, 0.1);
+  background: rgba(0, 212, 255, 0.1);
   border: 1px solid #00D4ff;
   border-radius: 30px;
   color: #00D4ff;
@@ -93,14 +93,14 @@
   font-size: 15px;
   border-radius: 30px;
   text-decoration: none;
-  border: 1px solid #0a84ff;
+  border: 1px solid #00D4ff;
   transition: all 0.3s ease;
 }
 
 .btn-outline-glow:hover {
-  background: #0a84ff;
-  border-color: #0a84ff;
-  color: white;
+  background: #00D4ff;
+  border-color: #00D4ff;
+  color: #00020f;
   transform: translateY(-2px);
 }
 
@@ -127,7 +127,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 151, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, #00D4ff, transparent);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -136,7 +136,7 @@
   transform: translateY(-6px);
   background: rgba(18, 28, 48, 0.88);
   border-color: #00D4ff;
-  box-shadow: 0 16px 36px rgba(0, 255, 151, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 212, 255, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .industry-grid-card:hover::before {
@@ -160,21 +160,21 @@
 }
 
 .industry-grid-card .icon-badge.blue {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.35);
+  background: rgba(0, 212, 255, 0.15);
+  color: #00D4ff;
+  border: 1px solid rgba(0, 212, 255, 0.35);
 }
 
 .industry-grid-card .icon-badge.green {
-  background: rgba(0, 255, 151, 0.15);
-  color: #00ff97;
-  border: 1px solid rgba(0, 255, 151, 0.35);
+  background: rgba(0, 212, 255, 0.15);
+  color: #00D4ff;
+  border: 1px solid rgba(0, 212, 255, 0.35);
 }
 
 .industry-grid-card .icon-badge.pink {
-  background: rgba(236, 72, 153, 0.15);
-  color: #f472b6;
-  border: 1px solid rgba(236, 72, 153, 0.35);
+  background: rgba(0, 212, 255, 0.15);
+  color: #00D4ff;
+  border: 1px solid rgba(0, 212, 255, 0.35);
 }
 
 .industry-grid-card .card-title {
@@ -231,7 +231,7 @@
 .industry-grid-card .learn-more-link {
   font-size: 14px;
   font-weight: 600;
-  color: #0a84ff;
+  color: #00D4ff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -261,13 +261,13 @@
 }
 
 .stat-badge-box:hover {
-  border-color: rgba(0, 255, 151, 0.3);
+  border-color: rgba(0, 212, 255, 0.3);
 }
 
 .stat-badge-box .badge-title {
   font-size: 13px;
   font-weight: 700;
-  color: #00ff97;
+  color: #00D4ff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
@@ -377,7 +377,7 @@
 /* FAQ Side Support Box */
 .industry-faq-side-box {
   background: rgba(13, 20, 36, 0.75);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(0, 212, 255, 0.3);
   border-radius: 16px;
   padding: 30px 24px;
   height: 100%;
@@ -390,8 +390,8 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
+  background: rgba(0, 212, 255, 0.15);
+  color: #00D4ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -415,7 +415,7 @@
 .industry-faq-side-box .demo-link {
   font-size: 14px;
   font-weight: 700;
-  color: #0a84ff;
+  color: #00D4ff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -426,8 +426,8 @@
 .industry-cta-banner {
   padding: 80px 0;
   background: linear-gradient(135deg, #0a1428 0%, #001229 100%);
-  border-top: 1px solid rgba(0, 255, 151, 0.2);
-  border-bottom: 1px solid rgba(0, 255, 151, 0.2);
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
   position: relative;
 }
 

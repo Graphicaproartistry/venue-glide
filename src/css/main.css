@@ -65,7 +65,7 @@
 }
 
 .ai-marketing {
-  --color-primary: #01ff97;
+  --color-primary: #00D4ff;
 }
 
 /* reset css start */
@@ -4873,7 +4873,7 @@ Drop Down menu end
   width: 100%;
   opacity: 0.9;
   filter: blur(20.5px);
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
 }
 
 .main-menu ul li.megamenu .submenu {
@@ -4994,7 +4994,7 @@ Drop Down menu end
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -5381,7 +5381,7 @@ Drop Down menu end
 }
 
 .mega_menu_wrapper .social_icons_list li a:hover svg path {
-  fill: #00ff97;
+  fill: #00D4ff;
 }
 
 .service_link {
@@ -5396,7 +5396,7 @@ Drop Down menu end
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   justify-content: space-between;
-  background: linear-gradient(61deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(61deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
 }
 
 .service_link .xb-item--holder {
@@ -6373,7 +6373,7 @@ Drop Down menu end
   height: 780px;
   width: 1px;
   z-index: -1;
-  background: linear-gradient(0deg, rgba(0, 164, 175, 0) 0%, rgba(0, 255, 151, 0.5) 50%, rgba(0, 164, 175, 0) 100%);
+  background: linear-gradient(0deg, rgba(0, 164, 175, 0) 0%, #00D4ff 50%, rgba(0, 164, 175, 0) 100%);
 }
 
 @media (max-width: 767px) {
@@ -6759,7 +6759,7 @@ Drop Down menu end
 }
 
 .xb-project-pagination li.active::before {
-  border: 1px solid #00ff97;
+  border: 1px solid #00D4ff;
 }
 
 .custom-sec-title .title {
@@ -7000,7 +7000,7 @@ Drop Down menu end
 }
 
 .ai-project-item .ai-category span {
-  color: #01ff97;
+  color: #00D4ff;
   font-weight: 500;
 }
 
@@ -7058,7 +7058,7 @@ Drop Down menu end
 }
 
 .ai-project-content .content .text-green {
-  color: #01ff97;
+  color: #00D4ff;
 }
 
 .ai-portfolio-wrap {
@@ -7510,7 +7510,7 @@ Drop Down menu end
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
 }
 
 @media (max-width: 767px) {
@@ -7761,7 +7761,7 @@ Drop Down menu end
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
 }
 
 @media (max-width: 767px) {
@@ -12567,7 +12567,7 @@ Drop Down menu end
   font-weight: 700;
   font-size: 110px;
   letter-spacing: -0.05em;
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -13386,7 +13386,7 @@ Drop Down menu end
   height: 100%;
   width: 100%;
   filter: blur(119px);
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
   opacity: 0.2;
 }
 
@@ -13705,14 +13705,14 @@ Drop Down menu end
   position: relative;
   color: var(--bs-white);
   border-color: var(--bs-primary);
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
 }
 
 .content_layer_group>li.active span {
   position: relative;
   color: var(--bs-white);
   border-color: var(--bs-primary);
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
 }
 
 .content_layer_group span {
@@ -13761,7 +13761,7 @@ Drop Down menu end
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(49deg, #4cbdd4 0.01%, #00ff97 61.5%, #4cbdd4 100%);
+  background: linear-gradient(49deg, #4cbdd4 0.01%, #00D4ff 61.5%, #4cbdd4 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -14094,7 +14094,7 @@ Drop Down menu end
 }
 
 .xb-contact-inner {
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
   padding: 140px 35px 40px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -14396,7 +14396,7 @@ Drop Down menu end
 
 .xb-contact-wrap::after {
   z-index: 1 !important;
-  background: linear-gradient(52deg, rgba(44, 50, 254, 0.5) 0%, rgba(0, 164, 175, 0.5) 49%, rgba(0, 255, 151, 0.5) 100%) !important;
+  background: linear-gradient(52deg, rgba(44, 50, 254, 0.5) 0%, rgba(0, 164, 175, 0.5) 49%, #00D4ff 100%) !important;
 }
 
 .xb-main-contact {
@@ -17110,7 +17110,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00ff97 100%);
+  background: linear-gradient(52deg, #2c32fe 0%, #00a4af 49%, #00D4ff 100%);
   background-size: 200% 200%;
   animation: gradient 5s ease-in-out infinite alternate;
 }
@@ -17697,7 +17697,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
   width: 100%;
   z-index: -1;
   transform: rotate(-180deg);
-  background: radial-gradient(85.63% 149.89% at -2.12% 64.17%, #00ff97 0%, rgba(0, 2, 15, 0) 100%);
+  background: radial-gradient(85.63% 149.89% at -2.12% 64.17%, #00D4ff 0%, rgba(0, 2, 15, 0) 100%);
 }
 
 .xb-footer-input-form button::after {
@@ -18407,4 +18407,9 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 /* Ensure content is always visible immediately when opening any page */
 .wow {
   visibility: visible !important;
+}
+
+
+.bullet-list-custom li::marker {
+  color: rgb(0, 212, 255) !important;
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import featureBg from "../../images/bg/features-gradient-bg.png";
+import { LuBuilding2, LuServer, LuBoxes, LuSparkles, LuCheck } from "react-icons/lu";
+import { Icon } from "../common/Icon";
 
 const PlatformOverviewCards: React.FC = () => {
   return (
@@ -15,11 +17,7 @@ const PlatformOverviewCards: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge blue mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                    <path d="M2 12h20" />
-                  </svg>
+                  <Icon icon={LuBuilding2} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
@@ -47,7 +45,7 @@ const PlatformOverviewCards: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>
@@ -66,10 +64,7 @@ const PlatformOverviewCards: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge orange mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                    <polyline points="17 6 23 6 23 12" />
-                  </svg>
+                  <Icon icon={LuServer} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
@@ -97,7 +92,7 @@ const PlatformOverviewCards: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>
@@ -119,9 +114,7 @@ const PlatformOverviewCards: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge pink mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                  </svg>
+                  <Icon icon={LuBoxes} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
@@ -149,7 +142,7 @@ const PlatformOverviewCards: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>
@@ -168,9 +161,7 @@ const PlatformOverviewCards: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge green mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg>
+                  <Icon icon={LuSparkles} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "30px" }}>
@@ -198,7 +189,7 @@ const PlatformOverviewCards: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>

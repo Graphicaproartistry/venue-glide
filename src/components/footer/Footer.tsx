@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LuMapPin, LuPhone } from "react-icons/lu";
+import { Icon } from "../common/Icon";
 
 // Image imports
 import footerBg from "../../images/bg/footer-bg.png";
-import locationIcon from "../../images/icon/location-icon.svg";
-import callIcon from "../../images/icon/call-icon.svg";
 
 const Footer: React.FC = () => {
   const arrowIcon = (
@@ -74,7 +74,6 @@ const Footer: React.FC = () => {
     </svg>
   );
 
-  // ONLY YOUR ORIGINAL 4 SOCIALS
   const socials = [
     {
       icon: <i className="fa-brands fa-facebook"></i>,
@@ -117,14 +116,6 @@ const Footer: React.FC = () => {
       style={{ backgroundImage: `url(${footerBg})` }}
     >
       <div className="xb-footer-wrap">
-        {/* Footer Heading */}
-        {/* <div className="xb-footer-heading wow zoomIn" data-wow-delay="0ms" data-wow-duration="600ms">
-          <h1 className="title">Venue Glide</h1>
-          <a className="mail" href="mailto:aivora@domain.com">
-            <img src={emailIcon} alt="email" /> aivora@domain.com
-          </a>
-        </div> */}
-
         {/* Footer Navigation */}
         <div className="xb-footer-nav">
           <div className="xb-footer-nav-item">
@@ -184,7 +175,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="xb-footer-bottom">
           <div className="contact-item">
-            <img src={locationIcon} alt="location" className="my-image" />
+            <Icon icon={LuMapPin} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
             <span className="contact-method">4517 Washington, USA</span>
           </div>
 
@@ -196,7 +187,7 @@ const Footer: React.FC = () => {
 
           <div className="contact-item">
             <a href="tel:+112304528597">
-              <img src={callIcon} alt="call" className="my-image" />
+              <Icon icon={LuPhone} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
             </a>
             <a className="contact-method" href="tel:+112304528597">
               +(1)1230 452 8597

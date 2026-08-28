@@ -49,7 +49,7 @@ const BookDemoForm: React.FC = () => {
                   width: "70px",
                   height: "70px",
                   borderRadius: "50%",
-                  background: "rgba(0, 255, 151, 0.15)",
+                  background: "rgba(0, 212, 255, 0.15)",
                   border: "2px solid #00D4ff",
                   display: "flex",
                   alignItems: "center",

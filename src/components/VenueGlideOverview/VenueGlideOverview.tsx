@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./VenueGlideOverview.css";
 import featureBg from "../../images/bg/features-gradient-bg.png";
+import { LuShieldCheck, LuCircleCheck, LuTrendingUp, LuBuilding2, LuCheck } from "react-icons/lu";
+import { Icon } from "../common/Icon";
 
 const VenueGlideOverview: React.FC = () => {
   return (
@@ -17,10 +19,7 @@ const VenueGlideOverview: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge blue mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
+                  <Icon icon={LuShieldCheck} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "56px", display: "flex", alignItems: "center" }}>
@@ -46,7 +45,7 @@ const VenueGlideOverview: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>
@@ -65,10 +64,7 @@ const VenueGlideOverview: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge orange mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
+                  <Icon icon={LuCircleCheck} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "56px", display: "flex", alignItems: "center" }}>
@@ -94,7 +90,7 @@ const VenueGlideOverview: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>
@@ -116,12 +112,7 @@ const VenueGlideOverview: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge pink mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
+                  <Icon icon={LuTrendingUp} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "56px", display: "flex", alignItems: "center" }}>
@@ -137,7 +128,7 @@ const VenueGlideOverview: React.FC = () => {
 
                 <ul className="list-unstyled p-0 m-0 d-flex flex-column gap-2 mb-4">
                   {[
-                    "AI-Driven occupancy forecasting & dynamic pricing",
+                    "AI (Beta) occupancy forecasting & dynamic pricing",
                     "Advanced member retention analytics",
                     "Automated kiosk & mobile check-in apps",
                     "IoT light & gate access controls integration",
@@ -145,7 +136,7 @@ const VenueGlideOverview: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>
@@ -164,11 +155,7 @@ const VenueGlideOverview: React.FC = () => {
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge green mb-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                    <line x1="8" y1="21" x2="16" y2="21" />
-                    <line x1="12" y1="17" x2="12" y2="21" />
-                  </svg>
+                  <Icon icon={LuBuilding2} size={24} color="#00D4FF" />
                 </div>
 
                 <h3 className="card-title" style={{ fontSize: "22px", fontWeight: 700, color: "#fff", marginBottom: "12px", minHeight: "56px", display: "flex", alignItems: "center" }}>
@@ -190,7 +177,7 @@ const VenueGlideOverview: React.FC = () => {
                   ].map((item, idx) => (
                     <li key={idx} className="d-flex align-items-center gap-2" style={{ fontSize: "13.5px", color: "#cbd5e1" }}>
                       <span className="d-inline-flex align-items-center justify-content-center flex-shrink-0" style={{ width: "18px", height: "18px", borderRadius: "50%", background: "rgba(0, 212, 255, 0.15)", color: "#00D4FF" }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                        <Icon icon={LuCheck} size={10} />
                       </span>
                       {item}
                     </li>

@@ -72,10 +72,10 @@
   background: rgba(13, 20, 36, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 255, 151, 0.25);
+  border: 1px solid rgba(0, 212, 255, 0.25);
   border-radius: 24px;
   padding: 50px 40px;
-  box-shadow: 0 20px 50px rgba(0, 255, 151, 0.06);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.06);
 }
 
 .pricing-why-box .section-title {
@@ -138,21 +138,21 @@
 
 .pricing-plan-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(0, 255, 151, 0.4);
-  box-shadow: 0 20px 45px rgba(0, 255, 151, 0.12);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 212, 255, 0.12);
 }
 
 .pricing-plan-card.popular {
   border: 2px solid #00D4ff;
   background: rgba(18, 28, 48, 0.9);
-  box-shadow: 0 16px 40px rgba(0, 255, 151, 0.15);
+  box-shadow: 0 16px 40px rgba(0, 212, 255, 0.15);
 }
 
 .popular-badge {
   position: absolute;
   top: -16px;
   right: 24px;
-  background: linear-gradient(135deg, #00D4ff 0%, #00b380 100%);
+  background: linear-gradient(135deg, #00D4ff 0%, #0088ff 100%);
   color: #00020f;
   font-size: 12px;
   font-weight: 800;
@@ -160,7 +160,7 @@
   letter-spacing: 0.08em;
   padding: 6px 16px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 255, 151, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
 }
 
 .plan-header {
@@ -252,12 +252,12 @@
 .plan-footer .btn-plan-primary {
   background: #00D4ff;
   color: #00020f;
-  box-shadow: 0 4px 20px rgba(0, 255, 151, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
 }
 
 .plan-footer .btn-plan-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 255, 151, 0.5);
+  box-shadow: 0 8px 25px #00D4ff;
   color: #00020f;
 }
 
@@ -368,17 +368,17 @@
 
 .everything-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 255, 151, 0.3);
+  border-color: rgba(0, 212, 255, 0.3);
   background: rgba(18, 28, 48, 0.85);
-  box-shadow: 0 10px 30px rgba(0, 255, 151, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.08);
 }
 
 .everything-icon {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(0, 255, 151, 0.1);
-  border: 1px solid rgba(0, 255, 151, 0.2);
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,14 +444,14 @@
 .process-card:hover {
   transform: translateY(-5px);
   border-color: #00D4ff;
-  box-shadow: 0 14px 35px rgba(0, 255, 151, 0.1);
+  box-shadow: 0 14px 35px rgba(0, 212, 255, 0.1);
 }
 
 .process-num {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00D4ff 0%, #00b380 100%);
+  background: linear-gradient(135deg, #00D4ff 0%, #0088ff 100%);
   color: #00020f;
   font-size: 16px;
   font-weight: 800;
@@ -494,13 +494,13 @@
   border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 255, 151, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
   border: none;
 }
 
 .btn-primary-green:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0, 255, 151, 0.45);
+  box-shadow: 0 8px 28px #00D4ff;
   color: #00020f;
 }
 
@@ -521,10 +521,11 @@
 
 .btn-outline-glow:hover {
   background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(0, 255, 151, 0.5);
+  border-color: #00D4ff;
   color: #00D4ff;
   transform: translateY(-2px);
 }
+
 /* 7. FAQ Accordion */
 .pricing-faq-accordion {
   max-width: 900px;
@@ -635,8 +636,8 @@
 }
 
 .why-sports-item:hover {
-  background: rgba(0, 255, 151, 0.08);
-  border-color: rgba(0, 255, 151, 0.3);
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.3);
   transform: translateY(-2px);
 }
 
@@ -665,7 +666,7 @@
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 255, 151, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.08);
 }
 
 .pricing-final-cta-box .title {
@@ -693,8 +694,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Responsive Styles */
 @media (max-width: 991px) {
+
   .pricing-plans-grid,
   .everything-grid,
   .process-grid {

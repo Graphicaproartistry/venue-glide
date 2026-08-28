@@ -80,7 +80,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 151, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, #00D4ff, transparent);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -89,7 +89,7 @@
   transform: translateY(-6px);
   background: rgba(18, 28, 48, 0.85);
   border-color: #00D4ff;
-  box-shadow: 0 16px 36px rgba(0, 255, 151, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 212, 255, 0.08), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .why-venueglide-card:hover::before {

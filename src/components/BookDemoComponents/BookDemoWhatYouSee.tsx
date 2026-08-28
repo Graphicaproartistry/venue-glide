@@ -1,40 +1,57 @@
 import React from "react";
+import { 
+  LuCalendarCheck, 
+  LuUsers, 
+  LuUserCheck, 
+  LuCreditCard, 
+  LuGraduationCap, 
+  LuChartColumn, 
+  LuSparkles 
+} from "react-icons/lu";
+import { Icon } from "../common/Icon";
+import { IconType } from "react-icons";
 
-const features = [
+interface DemoFeatureItem {
+  title: string;
+  desc: string;
+  icon: IconType;
+}
+
+const features: DemoFeatureItem[] = [
   {
     title: "Online Booking Management",
     desc: "See how customers book courts, facilities and coaching online in real time.",
-    icon: "far fa-calendar-check",
+    icon: LuCalendarCheck,
   },
   {
     title: "Membership Management",
     desc: "Discover how memberships, renewals, attendance and loyalty programs are automated.",
-    icon: "far fa-id-card",
+    icon: LuUsers,
   },
   {
     title: "Customer CRM",
     desc: "View complete customer profiles, booking history, communication and marketing tools.",
-    icon: "far fa-users-gear",
+    icon: LuUserCheck,
   },
   {
     title: "Point of Sale",
     desc: "Explore café, retail, merchandise and equipment hire workflows.",
-    icon: "far fa-cash-register",
+    icon: LuCreditCard,
   },
   {
     title: "Coaching Management",
     desc: "Learn how coaches, lessons, academies and player development programs are managed.",
-    icon: "far fa-user-graduate",
+    icon: LuGraduationCap,
   },
   {
     title: "Reporting & Analytics",
     desc: "See live business dashboards and performance reports.",
-    icon: "far fa-chart-mixed",
+    icon: LuChartColumn,
   },
   {
-    title: "VenueGlide AI",
+    title: "VenueGlide AI (Beta)",
     desc: "Experience AI-powered reporting, forecasting and operational insights.",
-    icon: "far fa-brain-circuit",
+    icon: LuSparkles,
   },
 ];
 
@@ -67,7 +84,7 @@ const BookDemoWhatYouSee: React.FC = () => {
               data-wow-duration="600ms"
             >
               <div className="card-icon-box">
-                <i className={item.icon}></i>
+                <Icon icon={item.icon} size={24} />
               </div>
               <h4 className="card-title">{item.title}</h4>
               <p className="card-desc">{item.desc}</p>

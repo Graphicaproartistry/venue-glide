@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { LuCheck, LuUser, LuBuilding2, LuSend } from "react-icons/lu";
+import { Icon } from "../common/Icon";
 
 const ContactFormCustom: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -45,7 +47,7 @@ const ContactFormCustom: React.FC = () => {
                   width: "70px",
                   height: "70px",
                   borderRadius: "50%",
-                  background: "rgba(0, 255, 151, 0.15)",
+                  background: "rgba(0, 212, 255, 0.15)",
                   border: "2px solid #00D4ff",
                   display: "flex",
                   alignItems: "center",
@@ -55,7 +57,7 @@ const ContactFormCustom: React.FC = () => {
                   fontSize: "32px",
                 }}
               >
-                <i className="far fa-check"></i>
+                <Icon icon={LuCheck} size={32} />
               </div>
               <h3 style={{ color: "#ffffff", fontWeight: 800, marginBottom: "16px" }}>
                 Enquiry Sent Successfully!
@@ -69,7 +71,7 @@ const ContactFormCustom: React.FC = () => {
               {/* Personal Information */}
               <div className="form-group-section">
                 <div className="form-section-header">
-                  <i className="far fa-user me-2"></i> Personal Information
+                  <Icon icon={LuUser} className="me-2" size={18} /> Personal Information
                 </div>
                 <div className="row g-3">
                   <div className="col-md-6">
@@ -138,7 +140,7 @@ const ContactFormCustom: React.FC = () => {
               {/* Venue Information */}
               <div className="form-group-section">
                 <div className="form-section-header">
-                  <i className="far fa-building me-2"></i> Venue Information
+                  <Icon icon={LuBuilding2} className="me-2" size={18} /> Venue Information
                 </div>
                 <div className="row g-3">
                   <div className="col-md-6">
@@ -231,7 +233,7 @@ const ContactFormCustom: React.FC = () => {
               {/* Your Enquiry */}
               <div className="form-group-section">
                 <div className="form-section-header">
-                  <i className="far fa-paper-plane me-2"></i> Your Enquiry
+                  <Icon icon={LuSend} className="me-2" size={18} /> Your Enquiry
                 </div>
                 <div className="mb-3">
                   <label className="form-label">How can we help? *</label>
