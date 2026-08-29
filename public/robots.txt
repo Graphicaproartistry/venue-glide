@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.venueglide.com.au/sitemap.xml
+Sitemap: https://www.venueglide.com/sitemap.xml

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const SITE_URL = "https://www.venueglide.com.au";
+export const SITE_URL = "https://www.venueglide.com";
 export const SITE_NAME = "VenueGlide";
 
 interface SeoProps {

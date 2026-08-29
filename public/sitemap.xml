@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.venueglide.com.au/</loc>
+    <loc>https://www.venueglide.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.venueglide.com.au/platform</loc>
+    <loc>https://www.venueglide.com/platform</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.venueglide.com.au/solutions</loc>
+    <loc>https://www.venueglide.com/solutions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.venueglide.com.au/industries</loc>
+    <loc>https://www.venueglide.com/industries</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.venueglide.com.au/pricing</loc>
+    <loc>https://www.venueglide.com/pricing</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.venueglide.com.au/about</loc>
+    <loc>https://www.venueglide.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.venueglide.com.au/book-demo</loc>
+    <loc>https://www.venueglide.com/book-demo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.venueglide.com.au/contact</loc>
+    <loc>https://www.venueglide.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
