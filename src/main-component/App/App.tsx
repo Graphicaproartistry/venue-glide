@@ -4,7 +4,6 @@ import AllRoute from "../router";
 import ErrorBoundary from "./ErrorBoundary";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "animate.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import Collapse from "@mui/material/Collapse";
+import { AnimatePresence, motion } from "framer-motion";
 import "./style.css";
 
 interface MenuItem {
@@ -89,18 +89,26 @@ const MobileMenu: React.FC = () => {
                   ></i>
                 </p>
 
-                {/* MUI Collapse for smooth animation */}
-                <Collapse in={openId === menu.id} timeout="auto" unmountOnExit>
-                  <ul className="subMenu">
-                    {menu.submenu.map((sub) => (
-                      <li key={sub.id}>
-                        <Link to={sub.link} onClick={handleClick}>
-                          {sub.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </Collapse>
+                <AnimatePresence initial={false}>
+                  {openId === menu.id && (
+                    <motion.ul
+                      className="subMenu"
+                      style={{ overflow: "hidden" }}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      {menu.submenu.map((sub) => (
+                        <li key={sub.id}>
+                          <Link to={sub.link} onClick={handleClick}>
+                            {sub.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
               </Fragment>
             ) : (
               <Link to={menu.link} onClick={handleClick}>

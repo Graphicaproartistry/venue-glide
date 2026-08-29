@@ -1,12 +1,16 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import Reveal from "../motion/Reveal";
 
 // Image imports (using your provided path)
 import heroBg from "../../images/bg/hero_bg.png";
 import heroIcon from "../../images/icon/animated-gif02.gif";
 import featureIcon1 from "../../images/icon/feature-icon01.svg";
 import featureIcon2 from "../../images/icon/feature-icon02.svg";
+
+const MotionLink = motion(Link);
 
 const HeroSection: React.FC = () => {
   return (
@@ -19,14 +23,22 @@ const HeroSection: React.FC = () => {
           {/* ---------- Left Content ---------- */}
           <div className="col-lg-9 col-md-9">
             <div className="hero-content">
-              <h2 className="title scale-animation wow">
-                Complete Sports Venue Management Software for Australia
-              </h2>
-              <p className="sub-title scale-animation wow">
-                Everything your sports venue needs to manage bookings, memberships, coaching, payments, POS, reporting and customer relationships — all from one intelligent cloud platform.
-              </p>
-              <div className="hero-btn scale-animation wow ">
-                <Link className="thm-btn agency-btn" to="/about" style={{ marginRight: "10px", marginBottom: "10px" }}>
+              <Reveal direction="up" distance={24}>
+                <h2 className="title">
+                  Complete Sports Venue Management Software for Australia
+                </h2>
+              </Reveal>
+              <Reveal direction="up" distance={24} delay={0.12}>
+                <p className="sub-title">
+                  Everything your sports venue needs to manage bookings, memberships, coaching, payments, POS, reporting and customer relationships — all from one intelligent cloud platform.
+                </p>
+              </Reveal>
+              <Reveal direction="up" distance={24} delay={0.24} className="hero-btn">
+                <MotionLink
+                  whileHover={{ scale: 1.04, y: -2 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                  className="thm-btn agency-btn" to="/about" style={{ marginRight: "10px", marginBottom: "10px" }}>
                   <span className="text">Book Now</span>
                   <span className="arrow">
                     <span className="arrow-icon">
@@ -160,8 +172,12 @@ const HeroSection: React.FC = () => {
                       </svg>
                     </span>
                   </span>
-                </Link>
-                <Link className="thm-btn agency-btn" to="/about">
+                </MotionLink>
+                <MotionLink
+                  whileHover={{ scale: 1.04, y: -2 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                  className="thm-btn agency-btn" to="/about">
                   <span className="text">Watch Platform Tour</span>
                   <span className="arrow">
                     <span className="arrow-icon">
@@ -295,24 +311,26 @@ const HeroSection: React.FC = () => {
                       </svg>
                     </span>
                   </span>
-                </Link>
-              </div>
+                </MotionLink>
+              </Reveal>
             </div>
           </div>
 
           {/* ---------- Right Icon ---------- */}
           <div className="col-lg-3 col-md-3">
-            <div
-              className="hero-icon wow zoomIn"
-              data-wow-delay="700ms"
-              data-wow-duration="800ms"
-            >
-              <img src={heroIcon} alt="Hero icon" />
-            </div>
+            <Reveal direction="none" delay={0.3}>
+              <motion.div
+                className="hero-icon"
+                animate={{ y: [0, -14, 0] }}
+                transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <img src={heroIcon} alt="Hero icon" />
+              </motion.div>
+            </Reveal>
           </div>
         </div>
         {/* ===== Title Section ===== */}
-        <div className="sec-title sec-title-center about-sec-title about-sec-title-two text-center pt-5 mt-5 pb-2" style={{ paddingTop: "90px" }}>
+        <Reveal direction="up" className="sec-title sec-title-center about-sec-title about-sec-title-two text-center pt-5 mt-5 pb-2" style={{ paddingTop: "90px" }}>
           <span className="sub-title d-inline-flex align-items-center gap-2 px-4 py-2 mb-3 rounded-pill text-uppercase fw-semibold" style={{ background: "rgba(0, 212, 255, 0.12)", color: "#00D4FF", border: "1px solid rgba(0, 212, 255, 0.3)", fontSize: "12px", letterSpacing: "1.5px" }}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
@@ -332,16 +350,19 @@ const HeroSection: React.FC = () => {
           <p className="content mx-auto" style={{ maxWidth: "720px", fontSize: "16px", color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.6" }}>
             Whether you operate a single indoor facility or manage multi-sport venues across Australia, VenueGlide OS powers seamless operations and maximum court utilization.
           </p>
-        </div>
+        </Reveal>
 
         {/* ---------- Features / Support Cards ---------- */}
         <div className="row g-4 mt-2 pb-5">
           {/* Card 1: We Support */}
           <div className="col-lg-6 mt-30">
-            <div
-              className="xb-feature-item h-100 p-4 p-md-5 rounded-4 pos-rel wow fadeInUp"
-              data-wow-delay="700ms"
-              data-wow-duration="600ms"
+            <motion.div
+              className="xb-feature-item h-100 p-4 p-md-5 rounded-4 pos-rel"
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -6, boxShadow: "0 28px 55px rgba(0, 0, 0, 0.5)" }}
               style={{
                 background: "rgba(10, 15, 30, 0.75)",
                 border: "1px solid rgba(0, 212, 255, 0.25)",
@@ -457,15 +478,18 @@ const HeroSection: React.FC = () => {
                 ))}
 
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Card 2: Platform Capabilities */}
           <div className="col-lg-6 mt-30">
-            <div
-              className="xb-feature-item h-100 p-4 p-md-5 rounded-4 pos-rel wow fadeInUp"
-              data-wow-delay="800ms"
-              data-wow-duration="600ms"
+            <motion.div
+              className="xb-feature-item h-100 p-4 p-md-5 rounded-4 pos-rel"
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -6, boxShadow: "0 28px 55px rgba(0, 0, 0, 0.5)" }}
               style={{
                 background: "rgba(10, 15, 30, 0.75)",
                 border: "1px solid rgba(0, 212, 255, 0.25)",
@@ -552,7 +576,7 @@ const HeroSection: React.FC = () => {
                   Purpose-built specifically for Australian sports facilities.
                 </span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
