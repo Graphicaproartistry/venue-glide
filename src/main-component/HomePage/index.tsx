@@ -1,38 +1,38 @@
 import React, { Fragment, useEffect } from "react";
 import Header from "../../components/Header/Header";
-import HeroSection from "../../components/hero/Hero";
-import SportsVenueFeatures from "../../components/SportsVenueFeatures/SportsVenueFeatures";
-import SportsVenueFAQ from "../../components/SportsVenueFAQ/SportsVenueFAQ";
 import Footer from "../../components/footer/Footer";
 import Scrollbar from "../../components/scrollbar/scrollbar";
-import AwardSection from "../../components/AboutComponents/AwardSection/AwardSection";
-import IntegrationSection from "../../components/ai-chatbot-components/IntegrationSection/IntegrationSection";
 
+import EditorialHero from "../../components/home/EditorialHero";
+import TrustMarquee from "../../components/home/TrustMarquee";
+import Statement from "../../components/home/Statement";
+import SportsVenueFeatures from "../../components/SportsVenueFeatures/SportsVenueFeatures";
+import KeyFigures from "../../components/home/KeyFigures";
+import VenueShowcase from "../../components/home/VenueShowcase";
+import SportsVenueFAQ from "../../components/SportsVenueFAQ/SportsVenueFAQ";
+import BigCTA from "../../components/home/BigCTA";
 
+import "../../components/home/editorial.css";
 
 const HomePage: React.FC = () => {
   useEffect(() => {
-    document.title = "Home | Venue Glide";
+    document.title = "VenueGlide | Sports Venue Management Software for Australia";
   }, []);
 
   return (
     <Fragment>
-      <div className='ai-agency'>
+      <div className="ai-agency">
         <div className="body_wrap o-clip">
           <Header />
           <main>
-            <HeroSection />
-            <div className="IntegrationSection-custom"><IntegrationSection /></div>
+            <EditorialHero />
+            <TrustMarquee />
+            <Statement />
             <SportsVenueFeatures />
+            <KeyFigures />
+            <VenueShowcase />
             <SportsVenueFAQ />
-            <AwardSection />
-            {/* <ServiceSection /> */}
-            {/* <ProjectSection/> */}
-            {/* <IndustriesMarqueeSection /> */}
-            {/* <IndustriesSection /> */}
-            {/* <ContactSection /> */}
-            {/* <TestimonialSection /> */}
-            {/* <BlogSection /> */}
+            <BigCTA />
           </main>
           <Footer />
           <Scrollbar />
