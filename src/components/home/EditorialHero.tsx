@@ -47,7 +47,7 @@ const EditorialHero: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            Sports Venue Operating System — Australia
+            Melbourne's Sports Venue Operating System
           </motion.span>
 
           <MaskText
@@ -65,9 +65,9 @@ const EditorialHero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.05, ease: [0.16, 1, 0.3, 1] }}
             >
-              Bookings, memberships, coaching, payments, POS and reporting — run
-              your entire venue from one platform built for Australian sports
-              facilities.
+              Bookings, memberships, coaching, payments, POS and staffless
+              access — run your entire venue from one platform built for
+              Melbourne sports facilities and trusted Australia-wide.
             </motion.p>
 
             <motion.div

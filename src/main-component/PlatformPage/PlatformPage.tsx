@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Header from "../../components/Header/Header";
+import Seo from "../../components/seo/Seo";
 import PlatformHero from "../../components/PlatformComponents/PlatformHero";
 import PlatformOperatingSystem from "../../components/PlatformComponents/PlatformOperatingSystem";
 import PlatformWorksTogether from "../../components/PlatformComponents/PlatformWorksTogether";
@@ -15,6 +16,11 @@ import "../../components/PlatformComponents/Platform.css";
 const PlatformPage: React.FC = () => {
   return (
     <Fragment>
+      <Seo
+        title="VenueGlide OS Platform | Sports Venue Management System"
+        description="Explore the VenueGlide OS platform: online bookings, memberships, POS, coaching and reporting for sports venues in Melbourne and across Australia, with native Stripe, Xero and Igloo staffless-access integrations."
+        path="/platform"
+      />
       <div className="platform-page inner-page">
         <div className="body_wrap o-clip">
           <Header />

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Header from "../../components/Header/Header";
 import PageTitle from "../../components/pagetitle/PageTitle";
+import Seo from "../../components/seo/Seo";
 import AboutSection from "../../components/AboutComponents/AboutSection/AboutSection";
 import WhyVenueGlide from "../../components/WhyVenueGlide/WhyVenueGlide";
 import FeatureSection from "../../components/AboutComponents/FeatureSection/FeatureSection";
@@ -12,6 +13,11 @@ import Footer from "../../components/footer/Footer";
 const AboutPage: React.FC = () => {
   return (
     <Fragment>
+      <Seo
+        title="About VenueGlide | Melbourne Sports Venue Software Company"
+        description="VenueGlide builds sports venue management software from Melbourne, Australia — helping indoor cricket, padel, tennis and multi-sport venues run bookings, payments and operations from one platform."
+        path="/about"
+      />
       <div className='about-page inner-page'>
         <div className="body_wrap o-clip">
           <Header />

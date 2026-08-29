@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./SportsVenueFAQ.css";
 import featureBg from "../../images/bg/features-gradient-bg.png";
 
-interface FAQItem {
+export interface FAQItem {
   id: number;
   question: string;
   answer: string;
 }
 
-const faqData: FAQItem[] = [
+export const faqData: FAQItem[] = [
   {
     id: 1,
     question: "What is sports venue management software?",
@@ -43,13 +43,13 @@ const faqData: FAQItem[] = [
     id: 6,
     question: "Can I accept online payments?",
     answer:
-      "Yes. VenueGlide integrates securely with major payment gateways to process credit cards, debit cards, direct debits, and automated recurring billing with complete security.",
+      "Yes. VenueGlide integrates natively with Stripe to process credit cards, debit cards and direct debits, with automated recurring billing handled securely end to end.",
   },
   {
     id: 7,
     question: "Does VenueGlide integrate with Xero?",
     answer:
-      "Yes! VenueGlide offers seamless integration with accounting platforms like Xero, allowing automated syncing of daily sales, invoices, revenue streams, and financial reports.",
+      "Yes! VenueGlide offers a native Xero integration, allowing automated syncing of daily sales, invoices, revenue streams, and financial reports straight into your accounting platform.",
   },
   {
     id: 8,
@@ -80,6 +80,18 @@ const faqData: FAQItem[] = [
     question: "Does VenueGlide work on mobile devices?",
     answer:
       "Yes! VenueGlide is fully cloud-based and responsive. Admins, staff, coaches, and customers can access all features smoothly on desktop, tablet, and mobile browsers.",
+  },
+  {
+    id: 13,
+    question: "Can members enter the venue during staffless hours?",
+    answer:
+      "Yes. VenueGlide integrates with Igloo smart-lock door access, so members and booked customers can unlock the venue themselves during early-morning, late-night or unstaffed hours — access is granted automatically for the duration of their booking and revoked afterwards.",
+  },
+  {
+    id: 14,
+    question: "Is VenueGlide available in Melbourne and across Australia?",
+    answer:
+      "Yes. VenueGlide is built and supported in Melbourne, Victoria, and used by sports venues across Australia — from independent single-court clubs to multi-location operators.",
   },
 ];
 

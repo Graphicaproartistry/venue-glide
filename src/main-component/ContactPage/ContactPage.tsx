@@ -1,5 +1,6 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import Header from "../../components/Header/Header";
+import Seo from "../../components/seo/Seo";
 import ContactHero from "../../components/ContactComponents/ContactHero";
 import ContactSpeakWithTeam from "../../components/ContactComponents/ContactSpeakWithTeam";
 import ContactInfoCards from "../../components/ContactComponents/ContactInfoCards";
@@ -15,25 +16,13 @@ import Scrollbar from "../../components/scrollbar/scrollbar";
 import "../../components/ContactComponents/Contact.css";
 
 const ContactPage: React.FC = () => {
-  useEffect(() => {
-    // SEO Title
-    document.title = "Contact VenueGlide | Sports Venue Management Software Australia";
-
-    // Meta Description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute(
-      "content",
-      "Contact VenueGlide to learn how our sports venue management software can help your venue simplify bookings, memberships, payments, CRM, reporting and daily operations. Book a demo or speak with our team today."
-    );
-  }, []);
-
   return (
     <Fragment>
+      <Seo
+        title="Contact VenueGlide | Sports Venue Software Melbourne"
+        description="Contact VenueGlide to learn how our sports venue management software can help your Melbourne or Australia-wide venue simplify bookings, memberships, payments, CRM and daily operations."
+        path="/contact"
+      />
       <div className="contact-page inner-page">
         <div className="body_wrap o-clip">
           <Header />
