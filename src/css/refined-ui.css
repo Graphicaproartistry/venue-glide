@@ -28,8 +28,25 @@
   filter: none !important;
 }
 
-/* Solid, restrained cards instead of heavy glassmorphism/neon borders. */
-.xb-feature-item, .venueglide-overview-card, .solution-grid-card, .what-you-see-card, .comparison-list {
+/* Solid, restrained cards instead of heavy glassmorphism/neon borders.
+   Every inner page (Platform/Solutions/Industries/Pricing/Contact) built its
+   own copy of this same card pattern under a different page-prefixed
+   classname (industry-grid-card, platform-grid-card, everything-card, ...) —
+   listed here explicitly rather than guessed at, since a wildcard
+   [class*="-card"] would also catch unrelated one-off classes. */
+.xb-feature-item,
+.venueglide-overview-card,
+.solution-grid-card,
+.what-you-see-card,
+.comparison-list,
+.industry-card,
+.industry-grid-card,
+.why-sports-card,
+.platform-grid-card,
+.everything-card,
+.process-card,
+.speak-card,
+.contact-info-card {
   border-radius: var(--radius-lg) !important;
   border: 1px solid var(--color-border) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;

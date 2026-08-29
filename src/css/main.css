@@ -50,8 +50,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 :root {
-  --font-body: "DM Sans", sans-serif;
-  --font-heading: 'SportingGrotesque';
+  --font-body: "Host Grotesk", "DM Sans", sans-serif;
+  --font-heading: "Host Grotesk", "DM Sans", sans-serif;
   --color-primary: #00D4ff;
   --color-secondary: #00020f;
   --color-heading: #fff;
