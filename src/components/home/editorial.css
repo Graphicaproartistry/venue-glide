@@ -503,6 +503,88 @@ html::-webkit-scrollbar {
   }
 }
 
+/* ---- retheme the legacy glow pill-buttons sitewide ---------------------
+   `.btn-primary-green` / `.btn-outline-glow` are redefined nearly
+   identically in half a dozen per-page stylesheets (Platform.css,
+   Solution.css, Industry.css, Pricing.css, BookDemo.css, Contact.css) and
+   used throughout each page, not just in the heroes already rebuilt above.
+   Retheming the shared classnames once here reaches every remaining
+   instance without touching every section of every page individually. */
+.btn-primary-green,
+.btn-outline-glow {
+  border-radius: 2px !important;
+  font-family: var(--ed-font) !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease !important;
+}
+
+.btn-primary-green {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+
+.btn-primary-green:hover {
+  background: var(--ed-accent) !important;
+  border-color: var(--ed-accent) !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-outline-glow {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+.btn-outline-glow:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Same family, different name (pricing cards): .btn-plan-primary/-outline. */
+.btn-plan-primary,
+.btn-plan-outline {
+  border-radius: 2px !important;
+  font-family: var(--ed-font) !important;
+  letter-spacing: 0.04em !important;
+  box-shadow: none !important;
+}
+
+.btn-plan-primary {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.btn-plan-primary:hover {
+  background: var(--ed-accent) !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+}
+
+.btn-plan-outline:hover {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.pricing-plan-card.popular {
+  border-color: var(--ed-accent) !important;
+  box-shadow: none !important;
+}
+
+.popular-badge {
+  background: var(--ed-accent) !important;
+  color: #000000 !important;
+}
+
 /* ---- fold the FAQ (still on its own component/CSS) into the same
    pure-black system so there's no visible seam between it and the
    editorial sections either side of it. ---------------------------- */

@@ -1,0 +1,51 @@
+/* Shared "inner page" hero: the same editorial system as the homepage
+ * (Host Grotesk, mask-reveal type, restrained buttons) but text-led rather
+ * than full-bleed photography, since these are secondary pages. Reuses the
+ * .ed-label / .ed-display / .ed-lede / .ed-btn primitives from editorial.css.
+ */
+.ed-page-hero {
+  position: relative;
+  background: #000000;
+  padding: 190px var(--ed-x, clamp(20px, 4vw, 60px)) 100px;
+  text-align: center;
+}
+
+.ed-page-hero .ed-label {
+  justify-content: center;
+}
+
+.ed-page-hero .ed-label::before {
+  display: none;
+}
+
+.ed-page-hero .ed-display {
+  max-width: 18em;
+  margin: 0 auto;
+}
+
+/* Inner-page heroes are secondary to the homepage's — same uppercase
+   display treatment, dialled back a size step. */
+.ed-page-hero .ed-display.ed-display--sm {
+  font-size: clamp(1.9rem, 4.6vw, 3.6rem);
+}
+
+.ed-page-hero .ed-lede {
+  margin: 28px auto 0;
+  max-width: 42em;
+  text-align: center;
+}
+
+.ed-page-hero .ed-lede + .ed-lede {
+  margin-top: 12px;
+}
+
+.ed-page-hero .ed-hero-actions {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .ed-page-hero {
+    padding: 150px var(--ed-x, 20px) 64px;
+  }
+}

@@ -1,5 +1,8 @@
 import React from "react";
-import featureBg from "../../images/bg/features-gradient-bg.png";
+import MaskText from "../motion/MaskText";
+import Reveal from "../motion/Reveal";
+import MagneticButton from "../motion/MagneticButton";
+import "../editorial/page-hero.css";
 
 const BookDemoHero: React.FC = () => {
   const scrollToForm = () => {
@@ -10,29 +13,36 @@ const BookDemoHero: React.FC = () => {
   };
 
   return (
-    <section
-      className="book-demo-hero-banner"
-      style={{ backgroundImage: `url(${featureBg})` }}
-    >
-      <div className="container">
-        <h1 className="hero-title wow fadeInUp" data-wow-duration="600ms">
-          See VenueGlide OS in Action
-        </h1>
-        <h2 className="hero-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          Discover how VenueGlide can simplify operations, increase bookings and help your sports venue grow.
-        </h2>
-        <p className="hero-desc wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
-          Every sports venue is different. That's why every VenueGlide demonstration is personalised around your business, your workflows and your operational goals.
+    <section className="ed-page-hero">
+      <Reveal direction="up">
+        <span className="ed-label">Book a Demo</span>
+      </Reveal>
+
+      <MaskText
+        as="h1"
+        className="ed-display ed-display--sm"
+        lines={["See VenueGlide OS", "in action"]}
+      />
+
+      <Reveal direction="up" delay={0.15}>
+        <p className="ed-lede">
+          Discover how VenueGlide can simplify operations, increase bookings
+          and help your sports venue grow. Every sports venue is different —
+          that's why every VenueGlide demonstration is personalised around
+          your business, your workflows and your operational goals. During
+          your live demo, our specialists will show you exactly how
+          VenueGlide can improve bookings, memberships, customer management,
+          reporting and day-to-day venue operations.
         </p>
-        <p className="hero-desc wow fadeInUp" data-wow-delay="250ms" data-wow-duration="600ms">
-          During your live demo, our specialists will show you exactly how VenueGlide can improve bookings, memberships, customer management, reporting and day-to-day venue operations.
-        </p>
-        <div className="hero-btns wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-          <button onClick={scrollToForm} className="btn-primary-green">
+      </Reveal>
+
+      <Reveal direction="up" delay={0.25} className="ed-hero-actions">
+        <MagneticButton>
+          <button className="ed-btn ed-btn--solid" onClick={scrollToForm} data-cursor="link">
             Schedule Your Personalised Demo
           </button>
-        </div>
-      </div>
+        </MagneticButton>
+      </Reveal>
     </section>
   );
 };
