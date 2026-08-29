@@ -58,8 +58,8 @@ const VenueShowcase: React.FC = () => {
 
         <MaskText
           as="h2"
-          className="ed-display ed-display--sm"
-          lines={["Purpose-built for", "how venues actually run"]}
+          className="ed-heading"
+          lines={["Purpose-built for how", "venues actually run"]}
         />
 
         <div style={{ marginTop: 72 }}>

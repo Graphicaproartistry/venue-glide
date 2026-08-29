@@ -93,10 +93,14 @@
 
 .capability-row {
   position: relative;
-  display: flex;
-  gap: 28px;
   padding: 34px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.capability-row-spotlight {
+  display: flex;
+  gap: 28px;
+  width: 100%;
 }
 
 .capability-row:first-child {

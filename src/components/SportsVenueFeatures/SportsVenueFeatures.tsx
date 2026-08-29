@@ -115,31 +115,46 @@ const FeatureRow: React.FC<FeatureRowProps & { index: number }> = ({
   description,
   tags,
   index,
-}) => (
-  <Reveal
-    direction="up"
-    distance={20}
-    delay={Math.min(index * 0.06, 0.3)}
-    className="capability-row"
-  >
-    <div className="capability-row-marker">
-      <span className="capability-row-index">{String(index + 1).padStart(2, "0")}</span>
-      <span className="capability-row-icon">
-        <Icon icon={icon} size={22} />
-      </span>
-    </div>
+}) => {
+  // A second, continuous layer on top of the one-shot fade-up entrance:
+  // each service dims to a resting 40% as it leaves the viewport centre and
+  // brightens back to full as it approaches, so services "light up" one by
+  // one while scrolling rather than all sitting at full brightness at once.
+  const rowRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: rowRef,
+    offset: ["start 0.88", "center 0.55", "end 0.2"],
+  });
+  const spotlight = useTransform(scrollYProgress, [0, 0.5, 1], [0.4, 1, 0.4]);
 
-    <div className="capability-row-content">
-      <h3 className="capability-row-title">{title}</h3>
-      <p className="capability-row-desc">{description}</p>
-      <ul className="capability-row-tags">
-        {tags.map((tag, tagIdx) => (
-          <li key={tagIdx}>{tag}</li>
-        ))}
-      </ul>
-    </div>
-  </Reveal>
-);
+  return (
+    <Reveal
+      direction="up"
+      distance={20}
+      delay={Math.min(index * 0.06, 0.3)}
+      className="capability-row"
+    >
+      <motion.div ref={rowRef} className="capability-row-spotlight" style={{ opacity: spotlight }}>
+        <div className="capability-row-marker">
+          <span className="capability-row-index">{String(index + 1).padStart(2, "0")}</span>
+          <span className="capability-row-icon">
+            <Icon icon={icon} size={22} />
+          </span>
+        </div>
+
+        <div className="capability-row-content">
+          <h3 className="capability-row-title">{title}</h3>
+          <p className="capability-row-desc">{description}</p>
+          <ul className="capability-row-tags">
+            {tags.map((tag, tagIdx) => (
+              <li key={tagIdx}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+      </motion.div>
+    </Reveal>
+  );
+};
 
 const SportsVenueFeatures: React.FC = () => {
   const railRef = useRef<HTMLDivElement>(null);

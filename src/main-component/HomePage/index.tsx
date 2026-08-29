@@ -12,8 +12,6 @@ import VenueShowcase from "../../components/home/VenueShowcase";
 import SportsVenueFAQ from "../../components/SportsVenueFAQ/SportsVenueFAQ";
 import BigCTA from "../../components/home/BigCTA";
 
-import "../../components/home/editorial.css";
-
 const HomePage: React.FC = () => {
   useEffect(() => {
     document.title = "VenueGlide | Sports Venue Management Software for Australia";
@@ -24,7 +22,7 @@ const HomePage: React.FC = () => {
       <div className="ai-agency">
         <div className="body_wrap o-clip">
           <Header />
-          <main>
+          <main className="ed-root">
             <EditorialHero />
             <TrustMarquee />
             <Statement />

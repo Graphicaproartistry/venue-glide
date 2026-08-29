@@ -7,6 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import ScreenLoader from "../../components/motion/ScreenLoader";
+import "../../components/home/editorial.css";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -99,6 +101,7 @@ const App: React.FC = () => {
   // ======================
   return (
     <div className="App lenis" id="scrool">
+      <ScreenLoader />
       <ErrorBoundary>
         <AllRoute />
       </ErrorBoundary>
