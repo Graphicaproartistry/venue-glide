@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import HeroSection from "../../components/hero/Hero";
-import AboutSection from "../../components/about/about";
 import SportsVenueFeatures from "../../components/SportsVenueFeatures/SportsVenueFeatures";
 import SportsVenueFAQ from "../../components/SportsVenueFAQ/SportsVenueFAQ";
 import Footer from "../../components/footer/Footer";
@@ -23,7 +22,6 @@ const HomePage: React.FC = () => {
           <Header />
           <main>
             <HeroSection />
-            <AboutSection />
             <div className="IntegrationSection-custom"><IntegrationSection /></div>
             <SportsVenueFeatures />
             <SportsVenueFAQ />

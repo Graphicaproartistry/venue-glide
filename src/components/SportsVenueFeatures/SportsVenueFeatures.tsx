@@ -13,6 +13,7 @@ import {
 } from "react-icons/lu";
 import { Icon } from "../common/Icon";
 import { IconType } from "react-icons";
+import Reveal from "../motion/Reveal";
 
 interface FeatureCardProps {
   icon: IconType;
@@ -144,7 +145,7 @@ const SportsVenueFeatures: React.FC = () => {
       style={{ backgroundImage: `url(${featureBg})` }}
     >
       <div className="container">
-        <div className="sec-title-wrap text-center mb-5">
+        <Reveal direction="up" className="sec-title-wrap text-center mb-5">
           <span className="sub-title d-inline-flex align-items-center gap-2 px-3 py-1 mb-2 rounded-pill text-uppercase fw-semibold">
             <Icon icon={LuZap} size={14} />
             Engineered for Sports Venues
@@ -152,15 +153,20 @@ const SportsVenueFeatures: React.FC = () => {
           <h2 className="sec-title">
             Powerful Features Designed for <br className="d-none d-md-inline" /> Modern Sports Facilities
           </h2>
-        </div>
+        </Reveal>
 
         <div className="row g-4 align-items-stretch">
           {featureData.map((card, idx) => (
             <div className="col-lg-4 col-md-6 d-flex" key={idx}>
-              <div
-                className="venue-feature-card w-100 d-flex flex-column justify-content-between wow fadeInUp"
-                data-wow-delay={card.delay}
-                data-wow-duration="600ms"
+              <Reveal
+                direction="up"
+                delay={parseInt(card.delay, 10) / 1000}
+                className="venue-feature-card w-100 d-flex flex-column justify-content-between"
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0 24px 48px rgba(0, 0, 0, 0.35)",
+                  transition: { duration: 0.25, ease: "easeOut" },
+                }}
               >
                 <div>
                   <div className="d-flex align-items-center justify-content-between mb-3">
@@ -201,7 +207,7 @@ const SportsVenueFeatures: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>
