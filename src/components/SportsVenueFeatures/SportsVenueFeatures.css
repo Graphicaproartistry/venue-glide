@@ -99,7 +99,8 @@
 
 .capability-row-spotlight {
   display: flex;
-  gap: 28px;
+  align-items: flex-start;
+  gap: 14px;
   width: 100%;
 }
 
@@ -112,14 +113,19 @@
   padding-bottom: 6px;
 }
 
+/* A normal flex item that bleeds into the rail's own left padding via a
+   negative margin, rather than `position: absolute` — that trick broke once
+   the marker ended up nested inside another element (any ancestor with a
+   transform, which Framer Motion applies even at rest, becomes a new
+   containing block, so the absolute offset silently resolved against the
+   wrong box and the icon landed on top of the copy instead of beside it). */
 .capability-row-marker {
-  position: absolute;
-  left: -76px;
-  top: 34px;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   gap: 14px;
   width: 76px;
+  margin-left: -76px;
 }
 
 .capability-row-index {
