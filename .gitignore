@@ -11,6 +11,9 @@
 # production
 /build
 
+# graphify (regenerable local knowledge-graph index)
+/graphify-out
+
 # misc
 .DS_Store
 .env.local

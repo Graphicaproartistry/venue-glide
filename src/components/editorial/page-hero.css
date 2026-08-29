@@ -18,6 +18,16 @@
   display: none;
 }
 
+.ed-page-hero .ed-label a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.ed-page-hero .ed-label a:hover {
+  color: var(--ed-accent, #00d4ff);
+}
+
 .ed-page-hero .ed-display {
   max-width: 18em;
   margin: 0 auto;
