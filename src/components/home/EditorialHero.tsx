@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import MaskText from "../motion/MaskText";
+import MagneticButton from "../motion/MagneticButton";
 import heroImage from "../../images/sports/basketball.png";
 
 /**
@@ -75,12 +76,16 @@ const EditorialHero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Link className="ed-btn ed-btn--solid" to="/book-demo">
-                Book a demo
-              </Link>
-              <Link className="ed-btn ed-btn--ghost" to="/platform">
-                Explore the platform
-              </Link>
+              <MagneticButton>
+                <Link className="ed-btn ed-btn--solid" to="/book-demo" data-cursor="link">
+                  Book a demo
+                </Link>
+              </MagneticButton>
+              <MagneticButton>
+                <Link className="ed-btn ed-btn--ghost" to="/platform" data-cursor="link">
+                  Explore the platform
+                </Link>
+              </MagneticButton>
             </motion.div>
           </div>
         </div>

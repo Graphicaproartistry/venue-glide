@@ -1,173 +1,145 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import logo from "../../images/logo/VenueGlide-logo-white-text.png";
-import MobileMenu from "../MobileMenu/MobileMenu";
-import { LuMenu, LuSearch } from "react-icons/lu";
+import { LuMenu, LuX } from "react-icons/lu";
 import { Icon } from "../common/Icon";
+import MagneticButton from "../motion/MagneticButton";
+import "./nav.css";
 
+const NAV_LINKS = [
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/about" },
+  { label: "Platform", to: "/platform" },
+  { label: "Solutions", to: "/solutions" },
+  { label: "Industries", to: "/industries" },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Book Demo", to: "/book-demo" },
+  { label: "Contact", to: "/contact" },
+];
+
+/**
+ * Premium minimal nav: transparent over the hero, solidifies on scroll,
+ * thin underline-on-hover links instead of the legacy pill buttons. Built
+ * as its own self-contained component/stylesheet (nav.css) rather than
+ * patching the old `.header-style--one` rules in main.css.
+ */
 const Header: React.FC = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [mobileActive, setMobileActive] = useState(false);
-  const lastScrollY = useRef<number>(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-
-      // Scroll up → show sticky smoothly
-      if (currentScroll < lastScrollY.current && currentScroll > 100) {
-        setIsSticky(true);
-        setTimeout(() => setIsVisible(true), 10);
-      }
-      // Scroll down → hide sticky instantly
-      else if (currentScroll > lastScrollY.current) {
-        setIsVisible(false);
-        setTimeout(() => setIsSticky(false), 100);
-      }
-
-      // Reset if near top
-      if (currentScroll <= 100) {
-        setIsSticky(false);
-        setIsVisible(false);
-      }
-
-      lastScrollY.current = currentScroll;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  const handleSubmit = (e: React.FormEvent) => e.preventDefault();
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <header
-      id="xb-header-area"
-      className="header-area header-style--one header-transparent is-sticky"
-    >
-      <div
-        className={`xb-header xb-sticky-stt ${isSticky ? "xb-header-area-sticky" : ""
-          } ${isVisible ? "xb-header-fixed" : "xb-header-hidden"}`}
-      >
-        <div className="container mxw-1650">
-          <div className="header__wrap ul_li_between">
-            {/* Logo */}
-            <div className="xb-header-logo">
-              <Link to="/" className="logo1" onClick={handleClick}>
-                <img src={logo} alt="Logo" width={200} />
-              </Link>
-            </div>
+    <>
+      <header className={`ed-nav ${isScrolled ? "is-scrolled" : ""}`}>
+        <Link to="/" className="ed-nav-logo" onClick={scrollTop}>
+          <img src={logo} alt="VenueGlide" />
+        </Link>
 
-            {/* Desktop Menu */}
-            <div className="main-menu__wrap navbar navbar-expand-lg p-0">
-              <nav className="main-menu collapse navbar-collapse">
-                <ul>
-                  <li>
-                    <Link to="/" onClick={handleClick}>
-                      <span>Home</span>
-                    </Link>
-                  </li>
+        <nav>
+          <ul className="ed-nav-links">
+            {NAV_LINKS.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  onClick={scrollTop}
+                  className={location.pathname === link.to ? "is-active" : ""}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-                  <li>
-                    <Link to="/about" onClick={handleClick}>
-                      <span>About Us</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/platform" onClick={handleClick}>
-                      <span>Platform</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/solutions" onClick={handleClick}>
-                      <span>Solutions</span>
-                    </Link>
-                  </li>
+        <MagneticButton>
+          <Link className="ed-nav-cta" to="/contact" onClick={scrollTop} data-cursor="link">
+            Purchase Now
+          </Link>
+        </MagneticButton>
 
-                  <li>
-                    <Link to="/industries" onClick={handleClick}>
-                      <span>Industries</span>
-                    </Link>
-                  </li>
+        <button
+          className="ed-nav-burger"
+          aria-label="Open menu"
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen(true)}
+        >
+          <Icon icon={LuMenu} size={24} />
+        </button>
+      </header>
 
-                  <li>
-                    <Link to="/pricing" onClick={handleClick}>
-                      <span>Pricing</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/book-demo" onClick={handleClick}>
-                      <span>Book Demo</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" onClick={handleClick}>
-                      <span>Contact</span>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            className="ed-mobile-menu"
+            initial={{ clipPath: "inset(0 0 100% 0)" }}
+            animate={{ clipPath: "inset(0 0 0% 0)" }}
+            exit={{ clipPath: "inset(0 0 100% 0)" }}
+            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+          >
+            <button
+              className="ed-mobile-menu-close"
+              aria-label="Close menu"
+              onClick={() => setMobileOpen(false)}
+            >
+              <Icon icon={LuX} size={26} />
+            </button>
 
-            {/* Button */}
-            <div className="header-btn">
-              <Link to="/contact" className="thm-btn" onClick={handleClick}>
+            <ul className="ed-mobile-menu-list">
+              {NAV_LINKS.map((link, idx) => (
+                <motion.li
+                  key={link.to}
+                  initial={{ y: "100%" }}
+                  animate={{ y: "0%" }}
+                  exit={{ y: "100%" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.1 + idx * 0.05,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                >
+                  <Link to={link.to} onClick={scrollTop}>
+                    {link.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+
+            <motion.div
+              className="ed-mobile-menu-cta"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.4, delay: 0.55 }}
+            >
+              <Link className="ed-btn ed-btn--solid" to="/contact" onClick={scrollTop}>
                 Purchase Now
               </Link>
-            </div>
-
-            {/* Mobile Toggle */}
-            <div className="header-bar-mobile side-menu d-lg-none">
-              <button
-                className="xb-nav-mobile"
-                onClick={() => setMobileActive(!mobileActive)}
-              >
-                <Icon icon={LuMenu} size={22} />
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          <div className="xb-header-wrap">
-            <div className={`xb-header-menu ${mobileActive ? "active" : ""}`}>
-              <div className="xb-header-menu-scroll">
-                <div
-                  className="xb-menu-close xb-hide-xl xb-close"
-                  onClick={() => setMobileActive(false)}
-                ></div>
-
-                <div className="xb-logo-mobile xb-hide-xl">
-                  <Link to="/" rel="home">
-                    <img src={logo} alt="Logo" />
-                  </Link>
-                </div>
-
-                <div className="xb-header-mobile-search xb-hide-xl">
-                  <form role="search" onSubmit={handleSubmit}>
-                    <input
-                      type="text"
-                      placeholder="Search..."
-                      name="s"
-                      className="search-field"
-                    />
-                    <button className="search-submit" type="submit">
-                      <Icon icon={LuSearch} size={18} />
-                    </button>
-                  </form>
-                </div>
-
-                <nav className="xb-header-nav">
-                  <MobileMenu />
-                </nav>
-              </div>
-            </div>
-            <div className="xb-header-menu-backdrop"></div>
-          </div>
-        </div>
-      </div>
-    </header>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

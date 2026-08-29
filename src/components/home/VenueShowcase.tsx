@@ -75,7 +75,7 @@ const VenueShowcase: React.FC = () => {
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <div className="ed-showcase-media">
+              <div className="ed-showcase-media" data-cursor="view" data-cursor-label="View">
                 <img src={item.image} alt={item.alt} loading="lazy" />
               </div>
 

@@ -1,0 +1,236 @@
+/* =====================================================================
+ * Premium minimal navigation — bypasses the legacy `.header-style--one`
+ * pill-button nav entirely rather than patching an 18k-line stylesheet.
+ * Transparent over the hero, solidifies on scroll, thin type, underline
+ * hover instead of buttons.
+ * ===================================================================== */
+
+.ed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 26px var(--ed-x, clamp(20px, 4vw, 60px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.4s var(--ed-ease, ease), border-color 0.4s var(--ed-ease, ease),
+    padding 0.4s var(--ed-ease, ease);
+}
+
+.ed-nav.is-scrolled {
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.ed-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.ed-nav-logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.ed-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ed-nav-links a {
+  position: relative;
+  font-family: var(--ed-font, inherit);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.ed-nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--ed-accent, #00d4ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s var(--ed-ease, ease);
+}
+
+.ed-nav-links a:hover,
+.ed-nav-links a.is-active {
+  color: #ffffff;
+}
+
+.ed-nav-links a:hover::after,
+.ed-nav-links a.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.ed-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  font-family: var(--ed-font, inherit);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.ed-nav-cta:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.ed-nav-burger {
+  display: none;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .ed-nav-links,
+  .ed-nav-cta {
+    display: none;
+  }
+
+  .ed-nav-burger {
+    display: flex;
+  }
+}
+
+/* ---- full-screen mobile menu ------------------------------------------ */
+
+.ed-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 clamp(24px, 8vw, 60px);
+}
+
+.ed-mobile-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ed-mobile-menu-list li {
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ed-mobile-menu-list a {
+  display: block;
+  padding: 18px 0;
+  font-family: var(--ed-font, inherit);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 8vw, 2.6rem);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ed-mobile-menu-cta {
+  margin-top: 36px;
+}
+
+.ed-mobile-menu-close {
+  position: absolute;
+  top: 26px;
+  right: clamp(20px, 4vw, 60px);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ---- custom cursor ------------------------------------------------------ */
+
+.ed-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  z-index: 10000;
+  transition: width 0.25s var(--ed-ease, ease), height 0.25s var(--ed-ease, ease),
+    background-color 0.25s ease;
+  mix-blend-mode: difference;
+}
+
+.ed-cursor.is-active {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.ed-cursor-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* ---- magnetic wrapper --------------------------------------------------- */
+
+.ed-magnetic {
+  display: inline-flex;
+}
+
+@media (hover: none) {
+  .ed-cursor {
+    display: none;
+  }
+}

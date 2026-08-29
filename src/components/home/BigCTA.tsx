@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MaskText from "../motion/MaskText";
 import Reveal from "../motion/Reveal";
+import MagneticButton from "../motion/MagneticButton";
 
 /**
  * Closing statement: one oversized line, revealed on scroll, and two ways to
@@ -17,12 +18,16 @@ const BigCTA: React.FC = () => (
       />
 
       <Reveal direction="up" delay={0.25} className="ed-cta-actions">
-        <Link className="ed-btn ed-btn--solid" to="/book-demo">
-          Book a demo
-        </Link>
-        <Link className="ed-btn ed-btn--ghost" to="/pricing">
-          See pricing
-        </Link>
+        <MagneticButton>
+          <Link className="ed-btn ed-btn--solid" to="/book-demo" data-cursor="link">
+            Book a demo
+          </Link>
+        </MagneticButton>
+        <MagneticButton>
+          <Link className="ed-btn ed-btn--ghost" to="/pricing" data-cursor="link">
+            See pricing
+          </Link>
+        </MagneticButton>
       </Reveal>
     </div>
   </section>
