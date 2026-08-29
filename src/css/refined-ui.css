@@ -1,35 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+/*
+ * Restrained, "designed by a human" UI pass on top of the base template
+ * (main.css). This file previously existed as an orphaned `src/index.css`
+ * that was never imported, so none of these overrides ever actually
+ * shipped. Re-homed here and reconciled with the real font stack: DM Sans
+ * for body text (main.css's --font-body), SportingGrotesque for headings
+ * (custom-fonts.css) — this file no longer fights that with a blanket
+ * font-family override.
+ */
 
 :root {
-  --font-main: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
   --radius-xl: 18px;
-  --color-border: rgba(255, 255, 255, 0.12);
-  --color-accent: #00D4FF;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body, html, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, a, li {
-  font-family: var(--font-main) !important;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-main) !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-/* Global Neon & Glow Removal Overrides */
+/* Kill the neon/glow-everything look: no glowing focus rings, no
+   text/box glow utility classes. */
 *:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -41,7 +28,7 @@ code {
   filter: none !important;
 }
 
-/* Premium Restrained Card & UI System */
+/* Solid, restrained cards instead of heavy glassmorphism/neon borders. */
 .xb-feature-item, .venueglide-overview-card, .solution-grid-card, .what-you-see-card, .comparison-list {
   border-radius: var(--radius-lg) !important;
   border: 1px solid var(--color-border) !important;
@@ -49,12 +36,11 @@ code {
   backdrop-filter: blur(12px);
 }
 
-/* Subtle Control Badges */
 .badge, .icon-badge, .card-sublabel {
   border-radius: var(--radius-sm) !important;
 }
 
-/* Compact Confident Buttons */
+/* Compact, confident buttons instead of oversized glowing pills. */
 .thm-btn, .agency-btn, .btn-submit-demo {
   border-radius: var(--radius-md) !important;
   font-weight: 600 !important;
@@ -67,7 +53,6 @@ code {
   box-shadow: 0 6px 20px rgba(0, 212, 255, 0.25) !important;
 }
 
-/* AI Beta Badge Styling */
 .beta-badge {
   display: inline-flex;
   align-items: center;
