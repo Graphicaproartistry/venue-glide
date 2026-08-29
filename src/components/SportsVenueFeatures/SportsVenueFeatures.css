@@ -58,101 +58,168 @@
   }
 }
 
-.venue-feature-card {
-  background: rgba(13, 20, 36, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 34px 28px;
-  height: 100%;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
-  display: flex;
-  flex-direction: column;
+/* ---------------------------------------------------------------------
+ * Capability rail: a scroll-linked timeline list replacing the old
+ * six-colour "card grid" (each card its own random hue, glowing borders,
+ * a checklist of coloured checkmarks) with one restrained accent, a
+ * single accent line that fills in as you scroll, and tag-style
+ * capability chips instead of a checklist.
+ * ------------------------------------------------------------------- */
+.capability-rail {
   position: relative;
-  overflow: hidden;
+  max-width: 880px;
+  margin: 0 auto;
+  padding-left: 76px;
 }
 
-.venue-feature-card::before {
-  content: "";
+.capability-rail-track,
+.capability-rail-fill {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.6), transparent);
-  opacity: 0;
-  transition: opacity 0.35s ease;
+  top: 6px;
+  bottom: 6px;
+  left: 27px;
+  width: 1px;
 }
 
-.venue-feature-card:hover {
-  transform: translateY(-6px);
-  background: rgba(18, 28, 48, 0.85);
-  border-color: #00D4ff;
-  box-shadow: 0 16px 36px rgba(0, 212, 255, 0.15), 0 8px 24px rgba(0, 0, 0, 0.4);
+.capability-rail-track {
+  background: rgba(255, 255, 255, 0.09);
 }
 
-.venue-feature-card:hover::before {
-  opacity: 1;
+.capability-rail-fill {
+  bottom: auto;
+  background: linear-gradient(180deg, #00d4ff, rgba(0, 212, 255, 0.15));
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.35);
 }
 
-.venue-feature-card .icon-box {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.capability-row {
+  position: relative;
+  display: flex;
+  gap: 28px;
+  padding: 34px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.capability-row:first-child {
+  padding-top: 6px;
+}
+
+.capability-row:last-child {
+  border-bottom: none;
+  padding-bottom: 6px;
+}
+
+.capability-row-marker {
+  position: absolute;
+  left: -76px;
+  top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 76px;
+}
+
+.capability-row-index {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.32);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.capability-row-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #060b18;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  color: #00d4ff;
   flex-shrink: 0;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
-.venue-feature-card .icon-box svg {
-  width: 22px;
-  height: 22px;
+.capability-row-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
-.venue-feature-card .card-title {
-  font-size: 20px;
+.capability-row:hover .capability-row-icon {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: #00d4ff;
+  transform: scale(1.06);
+}
+
+.capability-row-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.capability-row-title {
+  font-size: 21px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   line-height: 1.3;
 }
 
-.venue-feature-card .card-desc {
-  font-size: 14px;
-  line-height: 1.55;
-  color: #cbd5e1;
-  margin-bottom: 8px;
+.capability-row-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #a9b4c4;
+  margin-bottom: 16px;
+  max-width: 46em;
 }
 
-.venue-feature-card .card-sublabel {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #94a3b8;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.venue-feature-card .feature-list {
+.capability-row-tags {
   list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 0;
+  margin: 0;
 }
 
-.venue-feature-card .feature-list li {
-  font-size: 14px;
-  line-height: 1.75;
-  color: #94a3b8;
-  position: relative;
-  padding-left: 0;
-  transition: color 0.2s ease;
+.capability-row-tags li {
+  font-size: 12.5px;
+  line-height: 1;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 8px 14px;
+  transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
 }
 
-.venue-feature-card:hover .feature-list li {
-  color: #e2e8f0;
+.capability-row:hover .capability-row-tags li {
+  border-color: rgba(0, 212, 255, 0.3);
+  color: #e6f7ff;
+  background: rgba(0, 212, 255, 0.06);
+}
+
+@media (max-width: 576px) {
+  .capability-rail {
+    padding-left: 56px;
+  }
+
+  .capability-row-marker {
+    left: -56px;
+    width: 56px;
+    top: 30px;
+  }
+
+  .capability-row-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .capability-row-index {
+    display: none;
+  }
+
+  .capability-row-title {
+    font-size: 18px;
+  }
 }

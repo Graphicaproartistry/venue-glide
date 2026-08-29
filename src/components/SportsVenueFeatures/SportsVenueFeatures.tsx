@@ -1,144 +1,154 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "./SportsVenueFeatures.css";
 import featureBg from "../../images/bg/features-gradient-bg.png";
-import { 
-  LuCalendarCheck, 
-  LuUsers, 
-  LuCreditCard, 
-  LuHeartHandshake, 
-  LuGraduationCap, 
-  LuChartColumn, 
+import {
+  LuCalendarCheck,
+  LuIdCard,
+  LuReceipt,
+  LuHeartHandshake,
+  LuGraduationCap,
+  LuChartColumn,
   LuZap,
-  LuCheck 
 } from "react-icons/lu";
 import { Icon } from "../common/Icon";
 import { IconType } from "react-icons";
 import Reveal from "../motion/Reveal";
 
-interface FeatureCardProps {
+interface FeatureRowProps {
   icon: IconType;
-  iconBg: string;
-  iconColor: string;
-  iconBorder: string;
   title: string;
   description: string;
-  sublabel?: string;
-  items: string[];
-  delay: string;
+  tags: string[];
 }
 
-const featureData: FeatureCardProps[] = [
+const featureData: FeatureRowProps[] = [
   {
     icon: LuCalendarCheck,
-    iconBg: "rgba(0, 212, 255, 0.15)",
-    iconColor: "#00D4FF",
-    iconBorder: "rgba(0, 212, 255, 0.3)",
     title: "Online Booking Management",
-    description: "Enable court, field and facility bookings online 24/7 with real-time scheduling.",
-    sublabel: "Core Capabilities:",
-    items: [
+    description:
+      "Enable court, field and facility bookings online 24/7 with real-time scheduling.",
+    tags: [
       "Real-time court availability",
       "Interactive venue scheduling",
       "Automated SMS confirmations",
       "Peak & off-peak dynamic rates",
       "Waitlist auto-allocation",
-      "Instant QR code check-in"
+      "Instant QR code check-in",
     ],
-    delay: "100ms",
   },
   {
-    icon: LuUsers,
-    iconBg: "rgba(20, 184, 166, 0.15)",
-    iconColor: "#2dd4bf",
-    iconBorder: "rgba(20, 184, 166, 0.3)",
+    icon: LuIdCard,
     title: "Membership Management",
-    description: "Automate memberships, recurring billing and member perks from one dashboard.",
-    sublabel: "Automate Operations:",
-    items: [
+    description:
+      "Automate memberships, recurring billing and member perks from one dashboard.",
+    tags: [
       "Automated direct debit billing",
       "Family & multi-tier plans",
       "Digital waiver signing",
       "Member attendance tracking",
       "Automated renewal reminders",
-      "Loyalty rewards program"
+      "Loyalty rewards program",
     ],
-    delay: "200ms",
   },
   {
-    icon: LuCreditCard,
-    iconBg: "rgba(245, 158, 11, 0.15)",
-    iconColor: "#fbbf24",
-    iconBorder: "rgba(245, 158, 11, 0.3)",
+    icon: LuReceipt,
     title: "Sports Facility POS",
-    description: "Sell retail equipment, café items, coaching sessions and rentals seamlessly.",
-    sublabel: "Point of Sale Integration:",
-    items: [
+    description:
+      "Sell retail equipment, café items, coaching sessions and rentals seamlessly.",
+    tags: [
       "Pro shop retail & inventory",
       "Café & food ordering",
       "Equipment hire tracking",
       "Coaching package checkout",
       "Digital gift card redemption",
-      "EFT POS hardware sync"
+      "EFT POS hardware sync",
     ],
-    delay: "300ms",
   },
   {
     icon: LuHeartHandshake,
-    iconBg: "rgba(244, 63, 94, 0.15)",
-    iconColor: "#f43f5e",
-    iconBorder: "rgba(244, 63, 94, 0.3)",
     title: "Customer CRM",
-    description: "Build lasting player relationships with complete historical activity tracking.",
-    sublabel: "Customer Insights:",
-    items: [
+    description:
+      "Build lasting player relationships with complete historical activity tracking.",
+    tags: [
       "Complete player visit timeline",
       "Booking & spending history",
       "Automated re-engagement",
-      "Targeted SMS & Email campaigns",
+      "Targeted SMS & email campaigns",
       "Player preference profiles",
-      "Integrated communication log"
+      "Integrated communication log",
     ],
-    delay: "400ms",
   },
   {
     icon: LuGraduationCap,
-    iconBg: "rgba(129, 140, 248, 0.15)",
-    iconColor: "#818cf8",
-    iconBorder: "rgba(129, 140, 248, 0.3)",
     title: "Coaching Management",
-    description: "Organize coaches, private sessions, junior clinics and group academies.",
-    sublabel: "Academy & Coaching:",
-    items: [
-      "Cricket & Tennis academies",
-      "Padel & Football coaching",
+    description:
+      "Organize coaches, private sessions, junior clinics and group academies.",
+    tags: [
+      "Cricket & tennis academies",
+      "Padel & football coaching",
       "Private lesson scheduling",
       "Coach roster management",
       "Automated student attendance",
-      "Term package payments"
+      "Term package payments",
     ],
-    delay: "500ms",
   },
   {
     icon: LuChartColumn,
-    iconBg: "rgba(0, 212, 255, 0.15)",
-    iconColor: "#00D4FF",
-    iconBorder: "rgba(0, 212, 255, 0.3)",
     title: "Business Reporting",
-    description: "Gain 360-degree operational visibility into court utilization and revenue.",
-    sublabel: "Executive Analytics:",
-    items: [
+    description:
+      "Gain 360-degree operational visibility into court utilization and revenue.",
+    tags: [
       "Real-time revenue metrics",
       "Peak court utilization stats",
-      "Member retention rate analytics",
+      "Member retention analytics",
       "Staff performance reporting",
       "POS sales breakdown",
-      "Automated financial exports"
+      "Automated financial exports",
     ],
-    delay: "600ms",
   },
 ];
 
+const FeatureRow: React.FC<FeatureRowProps & { index: number }> = ({
+  icon,
+  title,
+  description,
+  tags,
+  index,
+}) => (
+  <Reveal
+    direction="up"
+    distance={20}
+    delay={Math.min(index * 0.06, 0.3)}
+    className="capability-row"
+  >
+    <div className="capability-row-marker">
+      <span className="capability-row-index">{String(index + 1).padStart(2, "0")}</span>
+      <span className="capability-row-icon">
+        <Icon icon={icon} size={22} />
+      </span>
+    </div>
+
+    <div className="capability-row-content">
+      <h3 className="capability-row-title">{title}</h3>
+      <p className="capability-row-desc">{description}</p>
+      <ul className="capability-row-tags">
+        {tags.map((tag, tagIdx) => (
+          <li key={tagIdx}>{tag}</li>
+        ))}
+      </ul>
+    </div>
+  </Reveal>
+);
+
 const SportsVenueFeatures: React.FC = () => {
+  const railRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: railRef,
+    offset: ["start 75%", "end 55%"],
+  });
+  const spineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   return (
     <section
       className="sports-venue-features bg_img"
@@ -155,60 +165,16 @@ const SportsVenueFeatures: React.FC = () => {
           </h2>
         </Reveal>
 
-        <div className="row g-4 align-items-stretch">
+        <div className="capability-rail" ref={railRef}>
+          <div className="capability-rail-track" aria-hidden="true" />
+          <motion.div
+            className="capability-rail-fill"
+            style={{ height: spineHeight }}
+            aria-hidden="true"
+          />
+
           {featureData.map((card, idx) => (
-            <div className="col-lg-4 col-md-6 d-flex" key={idx}>
-              <Reveal
-                direction="up"
-                delay={parseInt(card.delay, 10) / 1000}
-                className="venue-feature-card w-100 d-flex flex-column justify-content-between"
-                whileHover={{
-                  y: -8,
-                  boxShadow: "0 24px 48px rgba(0, 0, 0, 0.35)",
-                  transition: { duration: 0.25, ease: "easeOut" },
-                }}
-              >
-                <div>
-                  <div className="d-flex align-items-center justify-content-between mb-3">
-                    <div
-                      className="icon-box mb-0"
-                      style={{
-                        backgroundColor: card.iconBg,
-                        color: card.iconColor,
-                        borderColor: card.iconBorder,
-                      }}
-                    >
-                      <Icon icon={card.icon} size={22} />
-                    </div>
-                    <span className="badge rounded-pill" style={{ background: card.iconBg, color: card.iconColor, fontSize: "10px", padding: "5px 10px" }}>
-                      Feature 0{idx + 1}
-                    </span>
-                  </div>
-
-                  <h3 className="card-title">{card.title}</h3>
-                  <p className="card-desc" style={{ minHeight: "44px" }}>{card.description}</p>
-
-                  {card.sublabel && (
-                    <p className="card-sublabel" style={{ color: card.iconColor, fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                      {card.sublabel}
-                    </p>
-                  )}
-                </div>
-
-                <ul className="feature-list mt-2">
-                  {card.items.map((item, itemIdx) => (
-                    <li key={itemIdx} className="d-flex align-items-center gap-2 mb-2">
-                      <span className="d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: "16px", height: "16px", background: card.iconBg, color: card.iconColor }}>
-                        <Icon icon={LuCheck} size={10} />
-                      </span>
-                      <span style={{ fontSize: "13px", color: "rgba(255, 255, 255, 0.8)", fontWeight: 400 }}>
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            </div>
+            <FeatureRow key={card.title} index={idx} {...card} />
           ))}
         </div>
       </div>
