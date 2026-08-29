@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import WowInit from "../../components/wowInit/wowInit";
 
 // ✅ Home Pages
@@ -36,15 +36,12 @@ const AllRoute: React.FC = () => {
         <Routes>
           {/* ✅ Home Routes */}
           <Route path="/" element={<Homepage />} />
-          <Route path="/home" element={<Homepage />} />
           <Route path="/ai-marketing" element={<HomePage2 />} />
           <Route path="/ai-chatbot" element={<HomePage3 />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/platform" element={<PlatformPage />} />
           <Route path="/solutions" element={<SolutionPage />} />
-          <Route path="/solution" element={<SolutionPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/industry" element={<IndustriesPage />} />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/service-details" element={<SeviceSinglePage />} />
           <Route path="/career" element={<CareerSection />} />
@@ -57,7 +54,14 @@ const AllRoute: React.FC = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/book-demo" element={<BookDemoPage />} />
-          <Route path="/book-a-demo" element={<BookDemoPage />} />
+
+          {/* ✅ Legacy/alias URLs — redirect rather than serving duplicate
+              content on two paths, which splits SEO authority between them. */}
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="/solution" element={<Navigate to="/solutions" replace />} />
+          <Route path="/industry" element={<Navigate to="/industries" replace />} />
+          <Route path="/book-a-demo" element={<Navigate to="/book-demo" replace />} />
+
           {/* ✅ Error Page */}
           <Route path="/404" element={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} />

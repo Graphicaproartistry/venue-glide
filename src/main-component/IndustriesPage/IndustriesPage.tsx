@@ -19,6 +19,7 @@ const IndustriesPage: React.FC = () => {
         title="Industry-Specific Sports Venue Software | Melbourne, Australia"
         description="Purpose-built software for indoor cricket, padel, tennis, football/futsal, basketball and multi-sport venues in Melbourne and across Australia — configured for how each sport actually operates."
         path="/industries"
+        breadcrumbs={[{ name: "Industries", path: "/industries" }]}
       />
       <div className="industry-page inner-page">
         <div className="body_wrap o-clip">

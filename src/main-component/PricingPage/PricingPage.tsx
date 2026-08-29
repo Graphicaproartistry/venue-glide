@@ -21,6 +21,7 @@ const PricingPage: React.FC = () => {
         title="Pricing | Sports Venue Management Software Melbourne"
         description="Simple, transparent pricing for sports venue management software — plans for independent Melbourne clubs through multi-location operators across Australia."
         path="/pricing"
+        breadcrumbs={[{ name: "Pricing", path: "/pricing" }]}
       />
       <div className="pricing-page inner-page">
         <div className="body_wrap o-clip">

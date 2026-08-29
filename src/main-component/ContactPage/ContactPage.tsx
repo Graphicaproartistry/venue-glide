@@ -22,6 +22,7 @@ const ContactPage: React.FC = () => {
         title="Contact VenueGlide | Sports Venue Software Melbourne"
         description="Contact VenueGlide to learn how our sports venue management software can help your Melbourne or Australia-wide venue simplify bookings, memberships, payments, CRM and daily operations."
         path="/contact"
+        breadcrumbs={[{ name: "Contact", path: "/contact" }]}
       />
       <div className="contact-page inner-page">
         <div className="body_wrap o-clip">

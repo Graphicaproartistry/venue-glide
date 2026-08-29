@@ -19,6 +19,7 @@ const SolutionPage: React.FC = () => {
         title="Sports Venue Software Solutions | Melbourne & Australia"
         description="Complete software solutions for indoor cricket centres, padel and tennis clubs, football turf and multi-sport venues in Melbourne and across Australia — automate bookings, memberships, payments and reporting."
         path="/solutions"
+        breadcrumbs={[{ name: "Solutions", path: "/solutions" }]}
       />
       <div className="solution-page inner-page">
         <div className="body_wrap o-clip">

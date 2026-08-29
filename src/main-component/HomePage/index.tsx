@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
     <Fragment>
       <Seo
         title="Sports Venue Management Software Melbourne, Australia"
-        description="VenueGlide OS is Melbourne's sports venue management software — online bookings, memberships, POS, coaching, Stripe payments, Xero accounting and Igloo staffless access in one platform. Trusted by venues across Australia."
+        description="VenueGlide OS is Melbourne's sports venue management software — online bookings, memberships, POS, coaching, Stripe payments, Xero accounting and Igloo staffless access in one cloud platform. Built in Melbourne, trusted across Australia."
         path="/"
         structuredData={[faqSchema]}
       />

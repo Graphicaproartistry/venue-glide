@@ -12,6 +12,8 @@ interface SeoProps {
   structuredData?: object[];
   /** Set false on pages that shouldn't be indexed (none currently, but kept for completeness). */
   index?: boolean;
+  /** Breadcrumb trail (excluding Home, which is added automatically) for BreadcrumbList schema — improves SERP display. */
+  breadcrumbs?: { name: string; path: string }[];
 }
 
 const setMeta = (attr: "name" | "property", key: string, content: string) => {
@@ -53,6 +55,7 @@ const Seo: React.FC<SeoProps> = ({
   path,
   structuredData = [],
   index = true,
+  breadcrumbs = [],
 }) => {
   useEffect(() => {
     const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
@@ -108,6 +111,22 @@ const Seo: React.FC<SeoProps> = ({
           description,
           isPartOf: { "@id": `${SITE_URL}/#website` },
         },
+        ...(breadcrumbs.length
+          ? [
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+                  ...breadcrumbs.map((crumb, idx) => ({
+                    "@type": "ListItem",
+                    position: idx + 2,
+                    name: crumb.name,
+                    item: `${SITE_URL}${crumb.path}`,
+                  })),
+                ],
+              },
+            ]
+          : []),
         ...structuredData,
       ],
     };
