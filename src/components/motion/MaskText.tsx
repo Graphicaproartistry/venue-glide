@@ -7,6 +7,7 @@ interface MaskTextProps {
   /** Element type for the wrapper (the heading itself). */
   as?: "h1" | "h2" | "h3" | "p" | "div";
   className?: string;
+  style?: React.CSSProperties;
   delay?: number;
   stagger?: number;
   duration?: number;
@@ -30,6 +31,7 @@ const MaskText: React.FC<MaskTextProps> = ({
   lines,
   as = "div",
   className,
+  style,
   delay = 0,
   stagger = 0.09,
   duration = 0.9,
@@ -66,7 +68,7 @@ const MaskText: React.FC<MaskTextProps> = ({
       : ({ whileInView: "visible", viewport: { once: true, amount: 0.4 } } as const);
 
   return (
-    <MotionTag initial="hidden" variants={container} className={className} {...animationProps}>
+    <MotionTag initial="hidden" variants={container} className={className} style={style} {...animationProps}>
       {lines.map((content, idx) => (
         <span className="mask-line" key={idx}>
           <motion.span className="mask-line-inner" variants={line}>

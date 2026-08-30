@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Reveal from "../../motion/Reveal";
+import MaskText from "../../motion/MaskText";
 
 // Import your background + icons
 import bgImage from "../../../images/bg/feature-bg.jpg";
@@ -51,19 +53,19 @@ const FeatureSection: React.FC = () => {
         <div className="row">
           <div className="col-lg-8">
             <div className="xb-feature-content">
-              <div className="sec-title sec-title-center fea-sec-title mb-35 wow fadeInUp" data-wow-duration="600ms">
-                <h2 className="title title-line_height">
-                  Customer-First Innovation
-                </h2>
-                <span className=" mb-20">Every feature within VenueGlide OS is developed with feedback from sports venue owners, managers and operational teams.
-                  We understand that running a sports venue requires balancing customer satisfaction with operational efficiency.
-                  That's why our development philosophy focuses on:</span>
+              <div className="sec-title sec-title-center fea-sec-title mb-35">
+                <MaskText as="h2" className="title title-line_height" lines={["Customer-First Innovation"]} />
+                <Reveal direction="up" delay={0.1}>
+                  <span className=" mb-20">Every feature within VenueGlide OS is developed with feedback from sports venue owners, managers and operational teams.
+                    We understand that running a sports venue requires balancing customer satisfaction with operational efficiency.
+                    That's why our development philosophy focuses on:</span>
+                </Reveal>
               </div>
 
               <div className="row g-4 align-items-stretch mt-3">
 
                 {/* Item 1: Simplicity */}
-                <div className="col-lg-6 col-md-6 d-flex">
+                <Reveal direction="up" delay={0.15} className="col-lg-6 col-md-6 d-flex">
                   <div 
                     className="p-4 rounded-4 w-100 d-flex align-items-center gap-3"
                     style={{
@@ -89,10 +91,10 @@ const FeatureSection: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Reveal>
 
                 {/* Item 2: Reliability */}
-                <div className="col-lg-6 col-md-6 d-flex">
+                <Reveal direction="up" delay={0.2} className="col-lg-6 col-md-6 d-flex">
                   <div 
                     className="p-4 rounded-4 w-100 d-flex align-items-center gap-3"
                     style={{
@@ -119,10 +121,10 @@ const FeatureSection: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Reveal>
 
                 {/* Item 3: Automation */}
-                <div className="col-lg-6 col-md-6 d-flex">
+                <Reveal direction="up" delay={0.25} className="col-lg-6 col-md-6 d-flex">
                   <div 
                     className="p-4 rounded-4 w-100 d-flex align-items-center gap-3"
                     style={{
@@ -148,10 +150,10 @@ const FeatureSection: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Reveal>
 
                 {/* Item 4: Scalability */}
-                <div className="col-lg-6 col-md-6 d-flex">
+                <Reveal direction="up" delay={0.3} className="col-lg-6 col-md-6 d-flex">
                   <div 
                     className="p-4 rounded-4 w-100 d-flex align-items-center gap-3"
                     style={{
@@ -178,7 +180,7 @@ const FeatureSection: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Reveal>
 
               </div>
 

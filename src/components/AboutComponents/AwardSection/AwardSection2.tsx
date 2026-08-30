@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Reveal from "../../motion/Reveal";
+import MaskText from "../../motion/MaskText";
+import MagneticButton from "../../motion/MagneticButton";
 
 // Sports Venue Images
 import cricketImg from "../../../images/sports/cricket.png";
@@ -73,34 +76,38 @@ const AwardSection2: React.FC = () => {
                 <div className="row align-items-center g-5">
 
                     {/* LEFT CONTENT */}
-                    <div className="col-lg-6 wow fadeInLeft" data-wow-duration="600ms">
+                    <div className="col-lg-6">
                         <div className="sec-title mb-30">
-                            <span className="sub-title d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill text-uppercase fw-semibold" style={{ background: "rgba(0, 212, 255, 0.12)", color: "#00D4FF", border: "1px solid rgba(0, 212, 255, 0.25)", fontSize: "12px", letterSpacing: "1px" }}>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                                </svg>
-                                AUSTRALIAN SPORTS INDUSTRY
-                            </span>
-                            <h2 className="title title-line_height mb-3" style={{ fontSize: "38px", fontWeight: 700, lineHeight: "1.2", color: "#ffffff" }}>
-                                Supporting Australia's Sports Industry
-                            </h2>
-                            <p className="content mb-4" style={{ fontSize: "15px", color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.7" }}>
-                                Australia has one of the world's most active sporting communities. Sports venues play a vital role in bringing communities together, supporting grassroots participation and promoting healthier lifestyles. VenueGlide is proud to support this industry by providing modern technology that helps operators focus less on administration and more on delivering outstanding sporting experiences.
-                            </p>
+                            <Reveal direction="up">
+                                <span className="sub-title d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill text-uppercase fw-semibold" style={{ background: "rgba(0, 212, 255, 0.12)", color: "#00D4FF", border: "1px solid rgba(0, 212, 255, 0.25)", fontSize: "12px", letterSpacing: "1px" }}>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg>
+                                    AUSTRALIAN SPORTS INDUSTRY
+                                </span>
+                            </Reveal>
+                            <MaskText as="h2" className="title title-line_height mb-3" lines={["Supporting Australia's", "Sports Industry"]} style={{ fontSize: "38px", fontWeight: 700, lineHeight: "1.2", color: "#ffffff" }} />
+                            <Reveal direction="up" delay={0.1}>
+                                <p className="content mb-4" style={{ fontSize: "15px", color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.7" }}>
+                                    Australia has one of the world's most active sporting communities. Sports venues play a vital role in bringing communities together, supporting grassroots participation and promoting healthier lifestyles. VenueGlide is proud to support this industry by providing modern technology that helps operators focus less on administration and more on delivering outstanding sporting experiences.
+                                </p>
+                            </Reveal>
 
-                            <div className="d-flex flex-wrap align-items-center gap-3 mt-4">
-                                <Link className="thm-btn agency-btn px-4 py-3" to="/contact" style={{ borderRadius: "12px", background: "linear-gradient(135deg, #00D4FF 0%, #0088ff 100%)", color: "#0a0f1e", fontWeight: 700, fontSize: "15px" }}>
-                                    Book Your Personal Demo Today →
-                                </Link>
-                            </div>
+                            <Reveal direction="up" delay={0.2} className="d-flex flex-wrap align-items-center gap-3 mt-4">
+                                <MagneticButton>
+                                    <Link className="thm-btn agency-btn px-4 py-3" to="/contact" data-cursor="link" style={{ borderRadius: "12px", background: "linear-gradient(135deg, #00D4FF 0%, #0088ff 100%)", color: "#0a0f1e", fontWeight: 700, fontSize: "15px" }}>
+                                        Book Your Personal Demo Today →
+                                    </Link>
+                                </MagneticButton>
+                            </Reveal>
                         </div>
                     </div>
 
                     {/* RIGHT - SPORTS VENUES DISPLAY GRID MATCHING REFERENCE SCREENSHOT 5 */}
-                    <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="600ms">
+                    <div className="col-lg-6">
                         <div className="row g-3">
                             {sportsVenues.map((item, idx) => (
-                                <div className={idx === 4 ? "col-12" : "col-6"} key={idx}>
+                                <Reveal key={idx} direction="up" delay={Math.min(idx * 0.08 + 0.1, 0.4)} className={idx === 4 ? "col-12" : "col-6"}>
                                     <div
                                         className="position-relative overflow-hidden rounded-4 p-3 d-flex flex-column justify-content-end"
                                         style={{
@@ -127,7 +134,7 @@ const AwardSection2: React.FC = () => {
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </Reveal>
                             ))}
                         </div>
                     </div>

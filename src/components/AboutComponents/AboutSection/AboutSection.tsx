@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../../motion/Reveal";
+import MaskText from "../../motion/MaskText";
 
 // ==== Import Images ====
 import gif1 from "../../../images/icon/original-66948a0d81d.gif";
@@ -16,24 +18,26 @@ const AboutSection: React.FC = () => {
 
       <div className="container">
         {/* ===== Title Section ===== */}
-        <div className="sec-title sec-title-center about-sec-title about-sec-title-two text-center mb-5 wow fadeInUp" data-wow-duration="600ms">
-          <span className="sub-title d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill text-uppercase fw-semibold" style={{ background: "rgba(0, 212, 255, 0.12)", color: "#00D4FF", border: "1px solid rgba(0, 212, 255, 0.25)", fontSize: "12px", letterSpacing: "1px" }}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-            </svg>
-            ABOUT VENUEGLIDE OS
-          </span>
+        <div className="sec-title sec-title-center about-sec-title about-sec-title-two text-center mb-5">
+          <Reveal direction="up">
+            <span className="sub-title d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill text-uppercase fw-semibold" style={{ background: "rgba(0, 212, 255, 0.12)", color: "#00D4FF", border: "1px solid rgba(0, 212, 255, 0.25)", fontSize: "12px", letterSpacing: "1px" }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+              ABOUT VENUEGLIDE OS
+            </span>
+          </Reveal>
 
-          <h2 className="title" style={{ fontSize: "40px", fontWeight: 700, lineHeight: "1.25", marginBottom: "16px", color: "#ffffff" }}>
-            Powering the Future of Sports Venue Management
-          </h2>
+          <MaskText as="h2" className="title" lines={["Powering the Future of", "Sports Venue Management"]} style={{ fontSize: "40px", fontWeight: 700, lineHeight: "1.25", marginBottom: "16px", color: "#ffffff" }} />
 
-          <p className="content mx-auto mb-4" style={{ maxWidth: "780px", fontSize: "16px", color: "rgba(255, 255, 255, 0.8)", lineHeight: "1.6" }}>
-            VenueGlide OS is Australia's unified sports venue management platform—built specifically for indoor sports centres, padel clubs, tennis venues, football turfs, and multi-sport complexes to simplify operations, increase bookings, and drive growth.
-          </p>
+          <Reveal direction="up" delay={0.1}>
+            <p className="content mx-auto mb-4" style={{ maxWidth: "780px", fontSize: "16px", color: "rgba(255, 255, 255, 0.8)", lineHeight: "1.6" }}>
+              VenueGlide OS is Australia's unified sports venue management platform—built specifically for indoor sports centres, padel clubs, tennis venues, football turfs, and multi-sport complexes to simplify operations, increase bookings, and drive growth.
+            </p>
+          </Reveal>
 
           {/* Metric Highlight Badges */}
-          <div className="d-flex flex-wrap justify-content-center gap-3 mt-4">
+          <Reveal direction="up" delay={0.2} className="d-flex flex-wrap justify-content-center gap-3 mt-4">
             <div className="px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(0, 212, 255, 0.2)" }}>
               <span style={{ color: "#00D4FF", fontWeight: 700, fontSize: "13px" }}>⚡ 100% Cloud-Based</span>
             </div>
@@ -43,15 +47,15 @@ const AboutSection: React.FC = () => {
             <div className="px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(0, 212, 255, 0.2)" }}>
               <span style={{ color: "#00D4FF", fontWeight: 700, fontSize: "13px" }}>🔒 10+ Disconnected Tools Replaced</span>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* ===== Equalized Mission & Vision Cards ===== */}
         <div className="row g-4 align-items-stretch mt-2">
           {/* Card 1: Our Mission */}
-          <div className="col-lg-6 d-flex">
-            <div 
-              className="p-4 p-md-5 rounded-4 w-100 d-flex flex-column justify-content-between" 
+          <Reveal direction="up" delay={0.1} className="col-lg-6 d-flex">
+            <div
+              className="p-4 p-md-5 rounded-4 w-100 d-flex flex-column justify-content-between"
               style={{ 
                 background: "rgba(13, 20, 36, 0.75)", 
                 backdropFilter: "blur(12px)", 
@@ -99,12 +103,12 @@ const AboutSection: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Card 2: Our Vision */}
-          <div className="col-lg-6 d-flex">
-            <div 
-              className="p-4 p-md-5 rounded-4 w-100 d-flex flex-column justify-content-between" 
+          <Reveal direction="up" delay={0.2} className="col-lg-6 d-flex">
+            <div
+              className="p-4 p-md-5 rounded-4 w-100 d-flex flex-column justify-content-between"
               style={{ 
                 background: "rgba(13, 20, 36, 0.75)", 
                 backdropFilter: "blur(12px)", 
@@ -152,7 +156,7 @@ const AboutSection: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

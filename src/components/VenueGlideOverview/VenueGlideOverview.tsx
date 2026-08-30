@@ -4,6 +4,8 @@ import "./VenueGlideOverview.css";
 import featureBg from "../../images/bg/features-gradient-bg.png";
 import { LuShieldCheck, LuCircleCheck, LuTrendingUp, LuBuilding2, LuCheck } from "react-icons/lu";
 import { Icon } from "../common/Icon";
+import Reveal from "../motion/Reveal";
+import MagneticButton from "../motion/MagneticButton";
 
 const VenueGlideOverview: React.FC = () => {
   return (
@@ -15,7 +17,7 @@ const VenueGlideOverview: React.FC = () => {
         {/* ROW 1: Card 1 & Card 2 */}
         <div className="row g-4 align-items-stretch mb-4">
           {/* Card 1: Security & Reliability */}
-          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.1} className="col-lg-6 col-md-6 d-flex">
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge blue mb-3">
@@ -57,10 +59,10 @@ const VenueGlideOverview: React.FC = () => {
                 We are committed to delivering a platform Australian businesses can trust.
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Card 2: Why Venues Choose VenueGlide */}
-          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.2} className="col-lg-6 col-md-6 d-flex">
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge orange mb-3">
@@ -102,13 +104,13 @@ const VenueGlideOverview: React.FC = () => {
                 Built to deliver immediate ROI and administrative peace of mind.
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* ROW 2: Card 3 & Card 4 Side-by-Side */}
         <div className="row g-4 align-items-stretch">
           {/* Card 3: Looking Ahead */}
-          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.1} className="col-lg-6 col-md-6 d-flex">
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge pink mb-3">
@@ -148,10 +150,10 @@ const VenueGlideOverview: React.FC = () => {
                 Building technology that helps sports venues operate smarter and grow.
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Card 4: Ready to Modernise Your Sports Venue? */}
-          <div className="col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay="400ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.2} className="col-lg-6 col-md-6 d-flex">
             <div className="venueglide-overview-card w-100 d-flex flex-column justify-content-between p-4 p-md-5 rounded-4">
               <div>
                 <div className="icon-badge green mb-3">
@@ -186,12 +188,14 @@ const VenueGlideOverview: React.FC = () => {
               </div>
 
               <div className="pt-3" style={{ borderTop: "1px solid rgba(255, 255, 255, 0.1)" }}>
-                <Link className="thm-btn agency-btn w-100 text-center py-3" to="/contact" style={{ borderRadius: "12px", background: "linear-gradient(135deg, #00D4FF 0%, #0088ff 100%)", color: "#0a0f1e", fontWeight: 700, fontSize: "14px", display: "block" }}>
-                  Book Your Personal Demo Today →
-                </Link>
+                <MagneticButton className="w-100">
+                  <Link className="thm-btn agency-btn w-100 text-center py-3" to="/contact" data-cursor="link" style={{ borderRadius: "12px", background: "linear-gradient(135deg, #00D4FF 0%, #0088ff 100%)", color: "#0a0f1e", fontWeight: 700, fontSize: "14px", display: "block" }}>
+                    Book Your Personal Demo Today →
+                  </Link>
+                </MagneticButton>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

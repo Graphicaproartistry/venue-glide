@@ -1,5 +1,7 @@
 import React from "react";
 import "./WhyVenueGlide.css";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 // Background image import
 import featureBg from "../../images/bg/features-gradient-bg.png";
@@ -82,23 +84,23 @@ const WhyVenueGlide: React.FC = () => {
     >
       <div className="container">
         {/* Section Header */}
-        <div className="sec-title-wrap text-center mb-5 wow fadeInUp" data-wow-duration="600ms">
-          <span className="sub-title d-inline-flex align-items-center gap-2 px-3 py-1 mb-2 rounded-pill text-uppercase fw-semibold" style={{ background: "rgba(0, 212, 255, 0.12)", color: "#00D4FF", border: "1px solid rgba(0, 212, 255, 0.25)", fontSize: "12px", letterSpacing: "1px" }}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-            </svg>
-            WHY CHOOSE US
-          </span>
-          <h2 className="sec-title" style={{ fontSize: "38px", fontWeight: 700, color: "#fff" }}>
-            Why VenueGlide?
-          </h2>
+        <div className="sec-title-wrap text-center mb-5">
+          <Reveal direction="up">
+            <span className="sub-title d-inline-flex align-items-center gap-2 px-3 py-1 mb-2 rounded-pill text-uppercase fw-semibold" style={{ background: "rgba(0, 212, 255, 0.12)", color: "#00D4FF", border: "1px solid rgba(0, 212, 255, 0.25)", fontSize: "12px", letterSpacing: "1px" }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+              WHY CHOOSE US
+            </span>
+          </Reveal>
+          <MaskText as="h2" className="sec-title" lines={["Why VenueGlide?"]} style={{ fontSize: "38px", fontWeight: 700, color: "#fff" }} />
         </div>
 
         {/* Equalized 3 Cards Row */}
         <div className="row g-4 align-items-stretch">
           {cardData.map((card, idx) => (
-            <div key={card.id} className="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay={`${(idx + 1) * 100}ms`} data-wow-duration="600ms">
-              <div 
+            <Reveal key={card.id} direction="up" delay={Math.min(idx * 0.1, 0.3)} className="col-lg-4 col-md-6 d-flex">
+              <div
                 className="why-venueglide-card w-100 d-flex flex-column justify-content-between p-4 p-md-4 rounded-4"
                 style={{
                   background: "rgba(13, 20, 36, 0.75)",
@@ -135,7 +137,7 @@ const WhyVenueGlide: React.FC = () => {
                   {card.footer}
                 </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
