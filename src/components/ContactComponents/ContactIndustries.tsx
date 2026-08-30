@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const industries = [
   "Indoor Cricket Centres",
@@ -18,24 +20,17 @@ const ContactIndustries: React.FC = () => {
   return (
     <section className="contact-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Industries We Support
-        </h2>
-        <p className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          VenueGlide works with:
-        </p>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Industries We Support"]} />
+        <Reveal direction="up" delay={0.1}>
+          <p className="pricing-sec-subtitle">VenueGlide works with:</p>
+        </Reveal>
 
         <div className="industries-grid">
           {industries.map((ind, idx) => (
-            <div
-              key={idx}
-              className="industry-card wow fadeInUp"
-              data-wow-delay={`${(idx % 3) * 80 + 150}ms`}
-              data-wow-duration="600ms"
-            >
+            <Reveal key={idx} direction="up" distance={16} delay={Math.min((idx % 3) * 0.06 + 0.1, 0.4)} className="industry-card">
               <i className="far fa-dumbbell"></i>
               <span>{ind}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

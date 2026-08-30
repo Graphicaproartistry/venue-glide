@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const locations = [
   "Melbourne",
@@ -16,30 +18,27 @@ const ContactServingAustralia: React.FC = () => {
   return (
     <section className="contact-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Serving Sports Venues Across Australia
-        </h2>
-        <p className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          VenueGlide proudly supports sports venues across Australia, including:
-        </p>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Serving Sports Venues Across Australia"]} />
+        <Reveal direction="up" delay={0.1}>
+          <p className="pricing-sec-subtitle">
+            VenueGlide proudly supports sports venues across Australia, including:
+          </p>
+        </Reveal>
 
         <div className="australia-grid">
           {locations.map((loc, idx) => (
-            <div
-              key={idx}
-              className="location-card wow fadeInUp"
-              data-wow-delay={`${(idx % 3) * 80 + 150}ms`}
-              data-wow-duration="600ms"
-            >
+            <Reveal key={idx} direction="up" distance={16} delay={Math.min((idx % 3) * 0.06 + 0.1, 0.34)} className="location-card">
               <i className="far fa-location-dot"></i>
               <span>{loc}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="who-should-closing text-center wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-          We also work with sports organisations and venue operators internationally, delivering cloud-based software that scales from single facilities to enterprise multi-location businesses.
-        </div>
+        <Reveal direction="up" delay={0.2} className="who-should-closing text-center">
+          Built in Melbourne on cloud infrastructure that scales beyond
+          Australia as your venue grows — from a single facility to a
+          multi-location operation.
+        </Reveal>
       </div>
     </section>
   );

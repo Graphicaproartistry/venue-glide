@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { LuCheck, LuUser, LuBuilding2, LuSend } from "react-icons/lu";
 import { Icon } from "../common/Icon";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const ContactFormCustom: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -32,14 +34,12 @@ const ContactFormCustom: React.FC = () => {
   return (
     <section className="contact-section" id="contact-form-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Contact Form
-        </h2>
-        <h3 className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          Tell Us About Your Venue
-        </h3>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Contact Form"]} />
+        <Reveal direction="up" delay={0.1}>
+          <h3 className="pricing-sec-subtitle">Tell Us About Your Venue</h3>
+        </Reveal>
 
-        <div className="demo-form-wrapper wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+        <Reveal direction="up" delay={0.15} className="demo-form-wrapper">
           {submitted ? (
             <div className="text-center py-5">
               <div
@@ -256,7 +256,7 @@ const ContactFormCustom: React.FC = () => {
               </div>
             </form>
           )}
-        </div>
+        </Reveal>
       </div>
     </section>
   );
