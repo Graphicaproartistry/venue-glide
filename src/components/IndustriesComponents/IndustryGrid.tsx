@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 interface CardItem {
   id: number;
@@ -141,33 +143,39 @@ const IndustryGrid: React.FC = () => {
   return (
     <section className="industry-section" id="industries-grid">
       <div className="container">
-        <div className="sec-title-wrap text-center mb-5 wow fadeInUp" data-wow-duration="600ms">
-          <h2 className="industry-sec-title">
-            Built Around the Way Your Sport Operates
-          </h2>
-          <p
-            style={{
-              fontSize: "15px",
-              lineHeight: "1.7",
-              color: "#cbd5e1",
-              maxWidth: "860px",
-              margin: "0 auto",
-            }}
-          >
-            Whether you run a high-volume indoor cricket venue, a multi-court padel
-            club or a fast-growing sports academy, generic booking systems often
-            fall short. VenueGlide OS is built around the actual rules, court
-            structures, membership models and booking behaviors of modern sports
-            venues. From recurring team registrations to casual court hire and
-            coaching academies, VenueGlide adapts to your venue.
-          </p>
+        <div className="sec-title-wrap text-center mb-5">
+          <MaskText as="h2" className="industry-sec-title" lines={["Built Around the Way", "Your Sport Operates"]} />
+          <Reveal direction="up" delay={0.1}>
+            <p
+              style={{
+                fontSize: "15px",
+                lineHeight: "1.7",
+                color: "#cbd5e1",
+                maxWidth: "860px",
+                margin: "0 auto",
+              }}
+            >
+              Whether you run a high-volume indoor cricket venue, a multi-court padel
+              club or a fast-growing sports academy, generic booking systems often
+              fall short. VenueGlide OS is built around the actual rules, court
+              structures, membership models and booking behaviors of modern sports
+              venues. From recurring team registrations to casual court hire and
+              coaching academies, VenueGlide adapts to your venue.
+            </p>
+          </Reveal>
         </div>
 
         {/* 6 Cards Grid */}
         <div className="row g-4">
           {cardItems.map((card, idx) => (
-            <div key={card.id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={`${(idx % 3) * 100 + 100}ms`} data-wow-duration="600ms">
-              <div className="industry-grid-card">
+            <div key={card.id} className="col-lg-4 col-md-6">
+              <Reveal
+                direction="up"
+                distance={20}
+                delay={Math.min((idx % 3) * 0.08, 0.24)}
+                className="industry-grid-card"
+                whileHover={{ y: -6, borderColor: "rgba(0, 212, 255, 0.4)" }}
+              >
                 <div className={`icon-badge ${card.badgeClass}`}>
                   {card.iconSvg}
                 </div>
@@ -183,7 +191,7 @@ const IndustryGrid: React.FC = () => {
                   <span>Learn More</span>
                   <span>→</span>
                 </Link>
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>

@@ -1,4 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const IndustryDesignedSupport: React.FC = () => {
   return (
@@ -6,7 +9,13 @@ const IndustryDesignedSupport: React.FC = () => {
       <div className="container">
         <div className="row align-items-center g-5">
           {/* Left: Dashboard UI Mockup */}
-          <div className="col-lg-6 wow fadeInLeft" data-wow-duration="600ms">
+          <motion.div
+            className="col-lg-6"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div
               style={{
                 background: "rgba(13, 20, 36, 0.9)",
@@ -68,16 +77,20 @@ const IndustryDesignedSupport: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Content */}
-          <div className="col-lg-6 wow fadeInRight" data-wow-delay="150ms" data-wow-duration="600ms">
-            <h2 className="industry-sec-title">
-              Designed to Support Every Stage of Your Business
-            </h2>
-            <p className="industry-sec-desc">
-              From independent sports clubs to enterprise venue operators, VenueGlide adapts to businesses of every size. Whether you're opening your first venue or expanding nationally, our platform grows alongside your business with scalable tools for operations, customer management and reporting.
-            </p>
+          <div className="col-lg-6">
+            <MaskText
+              as="h2"
+              className="industry-sec-title"
+              lines={["Designed to Support Every", "Stage of Your Business"]}
+            />
+            <Reveal direction="up" delay={0.1}>
+              <p className="industry-sec-desc">
+                From independent sports clubs to enterprise venue operators, VenueGlide adapts to businesses of every size. Whether you're opening your first venue or expanding nationally, our platform grows alongside your business with scalable tools for operations, customer management and reporting.
+              </p>
+            </Reveal>
           </div>
         </div>
       </div>

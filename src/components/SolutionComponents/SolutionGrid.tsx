@@ -12,6 +12,8 @@ import {
 } from "react-icons/lu";
 import { Icon } from "../common/Icon";
 import { IconType } from "react-icons";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 interface SolutionItem {
   id: number;
@@ -151,14 +153,20 @@ const SolutionGrid: React.FC = () => {
   return (
     <section className="solution-section" id="solutions-grid">
       <div className="container">
-        <div className="sec-title-wrap text-center mb-5 wow fadeInUp" data-wow-duration="600ms">
-          <h2 className="solution-sec-title">Online Booking Solution</h2>
+        <div className="sec-title-wrap text-center mb-5">
+          <MaskText as="h2" className="solution-sec-title" lines={["Complete Solutions for Every Sports Venue"]} />
         </div>
 
         <div className="row g-4">
           {solutionItems.map((item, idx) => (
-            <div key={item.id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={`${(idx % 3) * 100 + 100}ms`} data-wow-duration="600ms">
-              <div className="solution-grid-card">
+            <div key={item.id} className="col-lg-4 col-md-6">
+              <Reveal
+                direction="up"
+                distance={20}
+                delay={Math.min((idx % 3) * 0.08, 0.24)}
+                className="solution-grid-card"
+                whileHover={{ y: -6, borderColor: "rgba(0, 212, 255, 0.4)" }}
+              >
                 <div className="icon-badge">
                   <Icon icon={item.icon} size={22} />
                 </div>
@@ -171,7 +179,7 @@ const SolutionGrid: React.FC = () => {
                     ))}
                   </ul>
                 )}
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>

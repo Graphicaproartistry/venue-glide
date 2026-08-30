@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 interface FAQItem {
   id: number;
@@ -44,30 +46,35 @@ const IndustryFAQ: React.FC = () => {
   return (
     <section className="industry-section">
       <div className="container">
-        <div className="sec-title-wrap text-center mb-5 wow fadeInUp" data-wow-duration="600ms">
+        <div className="sec-title-wrap text-center mb-5">
           <span className="sub-title-badge">FAQ</span>
-          <h2 className="industry-sec-title">Frequently Asked Questions</h2>
-          <p
-            style={{
-              fontSize: "15px",
-              color: "#cbd5e1",
-              maxWidth: "700px",
-              margin: "0 auto",
-            }}
-          >
-            Find answers to commonly asked questions about our product or service in our comprehensive FAQ section.
-          </p>
+          <MaskText as="h2" className="industry-sec-title" lines={["Frequently Asked Questions"]} />
+          <Reveal direction="up" delay={0.1}>
+            <p
+              style={{
+                fontSize: "15px",
+                color: "#cbd5e1",
+                maxWidth: "700px",
+                margin: "0 auto",
+              }}
+            >
+              Find answers to commonly asked questions about our product or service in our comprehensive FAQ section.
+            </p>
+          </Reveal>
         </div>
 
         <div className="row g-4 align-items-stretch">
           {/* Left: Accordions */}
-          <div className="col-lg-8 wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="600ms">
+          <div className="col-lg-8">
             <div className="industry-faq-accordion">
-              {faqData.map((item) => {
+              {faqData.map((item, idx) => {
                 const isOpen = activeId === item.id;
                 return (
-                  <div
+                  <Reveal
                     key={item.id}
+                    direction="up"
+                    distance={16}
+                    delay={Math.min(idx * 0.08, 0.3)}
                     className={`industry-faq-item ${isOpen ? "active" : ""}`}
                     style={{
                       background: "rgba(13, 20, 36, 0.75)",
@@ -127,15 +134,15 @@ const IndustryFAQ: React.FC = () => {
                         <p className="m-0">{item.answer}</p>
                       </div>
                     )}
-                  </div>
+                  </Reveal>
                 );
               })}
             </div>
           </div>
 
           {/* Right: Side Support Card */}
-          <div className="col-lg-4 wow fadeInRight" data-wow-delay="300ms" data-wow-duration="600ms">
-            <div className="industry-faq-side-box">
+          <div className="col-lg-4">
+            <Reveal direction="right" distance={24} delay={0.2} className="industry-faq-side-box">
               <div className="icon-box">
                 <svg
                   width="22"
@@ -162,7 +169,7 @@ const IndustryFAQ: React.FC = () => {
                 <span>Book a Demo Call</span>
                 <span>→</span>
               </Link>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>
