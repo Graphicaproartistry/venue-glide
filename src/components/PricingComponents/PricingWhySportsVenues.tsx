@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const benefitsList = [
   "Increase online bookings",
@@ -13,30 +15,34 @@ const PricingWhySportsVenues: React.FC = () => {
   return (
     <section className="pricing-section">
       <div className="container">
-        <div className="why-sports-box wow fadeInUp" data-wow-duration="600ms">
-          <h2 className="pricing-sec-title text-center mb-4">
-            Why Sports Venues Choose VenueGlide
-          </h2>
+        <div className="why-sports-box">
+          <div className="text-center">
+            <MaskText as="h2" className="pricing-sec-title mb-4" lines={["Why Sports Venues Choose VenueGlide"]} />
+          </div>
 
-          <div className="intro-text text-center">
-            VenueGlide is more than booking software.
-          </div>
-          <div className="sub-intro text-center">
-            It's a complete operating system that helps sports venues:
-          </div>
+          <Reveal direction="up" delay={0.1}>
+            <div className="intro-text text-center">
+              VenueGlide is more than booking software.
+            </div>
+            <div className="sub-intro text-center">
+              It's a complete operating system that helps sports venues:
+            </div>
+          </Reveal>
 
           <div className="why-sports-grid">
             {benefitsList.map((item, idx) => (
-              <div key={idx} className="why-sports-item">
+              <Reveal key={idx} direction="up" distance={16} delay={Math.min(idx * 0.06 + 0.1, 0.4)} className="why-sports-item">
                 <i className="far fa-check-circle"></i>
                 <span>{item}</span>
-              </div>
+              </Reveal>
             ))}
           </div>
 
-          <div className="why-sports-closing">
-            Whether you manage one venue or multiple locations, VenueGlide provides the tools to support long-term growth.
-          </div>
+          <Reveal direction="up" delay={0.2}>
+            <div className="why-sports-closing">
+              Whether you manage one venue or multiple locations, VenueGlide provides the tools to support long-term growth.
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

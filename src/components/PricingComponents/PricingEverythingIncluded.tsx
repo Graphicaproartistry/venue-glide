@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const includedItems = [
   { title: "Secure Cloud Hosting", icon: "far fa-cloud" },
@@ -16,32 +18,35 @@ const PricingEverythingIncluded: React.FC = () => {
   return (
     <section className="pricing-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Everything Included
-        </h2>
-        <p className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          Every VenueGlide subscription includes:
-        </p>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Everything Included"]} />
+        <Reveal direction="up" delay={0.1}>
+          <p className="pricing-sec-subtitle">
+            Every VenueGlide subscription includes:
+          </p>
+        </Reveal>
 
         <div className="everything-grid">
           {includedItems.map((item, idx) => (
-            <div
+            <Reveal
               key={idx}
-              className="everything-card wow fadeInUp"
-              data-wow-delay={`${(idx % 3) * 100 + 150}ms`}
-              data-wow-duration="600ms"
+              direction="up"
+              distance={16}
+              delay={Math.min((idx % 3) * 0.08 + 0.1, 0.34)}
+              className="everything-card"
             >
               <div className="everything-icon">
                 <i className={item.icon}></i>
               </div>
               <div className="everything-title">{item.title}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="everything-footer-note wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-          No hidden platform maintenance costs.
-        </div>
+        <Reveal direction="up" delay={0.2}>
+          <div className="everything-footer-note">
+            No hidden platform maintenance costs.
+          </div>
+        </Reveal>
       </div>
     </section>
   );

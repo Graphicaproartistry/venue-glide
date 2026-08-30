@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const PricingPlans: React.FC = () => {
   return (
     <section className="pricing-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Pricing Plans
-        </h2>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Pricing Plans"]} />
 
         <div className="pricing-plans-grid">
           {/* Starter Plan */}
-          <div className="pricing-plan-card wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.05} className="pricing-plan-card">
             <div className="plan-header">
               <h3 className="plan-title">Starter</h3>
               <div className="plan-subheading">Perfect for Growing Sports Venues</div>
@@ -57,10 +57,10 @@ const PricingPlans: React.FC = () => {
                 Book a Demo
               </Link>
             </div>
-          </div>
+          </Reveal>
 
           {/* Professional Plan */}
-          <div className="pricing-plan-card popular wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.1} className="pricing-plan-card popular">
             <div className="popular-badge">Most Popular</div>
 
             <div className="plan-header">
@@ -96,10 +96,10 @@ const PricingPlans: React.FC = () => {
                 Book a Demo
               </Link>
             </div>
-          </div>
+          </Reveal>
 
           {/* Enterprise Plan */}
-          <div className="pricing-plan-card wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.15} className="pricing-plan-card">
             <div className="plan-header">
               <h3 className="plan-title">Enterprise</h3>
               <div className="plan-subheading">Complete Solution for Multi-Venue Organisations</div>
@@ -134,7 +134,7 @@ const PricingPlans: React.FC = () => {
                 Contact Sales
               </Link>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

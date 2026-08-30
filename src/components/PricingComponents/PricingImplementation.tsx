@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const processSteps = [
   { num: 1, title: "1. Discovery & Planning" },
@@ -13,39 +15,38 @@ const PricingImplementation: React.FC = () => {
   return (
     <section className="pricing-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Implementation & Onboarding
-        </h2>
-        <h3 className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          A Smooth Transition to VenueGlide
-        </h3>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Implementation & Onboarding"]} />
+        <Reveal direction="up" delay={0.1}>
+          <h3 className="pricing-sec-subtitle">A Smooth Transition to VenueGlide</h3>
+        </Reveal>
 
-        <div className="implementation-intro wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+        <Reveal direction="up" delay={0.15} className="implementation-intro">
           <p>Moving to a new management platform doesn't have to be complicated.</p>
           <p>Our onboarding team works with your venue to ensure a smooth implementation with minimal disruption.</p>
-        </div>
+        </Reveal>
 
-        <h4 className="process-header-title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
-          Our Process
-        </h4>
+        <Reveal direction="up" delay={0.2}>
+          <h4 className="process-header-title">Our Process</h4>
+        </Reveal>
 
         <div className="process-grid">
           {processSteps.map((step) => (
-            <div
+            <Reveal
               key={step.num}
-              className="process-card wow fadeInUp"
-              data-wow-delay={`${(step.num - 1) * 80 + 200}ms`}
-              data-wow-duration="600ms"
+              direction="up"
+              distance={16}
+              delay={Math.min((step.num - 1) * 0.06 + 0.15, 0.5)}
+              className="process-card"
             >
               <div className="process-num">{step.num}</div>
               <div className="process-title">{step.title}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="implementation-closing wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
+        <Reveal direction="up" delay={0.25} className="implementation-closing">
           Whether you're switching from spreadsheets or another venue management system, we'll help you every step of the way.
-        </div>
+        </Reveal>
       </div>
     </section>
   );

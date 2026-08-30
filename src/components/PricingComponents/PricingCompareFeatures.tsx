@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const featureComparisonData = [
   { feature: "Online Booking", starter: "✓", pro: "✓", enterprise: "✓" },
@@ -18,11 +20,9 @@ const PricingCompareFeatures: React.FC = () => {
   return (
     <section className="pricing-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Compare Features
-        </h2>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Compare Features"]} />
 
-        <div className="compare-table-wrapper wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+        <Reveal direction="up" delay={0.1} className="compare-table-wrapper">
           <table className="compare-table">
             <thead>
               <tr>
@@ -67,7 +67,7 @@ const PricingCompareFeatures: React.FC = () => {
               ))}
             </tbody>
           </table>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
