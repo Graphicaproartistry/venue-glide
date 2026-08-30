@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { LuMapPin, LuPhone } from "react-icons/lu";
+import { LuMapPin, LuMail } from "react-icons/lu";
 import { Icon } from "../common/Icon";
 
 // Image imports
@@ -176,7 +176,7 @@ const Footer: React.FC = () => {
         <div className="xb-footer-bottom">
           <div className="contact-item">
             <Icon icon={LuMapPin} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
-            <span className="contact-method">4517 Washington, USA</span>
+            <span className="contact-method">Broadmeadows, Melbourne VIC, Australia</span>
           </div>
 
           <div className="contact-item copyright-item">
@@ -186,11 +186,11 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="contact-item">
-            <a href="tel:+112304528597">
-              <Icon icon={LuPhone} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
+            <a href="mailto:sales@venueglide.com">
+              <Icon icon={LuMail} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
             </a>
-            <a className="contact-method" href="tel:+112304528597">
-              +(1)1230 452 8597
+            <a className="contact-method" href="mailto:sales@venueglide.com">
+              sales@venueglide.com
             </a>
           </div>
         </div>

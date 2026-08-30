@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const inclusions = [
   "Live Product Walkthrough",
@@ -15,24 +17,23 @@ const BookDemoWhyBook: React.FC = () => {
   return (
     <section className="book-demo-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Why Book a Demo?
-        </h2>
-        <p className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          Every demonstration includes:
-        </p>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Why Book a Demo?"]} />
+        <Reveal direction="up" delay={0.1}>
+          <p className="pricing-sec-subtitle">Every demonstration includes:</p>
+        </Reveal>
 
         <div className="why-book-grid">
           {inclusions.map((item, idx) => (
-            <div
+            <Reveal
               key={idx}
-              className="why-book-card wow fadeInUp"
-              data-wow-delay={`${(idx % 4) * 80 + 150}ms`}
-              data-wow-duration="600ms"
+              direction="up"
+              distance={10}
+              delay={Math.min((idx % 4) * 0.06 + 0.15, 0.4)}
+              className="why-book-card"
             >
               <i className="far fa-check"></i>
               <span>{item}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

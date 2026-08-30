@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const benefits = [
   "Simplify daily operations",
@@ -15,26 +17,30 @@ const BookDemoWhySportsVenues: React.FC = () => {
   return (
     <section className="book-demo-section">
       <div className="container">
-        <div className="who-should-box wow fadeInUp" data-wow-duration="600ms">
-          <h2 className="pricing-sec-title text-center mb-3">
-            Why Sports Venues Choose VenueGlide
-          </h2>
-          <div className="sub-intro text-center">
-            VenueGlide helps sports venues:
+        <div className="who-should-box">
+          <div className="text-center">
+            <MaskText as="h2" className="pricing-sec-title mb-3" lines={["Why Sports Venues Choose VenueGlide"]} />
           </div>
+          <Reveal direction="up" delay={0.1}>
+            <div className="sub-intro text-center">
+              VenueGlide helps sports venues:
+            </div>
+          </Reveal>
 
           <div className="who-should-grid">
             {benefits.map((benefit, idx) => (
-              <div key={idx} className="who-should-item">
+              <Reveal key={idx} direction="up" distance={10} delay={Math.min(idx * 0.05 + 0.15, 0.45)} className="who-should-item">
                 <i className="far fa-check-circle"></i>
                 <span>{benefit}</span>
-              </div>
+              </Reveal>
             ))}
           </div>
 
-          <div className="who-should-closing">
-            Our platform is trusted by sports venues looking for a modern, connected operating system that supports long-term growth.
-          </div>
+          <Reveal direction="up" delay={0.3}>
+            <div className="who-should-closing">
+              Our platform is trusted by sports venues looking for a modern, connected operating system that supports long-term growth.
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -10,6 +10,8 @@ import {
 } from "react-icons/lu";
 import { Icon } from "../common/Icon";
 import { IconType } from "react-icons";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 interface DemoFeatureItem {
   title: string;
@@ -59,36 +61,34 @@ const BookDemoWhatYouSee: React.FC = () => {
   return (
     <section className="book-demo-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          What You'll See
-        </h2>
-        <h3 className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          A Demo Tailored to Your Venue
-        </h3>
+        <MaskText as="h2" className="pricing-sec-title" lines={["What You'll See"]} />
+        <Reveal direction="up" delay={0.1}>
+          <h3 className="pricing-sec-subtitle">A Demo Tailored to Your Venue</h3>
+        </Reveal>
 
-        <div className="what-you-see-intro wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+        <Reveal direction="up" delay={0.15} className="what-you-see-intro">
           <p>No generic presentations.</p>
           <p>No pre-recorded videos.</p>
           <p>Every demonstration is customised for your venue.</p>
           <p style={{ color: "#cbd5e1", marginTop: "8px" }}>
             We'll walk you through the features that matter most to your business.
           </p>
-        </div>
+        </Reveal>
 
         <div className="what-you-see-grid">
           {features.map((item, idx) => (
-            <div
+            <Reveal
               key={idx}
-              className="what-you-see-card wow fadeInUp"
-              data-wow-delay={`${(idx % 3) * 100 + 200}ms`}
-              data-wow-duration="600ms"
+              direction="up"
+              delay={Math.min((idx % 3) * 0.08 + 0.2, 0.5)}
+              className="what-you-see-card"
             >
               <div className="card-icon-box">
                 <Icon icon={item.icon} size={24} />
               </div>
               <h4 className="card-title">{item.title}</h4>
               <p className="card-desc">{item.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

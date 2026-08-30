@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const BookDemoForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -34,14 +36,12 @@ const BookDemoForm: React.FC = () => {
   return (
     <section className="book-demo-section" id="demo-request-form">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Demo Request Form
-        </h2>
-        <h3 className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          Book Your Personalised VenueGlide Demo
-        </h3>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Demo Request Form"]} />
+        <Reveal direction="up" delay={0.1}>
+          <h3 className="pricing-sec-subtitle">Book Your Personalised VenueGlide Demo</h3>
+        </Reveal>
 
-        <div className="demo-form-wrapper wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+        <Reveal direction="up" delay={0.15} className="demo-form-wrapper">
           {submitted ? (
             <div className="text-center py-5">
               <div
@@ -319,7 +319,7 @@ const BookDemoForm: React.FC = () => {
               </div>
             </form>
           )}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

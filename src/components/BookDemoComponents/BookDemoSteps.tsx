@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const steps = [
   {
@@ -22,25 +24,23 @@ const BookDemoSteps: React.FC = () => {
   return (
     <section className="book-demo-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          What Happens During the Demo?
-        </h2>
-        <h3 className="pricing-sec-subtitle wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
-          A Simple Three-Step Process
-        </h3>
+        <MaskText as="h2" className="pricing-sec-title" lines={["What Happens During the Demo?"]} />
+        <Reveal direction="up" delay={0.1}>
+          <h3 className="pricing-sec-subtitle">A Simple Three-Step Process</h3>
+        </Reveal>
 
         <div className="demo-steps-grid">
           {steps.map((item, idx) => (
-            <div
+            <Reveal
               key={idx}
-              className="demo-step-card wow fadeInUp"
-              data-wow-delay={`${idx * 100 + 150}ms`}
-              data-wow-duration="600ms"
+              direction="up"
+              delay={Math.min(idx * 0.1 + 0.15, 0.4)}
+              className="demo-step-card"
             >
               <div className="step-badge">{item.step}</div>
               <h4 className="step-title">{item.title}</h4>
               <p className="step-desc">{item.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

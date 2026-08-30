@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 interface FAQItem {
   id: number;
@@ -55,16 +57,17 @@ const BookDemoFAQ: React.FC = () => {
   return (
     <section className="book-demo-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Frequently Asked Questions
-        </h2>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Frequently Asked Questions"]} />
 
-        <div className="pricing-faq-accordion wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-          {faqData.map((item) => {
+        <div className="pricing-faq-accordion">
+          {faqData.map((item, idx) => {
             const isOpen = activeId === item.id;
             return (
-              <div
+              <Reveal
                 key={item.id}
+                direction="up"
+                distance={16}
+                delay={Math.min(idx * 0.07, 0.3)}
                 className={`pricing-faq-item ${isOpen ? "active" : ""}`}
               >
                 <button
@@ -82,7 +85,7 @@ const BookDemoFAQ: React.FC = () => {
                     <p className="m-0">{item.answer}</p>
                   </div>
                 )}
-              </div>
+              </Reveal>
             );
           })}
         </div>
