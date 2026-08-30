@@ -19,7 +19,7 @@ import ProjectDetails from "../ProjectDetails/ProjectDetails";
 import TeamPage from "../TeamPage/TeamPage";
 import ScrollToTop from "./ScrollToTop";
 import BlogPage from "../BlogPage/BlogPage";
-import BlogDetails from "../BlogDetails/BlogDetails";
+import BlogPostPage from "../BlogPostPage/BlogPostPage";
 import ContactPage from "../ContactPage/ContactPage";
 import PricingPage from "../PricingPage/PricingPage";
 import BookDemoPage from "../BookDemoPage/BookDemoPage";
@@ -50,7 +50,8 @@ const AllRoute: React.FC = () => {
           <Route path="/project-details" element={<ProjectDetails />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog-details" element={<BlogDetails />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/blog-details" element={<Navigate to="/blog" replace />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/book-demo" element={<BookDemoPage />} />

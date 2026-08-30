@@ -1,19 +1,26 @@
 import React, { Fragment } from "react";
 import Header from "../../components/Header/Header";
-import PageTitle from "../../components/pagetitle/PageTitle";
-import BlogList from "../../components/BlogList/BlogList";
-import Scrollbar from "../../components/scrollbar/scrollbar";
+import Seo from "../../components/seo/Seo";
+import BlogHero from "../../components/Blog/BlogHero";
+import BlogGrid from "../../components/Blog/BlogGrid";
 import Footer from "../../components/footer/Footer";
+import Scrollbar from "../../components/scrollbar/scrollbar";
 
 const BlogPage: React.FC = () => {
   return (
     <Fragment>
-      <div className='about-page inner-page'>
+      <Seo
+        title="Blog | VenueGlide OS Sports Venue Software"
+        description="News, product updates and customer stories from VenueGlide OS — sports venue management software for booking, memberships and operations in Melbourne, across Australia and worldwide."
+        path="/blog"
+        breadcrumbs={[{ name: "Blog", path: "/blog" }]}
+      />
+      <div className="blog-page inner-page">
         <div className="body_wrap o-clip">
           <Header />
           <main>
-            <PageTitle pageTitle="Blog" pagesub="Blog" />
-            <BlogList />
+            <BlogHero />
+            <BlogGrid />
           </main>
           <Footer />
           <Scrollbar />
