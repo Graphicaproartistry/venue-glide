@@ -1,16 +1,15 @@
 import React from "react";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const ContactInfoCards: React.FC = () => {
   return (
     <section className="contact-section">
       <div className="container">
-        <h2 className="pricing-sec-title wow fadeInUp" data-wow-duration="600ms">
-          Contact Information
-        </h2>
+        <MaskText as="h2" className="pricing-sec-title" lines={["Contact Information"]} />
 
         <div className="contact-info-grid mt-4">
-          {/* Card 1: General Enquiries */}
-          <div className="contact-info-card wow fadeInUp" data-wow-delay="100ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.05} className="contact-info-card">
             <div className="contact-info-icon">
               <i className="far fa-envelope"></i>
             </div>
@@ -19,10 +18,9 @@ const ContactInfoCards: React.FC = () => {
             <a href="mailto:sales@venueglide.com" className="card-link">
               sales@venueglide.com
             </a>
-          </div>
+          </Reveal>
 
-          {/* Card 2: Customer Support */}
-          <div className="contact-info-card wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.1} className="contact-info-card">
             <div className="contact-info-icon">
               <i className="far fa-headset"></i>
             </div>
@@ -30,21 +28,23 @@ const ContactInfoCards: React.FC = () => {
             <a href="mailto:support@venueglide.com" className="card-link mt-2">
               support@venueglide.com
             </a>
-          </div>
+          </Reveal>
 
-          {/* Card 3: Sales Team */}
-          <div className="contact-info-card wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.15} className="contact-info-card">
             <div className="contact-info-icon">
-              <i className="far fa-user-tie"></i>
+              <i className="far fa-map-marker-alt"></i>
             </div>
-            <h3 className="card-title">Sales Team</h3>
-            <p className="card-text mt-2">
-              Speak with one of our Venue Management Specialists.
+            <h3 className="card-title">Our Office</h3>
+            <p className="card-text mb-0">
+              12 Dimboola Road
+              <br />
+              Broadmeadows, Melbourne
+              <br />
+              Victoria 3047, Australia
             </p>
-          </div>
+          </Reveal>
 
-          {/* Card 4: Office Hours */}
-          <div className="contact-info-card wow fadeInUp" data-wow-delay="400ms" data-wow-duration="600ms">
+          <Reveal direction="up" delay={0.2} className="contact-info-card">
             <div className="contact-info-icon">
               <i className="far fa-clock"></i>
             </div>
@@ -56,7 +56,7 @@ const ContactInfoCards: React.FC = () => {
             <p className="card-text" style={{ fontSize: "12px", color: "#00D4ff" }}>
               Australian Eastern Time (AET)
             </p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

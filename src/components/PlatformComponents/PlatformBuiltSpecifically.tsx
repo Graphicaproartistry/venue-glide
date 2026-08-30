@@ -1,4 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 const PlatformBuiltSpecifically: React.FC = () => {
   return (
@@ -6,17 +9,27 @@ const PlatformBuiltSpecifically: React.FC = () => {
       <div className="container">
         <div className="row align-items-center g-5">
           {/* Left: Content */}
-          <div className="col-lg-6 wow fadeInLeft" data-wow-duration="600ms">
-            <h2 className="platform-sec-title">
-              Built Specifically for Sports Venues
-            </h2>
-            <p className="platform-sec-desc">
-              Most venue operators rely on several disconnected systems to manage daily operations. VenueGlide replaces those fragmented tools with one unified platform designed specifically for the sports industry. Whether you operate an indoor cricket centre, a padel club, a tennis academy or a multi-sport venue, every feature has been designed around the way sports facilities actually operate.
-            </p>
+          <div className="col-lg-6">
+            <MaskText
+              as="h2"
+              className="platform-sec-title"
+              lines={["Built Specifically for", "Sports Venues"]}
+            />
+            <Reveal direction="up" delay={0.1}>
+              <p className="platform-sec-desc">
+                Most venue operators rely on several disconnected systems to manage daily operations. VenueGlide replaces those fragmented tools with one unified platform designed specifically for the sports industry. Whether you operate an indoor cricket centre, a padel club, a tennis academy or a multi-sport venue, every feature has been designed around the way sports facilities actually operate.
+              </p>
+            </Reveal>
           </div>
 
           {/* Right: Dashboard Mockup */}
-          <div className="col-lg-6 wow fadeInRight" data-wow-delay="150ms" data-wow-duration="600ms">
+          <motion.div
+            className="col-lg-6"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="platform-dashboard-mockup">
               <div className="mockup-header">
                 <span className="title">Venue Performance Dashboard</span>
@@ -92,7 +105,7 @@ const PlatformBuiltSpecifically: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

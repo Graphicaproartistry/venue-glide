@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Reveal from "../motion/Reveal";
+import MaskText from "../motion/MaskText";
 
 interface GridItem {
   id: number;
@@ -31,7 +33,7 @@ const gridItems: GridItem[] = [
   {
     id: 5,
     title: "Payments",
-    desc: "Accept secure online payments, deposits, recurring memberships, refunds and invoices through integrated payment gateways.",
+    desc: "Accept secure online payments, deposits, recurring memberships, refunds and invoices through a native Stripe integration.",
   },
   {
     id: 6,
@@ -64,21 +66,27 @@ const PlatformFeaturesGrid: React.FC = () => {
   return (
     <section className="platform-section" id="everything-venue-needs">
       <div className="container">
-        <div className="sec-title-wrap text-center mb-5 wow fadeInUp" data-wow-duration="600ms">
-          <h2 className="platform-sec-title">Everything Your Venue Needs</h2>
+        <div className="sec-title-wrap text-center mb-5">
+          <MaskText as="h2" className="platform-sec-title" lines={["Everything Your Venue Needs"]} />
         </div>
 
         <div className="row g-4">
           {gridItems.map((item, idx) => (
-            <div key={item.id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={`${(idx % 3) * 100 + 100}ms`} data-wow-duration="600ms">
-              <div className="platform-grid-card">
+            <div key={item.id} className="col-lg-4 col-md-6">
+              <Reveal
+                direction="up"
+                distance={20}
+                delay={Math.min((idx % 3) * 0.08, 0.24)}
+                className="platform-grid-card"
+                whileHover={{ y: -6, borderColor: "rgba(0, 212, 255, 0.4)" }}
+              >
                 <h3 className="card-title">{item.title}</h3>
                 <p className="card-text">{item.desc}</p>
                 <Link to="/contact" className="learn-more-link">
                   <span>Learn More</span>
                   <span>→</span>
                 </Link>
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>

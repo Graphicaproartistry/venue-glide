@@ -102,6 +102,14 @@ const Seo: React.FC<SeoProps> = ({
           name: SITE_NAME,
           url: SITE_URL,
           areaServed: "Australia",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "12 Dimboola Road",
+            addressLocality: "Broadmeadows",
+            addressRegion: "VIC",
+            postalCode: "3047",
+            addressCountry: "AU",
+          },
         },
         {
           "@type": "WebPage",
