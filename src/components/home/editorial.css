@@ -219,7 +219,10 @@ html::-webkit-scrollbar {
   gap: 14px;
 }
 
-/* Editorial buttons: rectangular, restrained, no glow. */
+/* Editorial buttons: rectangular, restrained, no glow. Hover reveals the
+   accent colour with the same left-to-right sweep used by the footer's
+   social-media tabs (see ".ed-swipe-fill" below), rather than an instant
+   colour swap. */
 .ed-btn {
   display: inline-flex;
   align-items: center;
@@ -232,8 +235,7 @@ html::-webkit-scrollbar {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 0.3s var(--ed-ease), color 0.3s var(--ed-ease),
-    border-color 0.3s var(--ed-ease);
+  transition: color 0.3s var(--ed-ease), border-color 0.3s var(--ed-ease);
 }
 
 .ed-btn--solid {
@@ -243,7 +245,6 @@ html::-webkit-scrollbar {
 }
 
 .ed-btn--solid:hover {
-  background: var(--ed-accent);
   border-color: var(--ed-accent);
   color: #000000;
 }
@@ -255,8 +256,103 @@ html::-webkit-scrollbar {
 }
 
 .ed-btn--ghost:hover {
-  border-color: var(--ed-fg);
-  color: var(--ed-fg);
+  border-color: var(--ed-accent);
+  color: #000000;
+}
+
+/* ---- unified "swipe fill" hover ---------------------------------------
+   The footer's social-media tabs (Footer.tsx / .xb-social-media-item)
+   reveal the accent colour behind themselves on hover via a ::before
+   layer that grows from 0 to 100% width, rather than an instant colour
+   swap. Reusing that exact mechanic here — on every button-shaped element
+   sitewide, plus the footer's address/email/copyright row — keeps hover
+   motion consistent across the whole site instead of one component
+   improvising its own transition.
+
+   Two variants: a button that rests light/transparent gets a cyan sweep
+   with the label turning black once the fill passes under it; a button
+   that already rests on solid accent colour (gradient CTAs, the cyan
+   submit button) gets a white sweep instead, since a cyan-on-cyan sweep
+   would be invisible. */
+.ed-btn,
+.btn-primary-green,
+.btn-outline-glow,
+.btn-plan-primary,
+.btn-plan-outline,
+.btn-submit-demo,
+.thm-btn.agency-btn {
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1;
+}
+
+.ed-btn::before,
+.btn-primary-green::before,
+.btn-outline-glow::before,
+.btn-plan-primary::before,
+.btn-plan-outline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 0;
+  background: var(--ed-accent);
+  transition: width 0.4s var(--ed-ease);
+}
+
+.btn-submit-demo::before,
+.thm-btn.agency-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 0;
+  background: #ffffff;
+  transition: width 0.4s var(--ed-ease);
+}
+
+.ed-btn:hover::before,
+.btn-primary-green:hover::before,
+.btn-outline-glow:hover::before,
+.btn-plan-primary:hover::before,
+.btn-plan-outline:hover::before,
+.btn-submit-demo:hover::before,
+.thm-btn.agency-btn:hover::before {
+  width: 100%;
+}
+
+.btn-plan-outline:hover,
+.btn-outline-glow:hover {
+  color: #000000 !important;
+}
+
+/* Footer's address/email/copyright row: same sweep as its social-media
+   tabs directly above it, instead of the social row being the one place
+   on the page with this motion. */
+.xb-footer-bottom .contact-item {
+  z-index: 1;
+  overflow: hidden;
+}
+
+.xb-footer-bottom .contact-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 0;
+  background: var(--color-primary);
+  transition: width 0.4s var(--ed-ease);
+}
+
+.xb-footer-bottom .contact-item:hover::before {
+  width: 100%;
+}
+
+.xb-footer-bottom .contact-item:hover .contact-method,
+.xb-footer-bottom .contact-item:hover svg,
+.xb-footer-bottom .contact-item.copyright-item:hover p,
+.xb-footer-bottom .contact-item.copyright-item:hover p a {
+  color: #000000 !important;
 }
 
 .ed-scroll-cue {
@@ -596,8 +692,7 @@ html::-webkit-scrollbar {
   font-size: 12.5px !important;
   font-weight: 600 !important;
   box-shadow: none !important;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease,
-    transform 0.3s ease !important;
+  transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease !important;
 }
 
 .btn-primary-green {
@@ -607,7 +702,6 @@ html::-webkit-scrollbar {
 }
 
 .btn-primary-green:hover {
-  background: var(--ed-accent) !important;
   border-color: var(--ed-accent) !important;
   color: #000000 !important;
   box-shadow: none !important;
@@ -620,9 +714,7 @@ html::-webkit-scrollbar {
 }
 
 .btn-outline-glow:hover {
-  background: #ffffff !important;
-  color: #000000 !important;
-  border-color: #ffffff !important;
+  border-color: var(--ed-accent) !important;
   transform: translateY(-1px) !important;
 }
 
@@ -641,15 +733,12 @@ html::-webkit-scrollbar {
 }
 
 .btn-plan-primary:hover {
-  background: var(--ed-accent) !important;
   color: #000000 !important;
   box-shadow: none !important;
 }
 
 .btn-plan-outline:hover {
-  border-color: #ffffff !important;
-  color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--ed-accent) !important;
 }
 
 .pricing-plan-card.popular {
