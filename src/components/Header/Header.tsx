@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 
         <MagneticButton>
           <Link className="ed-nav-cta" to="/contact" onClick={scrollTop} data-cursor="link">
-            Purchase Now
+            Get Now
           </Link>
         </MagneticButton>
 
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.55 }}
             >
               <Link className="ed-btn ed-btn--solid" to="/contact" onClick={scrollTop}>
-                Purchase Now
+                Get Now
               </Link>
             </motion.div>
           </motion.div>

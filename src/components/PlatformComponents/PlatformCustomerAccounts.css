@@ -1,0 +1,153 @@
+/* ===== Customer account / booking history mockup (Platform page) ======= */
+
+.account-mockup-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.account-mockup-profile {
+  background: #ffffff;
+  border: 1px solid rgba(10, 15, 30, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.account-mockup-profile-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.account-mockup-edit {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0088cc;
+}
+
+.account-mockup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(10, 15, 30, 0.06);
+}
+
+.account-mockup-field span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.account-mockup-field strong {
+  font-size: 13.5px;
+  color: #0a0f1e;
+}
+
+.account-mockup-signout {
+  width: 100%;
+  margin-top: 12px;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: #ffffff;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 12.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: default;
+}
+
+.account-mockup-bookings-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.account-mockup-bookings-head h4 {
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0;
+  color: #0a0f1e;
+}
+
+.account-mockup-tabs {
+  display: inline-flex;
+  gap: 6px;
+  background: rgba(10, 15, 30, 0.05);
+  border-radius: 30px;
+  padding: 4px;
+}
+
+.account-mockup-tabs span {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 30px;
+  color: #5b6478;
+}
+
+.account-mockup-tabs span.is-active {
+  background: #ffffff;
+  color: #0a0f1e;
+  box-shadow: 0 2px 6px rgba(10, 15, 30, 0.12);
+}
+
+.account-mockup-booking-card {
+  background: #ffffff;
+  border: 1px solid rgba(10, 15, 30, 0.08);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.account-mockup-booking-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-bottom: 4px;
+}
+
+.account-mockup-booking-top span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0a0f1e;
+}
+
+.account-mockup-status {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 30px;
+  background: rgba(10, 15, 30, 0.06);
+  color: #5b6478;
+}
+
+.account-mockup-status.is-upcoming {
+  background: rgba(0, 212, 255, 0.12);
+  color: #0088cc;
+}
+
+.account-mockup-booking-card p {
+  font-size: 12px;
+  color: #5b6478;
+  margin: 0 0 8px;
+}
+
+.account-mockup-booking-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 11px;
+  color: #94a3b8;
+}

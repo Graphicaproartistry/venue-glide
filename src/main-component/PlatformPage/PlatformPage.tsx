@@ -3,6 +3,9 @@ import Header from "../../components/Header/Header";
 import Seo from "../../components/seo/Seo";
 import PlatformHero from "../../components/PlatformComponents/PlatformHero";
 import PlatformOperatingSystem from "../../components/PlatformComponents/PlatformOperatingSystem";
+import PlatformBookingExperience from "../../components/PlatformComponents/PlatformBookingExperience";
+import PlatformExperiencePreview from "../../components/PlatformComponents/PlatformExperiencePreview";
+import PlatformCustomerAccounts from "../../components/PlatformComponents/PlatformCustomerAccounts";
 import PlatformWorksTogether from "../../components/PlatformComponents/PlatformWorksTogether";
 import PlatformFeaturesGrid from "../../components/PlatformComponents/PlatformFeaturesGrid";
 import PlatformBuiltSpecifically from "../../components/PlatformComponents/PlatformBuiltSpecifically";
@@ -18,7 +21,7 @@ const PlatformPage: React.FC = () => {
     <Fragment>
       <Seo
         title="VenueGlide OS Platform | Sports Venue Management System"
-        description="Explore the VenueGlide OS platform: online bookings, memberships, POS, coaching and reporting for sports venues in Melbourne, across Australia and cloud-accessible worldwide, with native Stripe, Xero and Igloo staffless-access integrations."
+        description="Explore the VenueGlide OS platform: online bookings, VR and activity session previews, memberships, POS, coaching and reporting for sports venues in Melbourne, across Australia and cloud-accessible worldwide, with native Stripe, Xero and Igloo staffless-access integrations."
         path="/platform"
         breadcrumbs={[{ name: "Platform", path: "/platform" }]}
       />
@@ -28,6 +31,9 @@ const PlatformPage: React.FC = () => {
           <main>
             <PlatformHero />
             <PlatformOperatingSystem />
+            <PlatformBookingExperience />
+            <PlatformExperiencePreview />
+            <PlatformCustomerAccounts />
             <PlatformWorksTogether />
             <PlatformFeaturesGrid />
             <PlatformBuiltSpecifically />

@@ -1,0 +1,110 @@
+/* ===== VR / activity session preview gallery (Platform page) =========== */
+
+.experience-preview-intro {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.experience-preview-intro .platform-sub-title {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ed-accent, #00d4ff);
+  margin-bottom: 14px;
+}
+
+.experience-preview-intro .platform-sec-title {
+  justify-content: center;
+}
+
+.experience-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .experience-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .experience-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.experience-preview-card {
+  background: rgba(13, 20, 36, 0.75);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 16px;
+  padding: 22px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.experience-preview-card:hover {
+  border-color: var(--ed-accent, #00d4ff);
+  transform: translateY(-3px);
+}
+
+.experience-preview-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.experience-preview-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ed-accent, #00d4ff);
+  margin-bottom: 8px;
+}
+
+.experience-preview-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.experience-preview-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 16px;
+}
+
+.experience-preview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-preview-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.experience-preview-note {
+  text-align: center;
+  font-size: 12.5px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 28px 0 0;
+}
