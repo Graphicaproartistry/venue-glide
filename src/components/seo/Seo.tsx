@@ -102,6 +102,7 @@ const Seo: React.FC<SeoProps> = ({
           name: SITE_NAME,
           url: SITE_URL,
           areaServed: "Australia",
+          sameAs: ["https://www.linkedin.com/company/143606390/"],
           address: {
             "@type": "PostalAddress",
             streetAddress: "12 Dimboola Road",

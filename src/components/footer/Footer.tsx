@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
     {
       icon: <i className="fa-brands fa-linkedin"></i>,
       name: "LinkedIn",
-      url: "https://www.linkedin.com/",
+      url: "https://www.linkedin.com/company/143606390/",
     },
     {
       icon: <i className="fa-brands fa-square-youtube"></i>,
