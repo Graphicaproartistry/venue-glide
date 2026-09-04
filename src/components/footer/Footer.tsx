@@ -177,6 +177,15 @@ const Footer: React.FC = () => {
           <div className="contact-item copyright-item">
             <p>
               Copyright © 2026 <Link to="/">Venue Glide</Link>, All rights reserved.
+              <br />
+              Designed &amp; Developed by{" "}
+              <a
+                href="https://graphicaproartistry.com.au/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Graphica Pro Artistry
+              </a>
             </p>
           </div>
         </div>
