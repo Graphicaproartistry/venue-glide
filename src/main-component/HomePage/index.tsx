@@ -6,6 +6,7 @@ import Seo from "../../components/seo/Seo";
 
 import EditorialHero from "../../components/home/EditorialHero";
 import TrustMarquee from "../../components/home/TrustMarquee";
+import CustomerProofStrip from "../../components/home/CustomerProofStrip";
 import Statement from "../../components/home/Statement";
 import SportsVenueFeatures from "../../components/SportsVenueFeatures/SportsVenueFeatures";
 import IntegrationsShowcase from "../../components/home/IntegrationsShowcase";
@@ -30,8 +31,8 @@ const HomePage: React.FC = () => {
   return (
     <Fragment>
       <Seo
-        title="Sports Venue Management Software Melbourne, Australia"
-        description="VenueGlide OS is Melbourne's sports venue management software — online bookings, memberships, POS, coaching, Stripe payments, Xero accounting and Igloo staffless access in one cloud platform. Built in Melbourne, trusted across Australia."
+        title="Indoor Sports Centre Booking Software | Melbourne, Australia"
+        description="VenueGlide OS is a booking system for indoor sports centres, built in Melbourne — online bookings, a customer self-service portal, POS, invoicing, inventory, memberships and Stripe/Xero/Igloo integrations, fully customisable to your venue and sport. Trusted across Australia."
         path="/"
         structuredData={[faqSchema]}
       />
@@ -41,6 +42,7 @@ const HomePage: React.FC = () => {
           <main className="ed-root">
             <EditorialHero />
             <TrustMarquee />
+            <CustomerProofStrip />
             <Statement />
             <SportsVenueFeatures />
             <IntegrationsShowcase />

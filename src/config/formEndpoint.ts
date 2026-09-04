@@ -11,4 +11,4 @@
  *    hello@venueglide.com.au a one-time confirmation link that must be
  *    clicked before further submissions are delivered.
  */
-export const FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID";
+export const FORM_ENDPOINT = "https://formspree.io/f/mppzlylr";

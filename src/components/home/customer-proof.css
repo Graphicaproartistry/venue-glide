@@ -1,0 +1,31 @@
+.customer-proof-section {
+  border-top: 1px solid var(--ed-line, rgba(255, 255, 255, 0.14));
+  border-bottom: 1px solid var(--ed-line, rgba(255, 255, 255, 0.14));
+}
+
+.customer-proof-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.customer-proof-inner .ed-label {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.customer-proof-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ed-fg, #ffffff);
+  margin: 0 0 24px;
+}
+
+.customer-proof-link {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ed-accent, #00d4ff);
+  text-decoration: none;
+}
