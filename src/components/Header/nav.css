@@ -46,7 +46,7 @@
 .ed-nav-links {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 26px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -55,12 +55,12 @@
 .ed-nav-links a {
   position: relative;
   font-family: var(--ed-font, inherit);
-  font-size: 13.5px;
+  font-size: 16px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   padding-bottom: 4px;
-  transition: color 0.25s ease;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
 .ed-nav-links a::after {
@@ -79,6 +79,7 @@
 .ed-nav-links a:hover,
 .ed-nav-links a.is-active {
   color: #ffffff;
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.85), 0 0 24px rgba(0, 212, 255, 0.5);
 }
 
 .ed-nav-links a:hover::after,
@@ -209,10 +210,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   pointer-events: none;
   z-index: 10000;
   transition: width 0.25s var(--ed-ease, ease), height 0.25s var(--ed-ease, ease),
@@ -221,9 +222,24 @@
 }
 
 .ed-cursor.is-active {
-  width: 56px;
-  height: 56px;
+  width: 76px;
+  height: 76px;
   background: rgba(255, 255, 255, 0.15);
+}
+
+/* The custom ring replaces the native pointer entirely rather than
+   showing alongside it. Scoped to a class CustomCursor.tsx only adds
+   when it actually mounts (fine pointer AND no prefers-reduced-motion),
+   so a reduced-motion visitor — who gets no ring at all — never loses
+   their native cursor either. */
+body.has-custom-cursor,
+body.has-custom-cursor a,
+body.has-custom-cursor button,
+body.has-custom-cursor [role="button"],
+body.has-custom-cursor input,
+body.has-custom-cursor textarea,
+body.has-custom-cursor select {
+  cursor: none;
 }
 
 .ed-cursor-label {

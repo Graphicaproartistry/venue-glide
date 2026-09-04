@@ -328,10 +328,30 @@ html::-webkit-scrollbar {
 
 /* Footer's address/email/copyright row: same sweep as its social-media
    tabs directly above it, instead of the social row being the one place
-   on the page with this motion. */
+   on the page with this motion. Widths overridden to flex so a 4th item
+   (phone) fits without the original fixed 25/50/25 split overflowing. */
 .xb-footer-bottom .contact-item {
   z-index: 1;
   overflow: hidden;
+  width: auto !important;
+  flex: 1 1 220px;
+}
+
+.xb-footer-bottom .contact-item.copyright-item {
+  flex: 1 1 100%;
+  order: 5;
+}
+
+@media (max-width: 767px) {
+  .xb-footer-bottom .contact-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* Only Facebook + LinkedIn remain — two columns instead of the
+   template's original four. */
+.xb-social-media-wrap {
+  grid-template-columns: repeat(2, 1fr) !important;
 }
 
 .xb-footer-bottom .contact-item::before {

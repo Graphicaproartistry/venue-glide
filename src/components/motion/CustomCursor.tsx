@@ -20,6 +20,8 @@ const CustomCursor: React.FC = () => {
       window.matchMedia("(pointer: fine)").matches &&
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     setEnabled(canHover);
+    if (canHover) document.body.classList.add("has-custom-cursor");
+    return () => document.body.classList.remove("has-custom-cursor");
   }, []);
 
   useEffect(() => {

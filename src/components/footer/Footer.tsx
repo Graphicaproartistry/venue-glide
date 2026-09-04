@@ -81,32 +81,9 @@ const Footer: React.FC = () => {
       url: "https://www.facebook.com/",
     },
     {
-      icon: (
-        <svg
-          width="19"
-          height="19"
-          viewBox="0 0 19 19"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9.46973 0C14.6996 0 18.9395 4.25357 18.9395 9.5C18.9394 14.7464 14.6996 19 9.46973 19C4.24002 18.9998 8.74258e-05 14.7463 0 9.5C0 4.25366 4.23997 0.000150177 9.46973 0ZM8.27441 10.1201L4.02344 15.0771H4.98438L8.70117 10.7422L11.6709 15.0771H14.9131L10.5039 8.64062L14.5586 3.91309H13.5977L10.0771 8.01758L7.26562 3.91309H4.02344L8.27441 10.1201ZM13.5977 14.3848H12.1221L5.33008 4.63867H6.80566L13.5977 14.3848Z"
-            fill="#FFF"
-          />
-        </svg>
-      ),
-      name: "Twitter",
-      url: "https://twitter.com/",
-    },
-    {
       icon: <i className="fa-brands fa-linkedin"></i>,
       name: "LinkedIn",
       url: "https://www.linkedin.com/company/143606390/",
-    },
-    {
-      icon: <i className="fa-brands fa-square-youtube"></i>,
-      name: "YouTube",
-      url: "https://www.youtube.com/",
     },
   ];
 
@@ -176,22 +153,31 @@ const Footer: React.FC = () => {
         <div className="xb-footer-bottom">
           <div className="contact-item">
             <Icon icon={LuMapPin} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
-            <span className="contact-method">Broadmeadows, Melbourne VIC, Australia</span>
+            <span className="contact-method">12 Dimboola Road, Broadmeadows, Melbourne VIC, Australia</span>
+          </div>
+
+          <div className="contact-item">
+            <a href="tel:+61405207904">
+              <Icon icon={LuMail} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
+            </a>
+            <a className="contact-method" href="tel:+61405207904">
+              +61 405 207 904
+            </a>
+          </div>
+
+          <div className="contact-item">
+            <a href="mailto:hello@venueglide.com.au">
+              <Icon icon={LuMail} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
+            </a>
+            <a className="contact-method" href="mailto:hello@venueglide.com.au">
+              hello@venueglide.com.au
+            </a>
           </div>
 
           <div className="contact-item copyright-item">
             <p>
               Copyright © 2026 <Link to="/">Venue Glide</Link>, All rights reserved.
             </p>
-          </div>
-
-          <div className="contact-item">
-            <a href="mailto:sales@venueglide.com">
-              <Icon icon={LuMail} size={18} style={{ color: "#00D4FF", marginRight: "8px" }} />
-            </a>
-            <a className="contact-method" href="mailto:sales@venueglide.com">
-              sales@venueglide.com
-            </a>
           </div>
         </div>
       </div>

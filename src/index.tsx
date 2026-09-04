@@ -6,7 +6,6 @@ import App from "./main-component/App/App";
 import "./css/fontawesome.css";
 import "./css/themify-icons.css";
 import "./css/animate.css";
-import "./css/mousecursor.css";
 import "./css/imageRevealHover.css";
 import "./css/main.css";
 import "./css/refined-ui.css";

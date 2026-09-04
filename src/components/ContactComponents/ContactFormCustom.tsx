@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LuCheck, LuUser, LuBuilding2, LuSend } from "react-icons/lu";
+import { LuCheck, LuUser, LuSend } from "react-icons/lu";
 import { Icon } from "../common/Icon";
 import Reveal from "../motion/Reveal";
 import MaskText from "../motion/MaskText";
@@ -9,15 +9,9 @@ const ContactFormCustom: React.FC = () => {
   const { status, submit } = useFormspreeSubmit("Contact form");
   const [formData, setFormData] = useState({
     fullName: "",
-    businessName: "",
-    jobTitle: "",
-    email: "",
     phone: "",
+    email: "",
     industry: "",
-    numLocations: "",
-    numCourts: "",
-    currentSoftware: "",
-    numMembers: "",
     enquiry: "",
   });
 
@@ -69,10 +63,9 @@ const ContactFormCustom: React.FC = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              {/* Personal Information */}
               <div className="form-group-section">
                 <div className="form-section-header">
-                  <Icon icon={LuUser} className="me-2" size={18} /> Personal Information
+                  <Icon icon={LuUser} className="me-2" size={18} /> Your Details
                 </div>
                 <div className="row g-3">
                   <div className="col-md-6">
@@ -88,42 +81,6 @@ const ContactFormCustom: React.FC = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="form-label">Business Name *</label>
-                    <input
-                      type="text"
-                      name="businessName"
-                      required
-                      placeholder="e.g. Metro Sports Club"
-                      className="form-control-custom"
-                      value={formData.businessName}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-md-4">
-                    <label className="form-label">Job Title *</label>
-                    <input
-                      type="text"
-                      name="jobTitle"
-                      required
-                      placeholder="e.g. General Manager"
-                      className="form-control-custom"
-                      value={formData.jobTitle}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-md-4">
-                    <label className="form-label">Email Address *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="e.g. sarah@metrosports.com"
-                      className="form-control-custom"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-md-4">
                     <label className="form-label">Phone Number *</label>
                     <input
                       type="tel"
@@ -135,15 +92,18 @@ const ContactFormCustom: React.FC = () => {
                       onChange={handleChange}
                     />
                   </div>
-                </div>
-              </div>
-
-              {/* Venue Information */}
-              <div className="form-group-section">
-                <div className="form-section-header">
-                  <Icon icon={LuBuilding2} className="me-2" size={18} /> Venue Information
-                </div>
-                <div className="row g-3">
+                  <div className="col-md-6">
+                    <label className="form-label">Email Address *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="e.g. sarah@metrosports.com"
+                      className="form-control-custom"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                  </div>
                   <div className="col-md-6">
                     <label className="form-label">Industry *</label>
                     <select
@@ -168,70 +128,9 @@ const ContactFormCustom: React.FC = () => {
                       <option value="Other">Other</option>
                     </select>
                   </div>
-                  <div className="col-md-6">
-                    <label className="form-label">Number of Locations *</label>
-                    <select
-                      name="numLocations"
-                      required
-                      className="form-control-custom"
-                      value={formData.numLocations}
-                      onChange={handleChange}
-                    >
-                      <option value="">Select Number of Locations</option>
-                      <option value="1 Location">1 Location</option>
-                      <option value="2 - 5 Locations">2 - 5 Locations</option>
-                      <option value="6 - 10 Locations">6 - 10 Locations</option>
-                      <option value="10+ Multi-Venue Network">10+ Multi-Venue Network</option>
-                    </select>
-                  </div>
-                  <div className="col-md-4">
-                    <label className="form-label">Number of Courts / Facilities *</label>
-                    <select
-                      name="numCourts"
-                      required
-                      className="form-control-custom"
-                      value={formData.numCourts}
-                      onChange={handleChange}
-                    >
-                      <option value="">Select Courts/Facilities</option>
-                      <option value="1 - 4 Courts">1 - 4 Courts</option>
-                      <option value="5 - 10 Courts">5 - 10 Courts</option>
-                      <option value="11 - 20 Courts">11 - 20 Courts</option>
-                      <option value="20+ Courts">20+ Courts</option>
-                    </select>
-                  </div>
-                  <div className="col-md-4">
-                    <label className="form-label">Current Software *</label>
-                    <input
-                      type="text"
-                      name="currentSoftware"
-                      required
-                      placeholder="e.g. Spreadsheets, Mindbody, Ezypay, Other"
-                      className="form-control-custom"
-                      value={formData.currentSoftware}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-md-4">
-                    <label className="form-label">Number of Members *</label>
-                    <select
-                      name="numMembers"
-                      required
-                      className="form-control-custom"
-                      value={formData.numMembers}
-                      onChange={handleChange}
-                    >
-                      <option value="">Select Member Count</option>
-                      <option value="Under 500">Under 500</option>
-                      <option value="500 - 1,500">500 - 1,500</option>
-                      <option value="1,500 - 5,000">1,500 - 5,000</option>
-                      <option value="5,000+">5,000+</option>
-                    </select>
-                  </div>
                 </div>
               </div>
 
-              {/* Your Enquiry */}
               <div className="form-group-section">
                 <div className="form-section-header">
                   <Icon icon={LuSend} className="me-2" size={18} /> Your Enquiry

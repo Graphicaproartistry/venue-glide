@@ -15,8 +15,8 @@ const ContactInfoCards: React.FC = () => {
             </div>
             <h3 className="card-title">General Enquiries</h3>
             <p className="card-text mb-2">Email</p>
-            <a href="mailto:sales@venueglide.com" className="card-link">
-              sales@venueglide.com
+            <a href="mailto:hello@venueglide.com.au" className="card-link">
+              hello@venueglide.com.au
             </a>
           </Reveal>
 
@@ -25,8 +25,8 @@ const ContactInfoCards: React.FC = () => {
               <i className="far fa-headset"></i>
             </div>
             <h3 className="card-title">Customer Support</h3>
-            <a href="mailto:support@venueglide.com" className="card-link mt-2">
-              support@venueglide.com
+            <a href="mailto:hello@venueglide.com.au" className="card-link mt-2">
+              hello@venueglide.com.au
             </a>
           </Reveal>
 
@@ -42,6 +42,24 @@ const ContactInfoCards: React.FC = () => {
               <br />
               Victoria 3047, Australia
             </p>
+          </Reveal>
+
+          <Reveal direction="up" delay={0.18} className="contact-info-card">
+            <div className="contact-info-icon">
+              <i className="fab fa-whatsapp"></i>
+            </div>
+            <h3 className="card-title">Call or WhatsApp</h3>
+            <a href="tel:+61405207904" className="card-link d-block">
+              +61 405 207 904
+            </a>
+            <a
+              href="https://wa.me/61405207904"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-link mt-2 d-block"
+            >
+              Message on WhatsApp
+            </a>
           </Reveal>
 
           <Reveal direction="up" delay={0.2} className="contact-info-card">
