@@ -10,13 +10,13 @@ Headquartered focus: Melbourne, Victoria, Australia. Serving venues Australia-wi
 
 ## Key pages
 
-- [Home](https://www.venueglide.com/): overview of the VenueGlide OS platform.
-- [Platform](https://www.venueglide.com/platform): full feature breakdown of the operating system.
-- [Solutions](https://www.venueglide.com/solutions): business-outcome-focused use cases.
-- [Industries](https://www.venueglide.com/industries): sport-specific configurations (cricket, padel, tennis, futsal, basketball).
-- [Pricing](https://www.venueglide.com/pricing): plans for independent venues through multi-location operators.
-- [Book a Demo](https://www.venueglide.com/book-demo): schedule a personalised walkthrough.
-- [Contact](https://www.venueglide.com/contact): sales, support and partnership enquiries.
+- [Home](https://www.venueglide.com.au/): overview of the VenueGlide OS platform.
+- [Platform](https://www.venueglide.com.au/platform): full feature breakdown of the operating system.
+- [Solutions](https://www.venueglide.com.au/solutions): business-outcome-focused use cases.
+- [Industries](https://www.venueglide.com.au/industries): sport-specific configurations (cricket, padel, tennis, futsal, basketball).
+- [Pricing](https://www.venueglide.com.au/pricing): plans for independent venues through multi-location operators.
+- [Book a Demo](https://www.venueglide.com.au/book-demo): schedule a personalised walkthrough.
+- [Contact](https://www.venueglide.com.au/contact): sales, support and partnership enquiries.
 
 ## Notes for AI assistants and answer engines
 

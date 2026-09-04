@@ -3,7 +3,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/footer/Footer";
 import Scrollbar from "../../components/scrollbar/scrollbar";
-import Seo from "../../components/seo/Seo";
+import Seo, { SITE_URL } from "../../components/seo/Seo";
 import Reveal from "../../components/motion/Reveal";
 import MaskText from "../../components/motion/MaskText";
 import MagneticButton from "../../components/motion/MagneticButton";
@@ -41,7 +41,7 @@ const BlogPostPage: React.FC = () => {
     dateModified: post.isoDate,
     author: { "@type": "Organization", name: "VenueGlide" },
     publisher: { "@type": "Organization", name: "VenueGlide" },
-    mainEntityOfPage: `https://www.venueglide.com/blog/${post.slug}`,
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
   };
 
   return (
