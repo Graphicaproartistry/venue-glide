@@ -1,5 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import pimg1 from "../../images/partners/1.png";
 import pimg2 from "../../images/partners/2.png";
