@@ -1,0 +1,17 @@
+# Single-page app fallback: this is a client-side-routed React app
+# (react-router). Without this, the server 404s on every path except
+# "/" because only index.html actually exists as a file — every other
+# route (e.g. /platform, /pricing) only exists inside the React app,
+# so the server must serve index.html for it and let React Router
+# take over rendering the right page client-side.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Don't rewrite requests for real files or directories (JS, CSS,
+  # images, sitemap.xml, robots.txt, etc.).
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  RewriteRule ^ index.html [L]
+</IfModule>
