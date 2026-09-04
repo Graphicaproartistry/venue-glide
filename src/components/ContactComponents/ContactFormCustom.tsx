@@ -3,9 +3,10 @@ import { LuCheck, LuUser, LuBuilding2, LuSend } from "react-icons/lu";
 import { Icon } from "../common/Icon";
 import Reveal from "../motion/Reveal";
 import MaskText from "../motion/MaskText";
+import { useFormspreeSubmit } from "../../hooks/useFormspreeSubmit";
 
 const ContactFormCustom: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const { status, submit } = useFormspreeSubmit("Contact form");
   const [formData, setFormData] = useState({
     fullName: "",
     businessName: "",
@@ -28,7 +29,7 @@ const ContactFormCustom: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    submit(formData);
   };
 
   return (
@@ -40,7 +41,7 @@ const ContactFormCustom: React.FC = () => {
         </Reveal>
 
         <Reveal direction="up" delay={0.15} className="demo-form-wrapper">
-          {submitted ? (
+          {status === "success" ? (
             <div className="text-center py-5">
               <div
                 style={{
@@ -249,9 +250,16 @@ const ContactFormCustom: React.FC = () => {
                 </div>
               </div>
 
+              {status === "error" && (
+                <p className="mt-3" style={{ color: "#ef4444", fontSize: "14px" }}>
+                  Something went wrong sending your enquiry. Please try again, or email us directly at{" "}
+                  <a href="mailto:hello@venueglide.com.au">hello@venueglide.com.au</a>.
+                </p>
+              )}
+
               <div className="mt-4">
-                <button type="submit" className="btn-submit-demo">
-                  Send Enquiry
+                <button type="submit" className="btn-submit-demo" disabled={status === "submitting"}>
+                  {status === "submitting" ? "Sending..." : "Send Enquiry"}
                 </button>
               </div>
             </form>

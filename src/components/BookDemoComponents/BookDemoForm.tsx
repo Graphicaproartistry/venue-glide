@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Reveal from "../motion/Reveal";
 import MaskText from "../motion/MaskText";
+import { useFormspreeSubmit } from "../../hooks/useFormspreeSubmit";
 
 const BookDemoForm: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const { status, submit } = useFormspreeSubmit("Book a demo form");
   const [formData, setFormData] = useState({
     fullName: "",
     businessName: "",
@@ -30,7 +31,7 @@ const BookDemoForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    submit(formData);
   };
 
   return (
@@ -42,7 +43,7 @@ const BookDemoForm: React.FC = () => {
         </Reveal>
 
         <Reveal direction="up" delay={0.15} className="demo-form-wrapper">
-          {submitted ? (
+          {status === "success" ? (
             <div className="text-center py-5">
               <div
                 style={{
@@ -312,9 +313,16 @@ const BookDemoForm: React.FC = () => {
                 </div>
               </div>
 
+              {status === "error" && (
+                <p className="mt-3" style={{ color: "#ef4444", fontSize: "14px" }}>
+                  Something went wrong sending your booking request. Please try again, or email us directly at{" "}
+                  <a href="mailto:hello@venueglide.com.au">hello@venueglide.com.au</a>.
+                </p>
+              )}
+
               <div className="mt-4">
-                <button type="submit" className="btn-submit-demo">
-                  Book My Personalised Demo
+                <button type="submit" className="btn-submit-demo" disabled={status === "submitting"}>
+                  {status === "submitting" ? "Sending..." : "Book My Personalised Demo"}
                 </button>
               </div>
             </form>
