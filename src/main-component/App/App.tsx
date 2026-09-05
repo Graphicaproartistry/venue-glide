@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import ScreenLoader from "../../components/motion/ScreenLoader";
 import CustomCursor from "../../components/motion/CustomCursor";
+import GeoRedirect from "../../components/GeoRedirect";
 import "../../components/home/editorial.css";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -102,6 +103,7 @@ const App: React.FC = () => {
   // ======================
   return (
     <div className="App lenis" id="scrool">
+      <GeoRedirect />
       <ScreenLoader />
       <CustomCursor />
       <ErrorBoundary>
