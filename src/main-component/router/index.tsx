@@ -13,6 +13,7 @@ const AboutPage = lazy(() => import("../AboutPage/AboutPage"));
 const PlatformPage = lazy(() => import("../PlatformPage/PlatformPage"));
 const SolutionPage = lazy(() => import("../SolutionPage/SolutionPage"));
 const IndustriesPage = lazy(() => import("../IndustriesPage/IndustriesPage"));
+const IndustryLandingPage = lazy(() => import("../IndustryLandingPage/IndustryLandingPage"));
 const ServicePage = lazy(() => import("../ServicePage/ServicePage"));
 const SeviceSinglePage = lazy(() => import("../SeviceSinglePage/SeviceSinglePage"));
 const CareerSection = lazy(() => import("../CareerSection/CareerSection"));
@@ -45,6 +46,7 @@ const AllRoute: React.FC = () => {
             <Route path="/platform" element={<PlatformPage />} />
             <Route path="/solutions" element={<SolutionPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/industries/:slug" element={<IndustryLandingPage />} />
             <Route path="/service" element={<ServicePage />} />
             <Route path="/service-details" element={<SeviceSinglePage />} />
             <Route path="/career" element={<CareerSection />} />

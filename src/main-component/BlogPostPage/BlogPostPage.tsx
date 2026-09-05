@@ -10,6 +10,7 @@ import MagneticButton from "../../components/motion/MagneticButton";
 import { getBlogPostBySlug } from "../../data/blogPosts";
 import "../../components/editorial/page-hero.css";
 import "../../components/Blog/BlogPost.css";
+import "../IndustryLandingPage/IndustryLandingPage.css";
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -103,6 +104,17 @@ const BlogPostPage: React.FC = () => {
                           <p>{faq.answer}</p>
                         </div>
                       ))}
+                    </Reveal>
+                  )}
+
+                  {post.slug === "crickzilla-melbourne-indoor-cricket-centre-chooses-venueglide" && (
+                    <Reveal direction="up" delay={0.12} className="industry-landing-related">
+                      <p>
+                        See what VenueGlide OS offers indoor cricket venues:{" "}
+                        <Link to="/industries/indoor-cricket-booking-software">
+                          Indoor Cricket Booking Software
+                        </Link>
+                      </p>
                     </Reveal>
                   )}
 

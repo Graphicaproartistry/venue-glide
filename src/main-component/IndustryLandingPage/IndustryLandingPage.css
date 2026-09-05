@@ -1,0 +1,85 @@
+.industry-landing-container {
+  max-width: 780px;
+}
+
+.industry-landing-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ed-fg, #ffffff);
+  margin: 44px 0 18px;
+}
+
+.industry-landing-container h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ed-fg, #ffffff);
+  margin: 24px 0 8px;
+}
+
+.industry-landing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+
+.industry-landing-list-item {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.industry-landing-list-item::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--ed-muted, #94a3b8);
+}
+
+.industry-landing-list--check .industry-landing-list-item::before {
+  content: "✓";
+  color: var(--ed-accent, #00d4ff);
+}
+
+.industry-landing-related {
+  padding: 16px 20px;
+  border: 1px solid var(--ed-line, rgba(255, 255, 255, 0.14));
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.industry-landing-related p {
+  margin: 0;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.industry-landing-related a {
+  color: var(--ed-accent, #00d4ff);
+}
+
+.industry-landing-faq-item {
+  margin-bottom: 22px;
+}
+
+.industry-landing-faq-item p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+}
+
+.industry-landing-cta {
+  margin-top: 48px;
+  padding: 36px;
+  text-align: center;
+  border: 1px solid var(--ed-line, rgba(255, 255, 255, 0.14));
+  border-radius: 4px;
+}
+
+.industry-landing-cta h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}

@@ -10,12 +10,14 @@ interface CardItem {
   badgeClass: string;
   iconSvg: React.ReactNode;
   bullets: string[];
+  slug?: string;
 }
 
 const cardItems: CardItem[] = [
   {
     id: 1,
     title: "Indoor Cricket Centres",
+    slug: "indoor-cricket-booking-software",
     desc: "Manage lane bookings, memberships, competitions, coaching sessions, birthday parties, tournaments and café sales from one connected platform.",
     badgeClass: "blue",
     iconSvg: (
@@ -39,6 +41,7 @@ const cardItems: CardItem[] = [
   {
     id: 2,
     title: "Padel Clubs",
+    slug: "padel-club-management-software",
     desc: "Simplify court bookings, coaching programs, social competitions and member management while maximising court utilisation.",
     badgeClass: "green",
     iconSvg: (
@@ -59,6 +62,7 @@ const cardItems: CardItem[] = [
   {
     id: 3,
     title: "Tennis Clubs",
+    slug: "tennis-club-booking-software",
     desc: "Manage tennis court bookings, memberships, coaching, tournaments and club operations through one modern platform.",
     badgeClass: "pink",
     iconSvg: (
@@ -79,6 +83,7 @@ const cardItems: CardItem[] = [
   {
     id: 4,
     title: "Football Centres",
+    slug: "football-turf-booking-software",
     desc: "Run five-a-side football venues with advanced pitch scheduling, league management, casual bookings and customer management.",
     badgeClass: "green",
     iconSvg: (
@@ -99,6 +104,7 @@ const cardItems: CardItem[] = [
   {
     id: 5,
     title: "Basketball Facilities",
+    slug: "basketball-court-booking-software",
     desc: "Manage court hire, coaching sessions, competitions, memberships and retail sales from one platform.",
     badgeClass: "blue",
     iconSvg: (
@@ -187,7 +193,7 @@ const IndustryGrid: React.FC = () => {
                     <li key={idx2}>{bullet}</li>
                   ))}
                 </ul>
-                <Link to="/contact" className="learn-more-link">
+                <Link to={card.slug ? `/industries/${card.slug}` : "/contact"} className="learn-more-link">
                   <span>Learn More</span>
                   <span>→</span>
                 </Link>
