@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
     <Fragment>
       <Seo
         title="About VenueGlide | Melbourne Sports Venue Software Company"
-        description="VenueGlide builds sports venue management software from Melbourne, Australia — helping indoor cricket, padel, tennis and multi-sport venues run bookings, payments and operations from one platform, cloud-accessible worldwide."
+        description="VenueGlide builds sports venue software from Melbourne, Australia — bookings and operations in one platform, cloud-accessible worldwide."
         path="/about"
         breadcrumbs={[{ name: "About Us", path: "/about" }]}
       />

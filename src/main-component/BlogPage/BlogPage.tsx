@@ -11,7 +11,7 @@ const BlogPage: React.FC = () => {
     <Fragment>
       <Seo
         title="Blog | VenueGlide OS Sports Venue Software"
-        description="News, product updates and customer stories from VenueGlide OS — sports venue management software for booking, memberships and operations in Melbourne, across Australia and worldwide."
+        description="News and customer stories from VenueGlide OS — sports venue booking software for Melbourne and Australia."
         path="/blog"
         breadcrumbs={[{ name: "Blog", path: "/blog" }]}
       />

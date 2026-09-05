@@ -18,7 +18,7 @@ const PricingPage: React.FC = () => {
   return (
     <Fragment>
       <Seo
-        title="Pricing | Sports Venue Management Software Melbourne"
+        title="Pricing | Venue Software Melbourne"
         description="Simple, transparent pricing for sports venue management software — plans for independent Melbourne clubs through multi-location operators across Australia."
         path="/pricing"
         breadcrumbs={[{ name: "Pricing", path: "/pricing" }]}

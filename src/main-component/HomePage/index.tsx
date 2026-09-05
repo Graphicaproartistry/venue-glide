@@ -31,8 +31,8 @@ const HomePage: React.FC = () => {
   return (
     <Fragment>
       <Seo
-        title="Indoor Sports Centre Booking Software | Melbourne, Australia"
-        description="VenueGlide OS is a booking system for indoor sports centres, built in Melbourne — online bookings, a customer self-service portal, POS, invoicing, inventory, memberships and Stripe/Xero/Igloo integrations, fully customisable to your venue and sport. Trusted across Australia."
+        title="Indoor Sports Booking Software | Melbourne"
+        description="VenueGlide OS is booking software for indoor sports centres — bookings, POS, memberships and payments in one platform. Melbourne-built, Australia-wide."
         path="/"
         structuredData={[faqSchema]}
       />

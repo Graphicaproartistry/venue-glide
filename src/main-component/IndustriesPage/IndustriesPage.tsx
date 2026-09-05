@@ -16,8 +16,8 @@ const IndustriesPage: React.FC = () => {
   return (
     <Fragment>
       <Seo
-        title="Industry-Specific Sports Venue Software | Melbourne, Australia"
-        description="Purpose-built software for indoor cricket, padel, tennis, football/futsal, basketball and multi-sport venues in Melbourne and across Australia — configured for how each sport actually operates."
+        title="Sports Venue Software by Industry | Melbourne"
+        description="Purpose-built software for indoor cricket, padel, tennis, football and multi-sport venues across Melbourne and Australia."
         path="/industries"
         breadcrumbs={[{ name: "Industries", path: "/industries" }]}
       />

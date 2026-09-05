@@ -19,7 +19,7 @@ const BookDemoPage: React.FC = () => {
     <Fragment>
       <Seo
         title="Book a Demo | VenueGlide OS Sports Venue Software"
-        description="Book a personalised VenueGlide OS demo and see how Melbourne and Australia's sports venues automate bookings, memberships, payments, CRM, reporting and staffless access."
+        description="Book a personalised VenueGlide OS demo and see how Melbourne venues automate bookings, payments and reporting."
         path="/book-demo"
         breadcrumbs={[{ name: "Book a Demo", path: "/book-demo" }]}
       />

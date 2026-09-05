@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
     <Fragment>
       <Seo
         title="Contact VenueGlide | Sports Venue Software Melbourne"
-        description="Contact VenueGlide to learn how our sports venue management software can help your Melbourne or Australia-wide venue simplify bookings, memberships, payments, CRM and daily operations."
+        description="Contact VenueGlide to see how our software helps Melbourne and Australian venues run bookings, payments and operations."
         path="/contact"
         breadcrumbs={[{ name: "Contact", path: "/contact" }]}
       />

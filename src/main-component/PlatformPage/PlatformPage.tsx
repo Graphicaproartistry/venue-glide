@@ -21,7 +21,7 @@ const PlatformPage: React.FC = () => {
     <Fragment>
       <Seo
         title="VenueGlide OS Platform | Sports Venue Management System"
-        description="Explore the VenueGlide OS platform: online bookings, VR and activity session previews, memberships, POS, coaching and reporting for sports venues in Melbourne, across Australia and cloud-accessible worldwide, with native Stripe, Xero and Igloo staffless-access integrations."
+        description="VenueGlide OS platform: online bookings, memberships, POS, coaching and reporting for sports venues in Melbourne, across Australia and worldwide."
         path="/platform"
         breadcrumbs={[{ name: "Platform", path: "/platform" }]}
       />
