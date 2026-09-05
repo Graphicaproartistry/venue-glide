@@ -73,12 +73,12 @@ const AboutSection: React.FC = () => {
                   </div>
                   <div>
                     <span style={{ fontSize: "11px", color: "#00D4FF", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px" }}>OUR MISSION</span>
-                    <h3 style={{ color: "#ffffff", fontSize: "20px", fontWeight: 700, margin: 0 }}>Simplifying Venue Operations</h3>
+                    <h3 style={{ color: "#ffffff", fontSize: "20px", fontWeight: 700, margin: 0 }}>Give Venue Owners Their Time Back</h3>
                   </div>
                 </div>
 
                 <p style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "14.5px", lineHeight: "1.6", marginBottom: "20px" }}>
-                  Empower Australian sports venue owners and operators with technology that reduces administration, improves operational efficiency, and creates exceptional experiences for members, players, and staff.
+                  Most Australian venue operators lose hours every week juggling a booking spreadsheet, a separate payment system and a phone that never stops ringing. VenueGlide OS exists to close that gap — replacing the manual admin with software that runs bookings, memberships and payments on its own, so owners spend their time on the venue floor, not behind a screen.
                 </p>
 
                 <ul className="list-unstyled p-0 m-0 d-flex flex-column gap-2">
@@ -126,12 +126,12 @@ const AboutSection: React.FC = () => {
                   </div>
                   <div>
                     <span style={{ fontSize: "11px", color: "#00D4FF", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px" }}>OUR VISION</span>
-                    <h3 style={{ color: "#ffffff", fontSize: "20px", fontWeight: 700, margin: 0 }}>Operating System for Sports</h3>
+                    <h3 style={{ color: "#ffffff", fontSize: "20px", fontWeight: 700, margin: 0 }}>One Platform, Every Sport in Australia</h3>
                   </div>
                 </div>
 
                 <p style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "14.5px", lineHeight: "1.6", marginBottom: "20px" }}>
-                  Building the leading cloud operating system for sports venues—combining automation, artificial intelligence, and real-time analytics to redefine how sports businesses operate and grow.
+                  Cricket lanes, padel courts, football turf, basketball stadiums, VR entertainment centres — every venue type still runs on the same disconnected mix of booking links, spreadsheets and card machines. We're building the single platform that fits all of them, so no Australian venue has to stitch together five tools just to take a booking.
                 </p>
 
                 <ul className="list-unstyled p-0 m-0 d-flex flex-column gap-2">

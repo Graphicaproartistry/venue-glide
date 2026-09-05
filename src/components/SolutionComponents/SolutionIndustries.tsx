@@ -12,6 +12,7 @@ const industriesList = [
   "Badminton Centres",
   "Pickleball Clubs",
   "Squash Centres",
+  "VR & Entertainment Venues",
   "Sports Academies",
   "Community Recreation Centres",
   "Multi-Sport Venues",

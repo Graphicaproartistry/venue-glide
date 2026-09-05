@@ -125,6 +125,28 @@ const cardItems: CardItem[] = [
   },
   {
     id: 6,
+    title: "VR & Entertainment Venues",
+    slug: "vr-entertainment-venue-booking-software",
+    desc: "Schedule timed VR sessions, manage pod and headset availability, and handle parties and group bookings alongside casual walk-ins.",
+    badgeClass: "pink",
+    iconSvg: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="7" width="20" height="10" rx="3" />
+        <circle cx="8" cy="12" r="1.6" />
+        <circle cx="16" cy="12" r="1.6" />
+      </svg>
+    ),
+    bullets: [
+      "VR Entertainment Centres",
+      "Immersive Gaming Venues",
+      "Session Scheduling",
+      "Pod & Headset Availability",
+      "Party & Group Bookings",
+      "Combo Activity Packages",
+    ],
+  },
+  {
+    id: 7,
     title: "Sports Academies",
     desc: "Organise player development, coaching schedules, attendance tracking, memberships and payments.",
     badgeClass: "green",

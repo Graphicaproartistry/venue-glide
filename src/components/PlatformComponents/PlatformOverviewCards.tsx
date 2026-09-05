@@ -40,6 +40,7 @@ const PlatformOverviewCards: React.FC = () => {
                     "Basketball & Volleyball Facilities",
                     "Badminton & Pickleball Clubs",
                     "Squash & Racquetball Centres",
+                    "VR & Immersive Entertainment Venues",
                     "Junior & Pro Sports Academies",
                     "Community Recreation Centres",
                     "Multi-Sport Facility Complexes"

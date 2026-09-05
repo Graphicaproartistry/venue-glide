@@ -11,6 +11,7 @@ const industries = [
   "Pickleball Clubs",
   "Badminton Centres",
   "Squash Centres",
+  "VR & Entertainment Venues",
   "Sports Academies",
   "Community Recreation Centres",
   "Multi-Sport Venues",

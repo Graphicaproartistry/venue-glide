@@ -48,6 +48,7 @@ const cardData: CardData[] = [
       "Basketball & Volleyball Stadiums",
       "Badminton & Pickleball Clubs",
       "Squash & Racquetball Centres",
+      "VR & Immersive Entertainment Venues",
       "Community Recreation Hubs",
       "Junior & Pro Sports Academies",
       "Multi-Sport Facility Complexes",

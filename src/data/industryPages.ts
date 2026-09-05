@@ -194,6 +194,47 @@ const industryPages: IndustryPage[] = [
       },
     ],
   },
+  {
+    slug: "vr-entertainment-venue-booking-software",
+    sport: "VR & Immersive Entertainment",
+    metaTitle: "VR Entertainment Venue Booking Software | Australia",
+    metaDescription:
+      "Booking and venue management software for VR entertainment and immersive gaming centres in Australia — session scheduling, add-ons and payments in one system.",
+    h1: "VR Entertainment Venue Booking Software",
+    lede: "VR and immersive entertainment venues run tightly timed sessions, shared equipment and walk-in customers alongside parties and group bookings. VenueGlide OS gives VR and entertainment centres one system to schedule sessions, take payments and manage capacity without double-booking a pod or headset.",
+    painPoints: [
+      "VR session slots booked over the phone or through a generic calendar tool not built for timed experiences",
+      "No live visibility into which pods, headsets or rooms are free before a customer arrives",
+      "Party and group bookings for VR sessions handled separately from casual walk-in sessions",
+      "Add-ons and combo packages (VR plus another activity) priced and booked manually at the counter",
+    ],
+    capabilities: [
+      "Real-time session and equipment availability, so a pod or headset is never double-booked",
+      "Fixed-length session scheduling built for timed experiences rather than open-ended court hire",
+      "Party, group and corporate booking management alongside casual walk-in sessions",
+      "Combo bookings — VR sessions paired with another activity in the same booking flow",
+      "Stripe payments, automatic invoicing and printable receipts at the venue",
+      "Customer accounts and booking history for repeat players and members",
+    ],
+    faqs: [
+      {
+        question: "Can VR entertainment venues manage timed sessions and equipment availability in one system?",
+        answer:
+          "Yes. VenueGlide OS schedules fixed-length VR sessions against live pod and headset availability, so two bookings are never assigned the same equipment.",
+      },
+      {
+        question: "Does VenueGlide support venues that combine VR with other activities, like indoor cricket?",
+        answer:
+          "Yes. Multi-activity venues — for example an indoor cricket centre that also runs a VR experience — manage every activity on one shared real-time calendar instead of separate booking tools.",
+      },
+      {
+        question: "Is there an example of a venue running VR bookings on VenueGlide OS?",
+        answer:
+          "Yes — CrickZilla, an indoor cricket and VR entertainment centre in Mickleham, Melbourne, runs its VR sessions alongside lane, box cricket and coaching bookings on VenueGlide OS.",
+      },
+    ],
+    relatedBlogSlug: "crickzilla-melbourne-indoor-cricket-centre-chooses-venueglide",
+  },
 ];
 
 export const getIndustryPageBySlug = (slug: string): IndustryPage | undefined =>

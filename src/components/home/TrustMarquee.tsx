@@ -21,6 +21,7 @@ const SPORTS = [
   "Squash",
   "Pickleball",
   "Netball",
+  "VR entertainment",
   "Multi-sport",
 ];
 

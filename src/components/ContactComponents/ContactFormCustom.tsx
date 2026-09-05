@@ -119,6 +119,7 @@ const ContactFormCustom: React.FC = () => {
                       <option value="Tennis Clubs">Tennis Clubs</option>
                       <option value="Football Centres">Football Centres</option>
                       <option value="Basketball Facilities">Basketball Facilities</option>
+                      <option value="VR & Entertainment Venues">VR & Entertainment Venues</option>
                       <option value="Pickleball Clubs">Pickleball Clubs</option>
                       <option value="Badminton Centres">Badminton Centres</option>
                       <option value="Squash Centres">Squash Centres</option>
