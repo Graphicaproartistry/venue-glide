@@ -64,13 +64,26 @@ html::-webkit-scrollbar {
 
 /* ---- shared primitives ---------------------------------------------- */
 
+/* !important overrides here fight legacy template rules like
+   `.about-sec-title .title span:nth-child(1)` / `.fea-sec-title .title span`
+   (main.css) — written for decorative squiggle-image spans that no longer
+   exist in these headings. MaskText renders each line as a plain <span>,
+   an exact accidental match for those old selectors, which was clipping
+   real heading text down to a ~58-116px box (only the first couple of
+   characters visible, the rest silently cut off by `overflow: hidden`). */
 .mask-line {
-  display: block;
+  display: block !important;
   overflow: hidden;
+  width: auto !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  position: static !important;
 }
 
 .mask-line-inner {
-  display: block;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
   will-change: transform;
 }
 
