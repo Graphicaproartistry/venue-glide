@@ -90,16 +90,6 @@ const EditorialHero: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="ed-scroll-cue"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.4 }}
-      >
-        Scroll
-        <span className="ed-scroll-cue-line" aria-hidden="true" />
-      </motion.div>
     </section>
   );
 };
