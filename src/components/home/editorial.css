@@ -84,7 +84,16 @@ html::-webkit-scrollbar {
   display: block !important;
   width: auto !important;
   height: auto !important;
-  will-change: transform;
+  /* No permanent `will-change: transform` here: Framer Motion promotes its
+     own compositor layer only while the reveal is actually animating and
+     drops it afterwards. Leaving will-change set at all times, on an
+     element that often sits inside a `backdrop-filter: blur(...)` card
+     (About page Mission/Vision, Why VenueGlide, Platform overview), is a
+     known trigger for stale/ghosted text on scroll in Chromium — the
+     browser keeps an old compositor layer alive under the blur and
+     briefly paints it over the current one, which reads as doubled or
+     smeared letterforms until the next repaint settles it. */
+  backface-visibility: hidden;
 }
 
 .ed-section {
