@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import MaskText from "../motion/MaskText";
 import MagneticButton from "../motion/MagneticButton";
-import heroImage from "../../images/sports/basketball.png";
+import heroPoster from "../../images/sports/hero-glide-poster.jpg";
+import heroVideo from "../../videos/hero-glide.mp4";
 
 /**
  * Full-bleed opening statement: a cinematic venue photograph that drifts
@@ -33,7 +34,19 @@ const EditorialHero: React.FC = () => {
         className="ed-hero-media"
         style={shouldReduceMotion ? undefined : { y: mediaY, scale: mediaScale }}
       >
-        <img src={heroImage} alt="A packed indoor arena on game night" />
+        {shouldReduceMotion ? (
+          <img src={heroPoster} alt="A glowing indoor sports court at night" />
+        ) : (
+          <video
+            src={heroVideo}
+            poster={heroPoster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+          />
+        )}
       </motion.div>
 
       <motion.div
