@@ -8,6 +8,17 @@
   RewriteEngine On
   RewriteBase /
 
+  # Canonicalise the .com.au domain to www: the apex (venueglide.com.au)
+  # and www.venueglide.com.au were both serving the same content with no
+  # redirect between them, which Search Console flagged as a duplicate
+  # ("Alternate page with proper canonical tag") — Google was resolving it
+  # correctly via the canonical tag, but a real 301 removes the duplicate
+  # crawl entirely instead of relying on that alone. Deliberately scoped to
+  # .com.au only — the .com domain's apex/www behavior is handled by the
+  # client-side GeoRedirect component instead, and must not be touched here.
+  RewriteCond %{HTTP_HOST} ^venueglide\.com\.au$ [NC]
+  RewriteRule ^ https://www.venueglide.com.au%{REQUEST_URI} [R=301,L]
+
   # Don't rewrite requests for real files or directories (JS, CSS,
   # images, sitemap.xml, robots.txt, etc.).
   RewriteCond %{REQUEST_FILENAME} !-f
