@@ -76,22 +76,17 @@ const ContactInfoCards: React.FC = () => {
             </p>
           </Reveal>
 
-          <Reveal direction="up" delay={0.22} className="contact-info-card">
-            <div className="contact-info-icon">
-              <i className="fab fa-google"></i>
-            </div>
-            <h3 className="card-title">Leave Us a Review</h3>
-            <p className="card-text mb-2">Using VenueGlide OS? Let others know.</p>
-            <a
-              href="https://g.page/r/CdklQUBdHlZJEAI/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-link"
-            >
-              Review us on Google
-            </a>
-          </Reveal>
         </div>
+
+        <Reveal direction="up" delay={0.25} className="contact-map-wrap mt-4">
+          <iframe
+            title="VenueGlide office location"
+            src="https://www.google.com/maps?q=12+Dimboola+Road,+Broadmeadows,+VIC+3047,+Australia&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          ></iframe>
+        </Reveal>
       </div>
     </section>
   );
