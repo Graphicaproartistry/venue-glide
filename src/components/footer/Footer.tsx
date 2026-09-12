@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
               <a
                 href="https://graphicaproartistry.com.au/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 Graphica Pro Artistry
               </a>
