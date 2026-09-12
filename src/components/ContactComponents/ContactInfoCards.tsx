@@ -75,6 +75,22 @@ const ContactInfoCards: React.FC = () => {
               Australian Eastern Time (AET)
             </p>
           </Reveal>
+
+          <Reveal direction="up" delay={0.22} className="contact-info-card">
+            <div className="contact-info-icon">
+              <i className="fab fa-google"></i>
+            </div>
+            <h3 className="card-title">Leave Us a Review</h3>
+            <p className="card-text mb-2">Using VenueGlide OS? Let others know.</p>
+            <a
+              href="https://g.page/r/CdklQUBdHlZJEAI/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-link"
+            >
+              Review us on Google
+            </a>
+          </Reveal>
         </div>
       </div>
     </section>
