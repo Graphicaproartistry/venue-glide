@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
         {/* Footer Navigation */}
         <div className="xb-footer-nav">
           <div className="xb-footer-nav-item">
-            <span className="sub-title">Venue Glide</span>
+            <span className="sub-title">VenueGlide</span>
             <h2 className="title">
               <Link to="/">Home</Link>
             </h2>
@@ -176,7 +176,7 @@ const Footer: React.FC = () => {
 
           <div className="contact-item copyright-item">
             <p>
-              Copyright © 2026 <Link to="/">Venue Glide</Link>, All rights reserved.
+              Copyright © 2026 <Link to="/">VenueGlide</Link>, All rights reserved.
               <br />
               Designed &amp; Developed by{" "}
               <a
