@@ -96,6 +96,17 @@ html::-webkit-scrollbar {
   backface-visibility: hidden;
 }
 
+/* Card headings across the site (Solutions, Industries, Platform, About,
+   Contact, Blog, Book Demo, etc.) were each styled per-component at a flat
+   font-weight: 700 with no letter-spacing — legible, but visually dense at
+   card-title sizes (19-22px), reading as cramped/"sticky" rather than open.
+   One shared override instead of touching a dozen near-duplicate
+   .card-title rules individually. */
+.card-title {
+  font-weight: 600 !important;
+  letter-spacing: 0.015em !important;
+}
+
 .ed-section {
   position: relative;
   padding: var(--ed-y) 0;

@@ -12,6 +12,10 @@ export interface IndustryPage {
   lede: string;
   painPoints: string[];
   capabilities: string[];
+  /** Optional deeper-dive paragraphs rendered between capabilities and FAQs — used to
+   *  give a page real content depth instead of just bullet lists, for verticals where
+   *  ranking against established competitors needs more than a thin landing page. */
+  whyVenueGlide?: string[];
   faqs: IndustryFaq[];
   relatedBlogSlug?: string;
 }
@@ -39,6 +43,11 @@ const industryPages: IndustryPage[] = [
       "Walk-in and front-desk bookings alongside the online calendar",
       "Stripe payments, automatic invoicing and printable receipts at the venue",
     ],
+    whyVenueGlide: [
+      "Most indoor cricket booking software sold in Australia is built for outdoor club fixtures first and indoor lane hire second — a generic sports-club platform with cricket bolted on. VenueGlide OS was built the other way around: for a venue where every lane, bowling machine and coaching slot is a paid, timed resource that has to be sold correctly the first time, with no double-booking and no manual reconciliation at the end of the night.",
+      "That distinction matters in practice. A club-fixture platform assumes a season, a fixture list and a ladder. An indoor cricket centre in Melbourne or anywhere else in Australia runs on walk-ins, casual lane hire, box cricket comps, coaching blocks and birthday parties, often across the same eight lanes in the same evening — which is exactly the booking pattern VenueGlide OS is built around.",
+      "Venues evaluating indoor cricket booking software in Australia are usually comparing a generic booking tool against something purpose-built for lane-based, add-on-heavy venues. VenueGlide OS falls into the second category, with real-time lane availability, paid add-ons in the same booking flow, and a live example — CrickZilla in Mickleham, Melbourne — already running on it.",
+    ],
     faqs: [
       {
         question: "Can indoor cricket venues manage bowling machines and lane add-ons in the same booking?",
@@ -54,6 +63,16 @@ const industryPages: IndustryPage[] = [
         question: "Is there an example of an indoor cricket centre using VenueGlide OS?",
         answer:
           "Yes — CrickZilla, an indoor cricket and VR entertainment centre in Mickleham, Melbourne, runs its lane, box cricket, coaching and VR bookings on VenueGlide OS.",
+      },
+      {
+        question: "Is VenueGlide indoor cricket booking software available Australia-wide, or only in Melbourne?",
+        answer:
+          "VenueGlide OS is built and supported from Melbourne but runs as a cloud platform, so indoor cricket venues anywhere in Australia can use it — it isn't limited to Victoria.",
+      },
+      {
+        question: "How is VenueGlide different from generic sports club booking software used for indoor cricket?",
+        answer:
+          "Generic club software is built around fixtures and ladders first. VenueGlide OS is built around lane-based, timed bookings with paid add-ons — the pattern indoor cricket centres actually run, including casual lane hire, box cricket, coaching and bowling-machine hire on the same real-time calendar.",
       },
     ],
     relatedBlogSlug: "crickzilla-melbourne-indoor-cricket-centre-chooses-venueglide",

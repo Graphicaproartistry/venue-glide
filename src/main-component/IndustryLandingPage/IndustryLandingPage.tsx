@@ -105,6 +105,19 @@ const IndustryLandingPage: React.FC = () => {
                   ))}
                 </div>
 
+                {page.whyVenueGlide && page.whyVenueGlide.length > 0 && (
+                  <>
+                    <Reveal direction="up" delay={0.1}>
+                      <h2>Why choose VenueGlide for {page.sport.toLowerCase()}</h2>
+                    </Reveal>
+                    {page.whyVenueGlide.map((paragraph, idx) => (
+                      <Reveal key={idx} direction="up" delay={Math.min(idx * 0.06, 0.3)}>
+                        <p>{paragraph}</p>
+                      </Reveal>
+                    ))}
+                  </>
+                )}
+
                 {relatedPost && (
                   <Reveal direction="up" delay={0.1} className="industry-landing-related">
                     <p>
