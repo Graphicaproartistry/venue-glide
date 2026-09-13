@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Reveal from "../motion/Reveal";
 import MaskText from "../motion/MaskText";
+import worksTogetherImage from "../../images/platform/works-together.jpg";
 
 const checklistItems = [
   "Online bookings",
@@ -81,8 +82,8 @@ const PlatformWorksTogether: React.FC = () => {
                 data-cursor="view"
               >
                 <img
-                  src="https://images.pexels.com/photos/5256819/pexels-photo-5256819.jpeg"
-                  alt="Everything Works Together"
+                  src={worksTogetherImage}
+                  alt="VenueGlide platform bringing bookings, memberships, payments, coaching and reporting together in one operating system"
                 />
               </motion.div>
             </Reveal>
