@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Reveal from "../motion/Reveal";
 import MaskText from "../motion/MaskText";
+import whyChooseImage from "../../images/solutions/why-choose-venueglide.jpg";
 
 const whyChooseItems = [
   "Increase online bookings",
@@ -61,8 +62,8 @@ const SolutionWhyChoose: React.FC = () => {
                 data-cursor="view"
               >
                 <img
-                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
-                  alt="Why Businesses Choose VenueGlide"
+                  src={whyChooseImage}
+                  alt="VenueGlide OS dashboard showing live bookings, memberships, payments, lane availability and analytics for a multi-sport venue"
                 />
               </motion.div>
             </Reveal>
