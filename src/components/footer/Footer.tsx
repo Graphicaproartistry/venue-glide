@@ -178,7 +178,14 @@ const Footer: React.FC = () => {
             <p>
               Copyright © 2026 <Link to="/">VenueGlide</Link>, All rights reserved.
               <br />
-              Designed &amp; Developed by VenueGlide
+              Designed &amp; Developed by{" "}
+              <a
+                href="https://graphicaproartistry.com.au/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                Graphica Pro Artistry
+              </a>
             </p>
           </div>
         </div>
