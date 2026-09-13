@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Reveal from "../motion/Reveal";
 import MaskText from "../motion/MaskText";
+import industriesImage from "../../images/solutions/industries-we-support.jpg";
 
 const industriesList = [
   "Indoor Cricket Centres",
@@ -32,8 +33,8 @@ const SolutionIndustries: React.FC = () => {
                 data-cursor="view"
               >
                 <img
-                  src="https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg"
-                  alt="Industries We Support"
+                  src={industriesImage}
+                  alt="Players using an indoor cricket lane at a VenueGlide-powered multi-sport facility"
                 />
               </motion.div>
             </Reveal>
