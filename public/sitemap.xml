@@ -51,6 +51,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.venueglide.com.au/locations</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.venueglide.com.au/locations/sydney</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.venueglide.com.au/locations/brisbane</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.venueglide.com.au/locations/perth</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.venueglide.com.au/locations/adelaide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.venueglide.com.au/pricing</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
