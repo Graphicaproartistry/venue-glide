@@ -5,6 +5,7 @@ import Scrollbar from "../../components/scrollbar/scrollbar";
 import Seo from "../../components/seo/Seo";
 
 import EditorialHero from "../../components/home/EditorialHero";
+import WhatIsVenueGlide from "../../components/home/WhatIsVenueGlide";
 import TrustMarquee from "../../components/home/TrustMarquee";
 import CustomerProofStrip from "../../components/home/CustomerProofStrip";
 import Statement from "../../components/home/Statement";
@@ -41,6 +42,7 @@ const HomePage: React.FC = () => {
           <Header />
           <main className="ed-root">
             <EditorialHero />
+            <WhatIsVenueGlide />
             <TrustMarquee />
             <CustomerProofStrip />
             <Statement />
