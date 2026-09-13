@@ -14,6 +14,7 @@
 
 :root {
   --ed-font: "Host Grotesk", "DM Sans", sans-serif;
+  --ed-font-heading: "Space Grotesk", "DM Sans", sans-serif;
   --ed-bg: #000000;
   --ed-bg-alt: #0a0a0a;
   --ed-fg: #ffffff;
@@ -103,6 +104,7 @@ html::-webkit-scrollbar {
    One shared override instead of touching a dozen near-duplicate
    .card-title rules individually. */
 .card-title {
+  font-family: var(--ed-font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: 0.015em !important;
 }
@@ -149,7 +151,7 @@ html::-webkit-scrollbar {
    (26px -> 50px). This is what most section titles use — the all-caps
    oversized treatment is reserved for the hero and the closing statement. */
 .ed-heading {
-  font-family: var(--ed-font);
+  font-family: var(--ed-font-heading);
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
@@ -162,7 +164,7 @@ html::-webkit-scrollbar {
    the reference's own h1 scale (38px -> 101px), set uppercase because that
    specific copy is authored in caps, not because every heading is. */
 .ed-display {
-  font-family: var(--ed-font);
+  font-family: var(--ed-font-heading);
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1.05;
@@ -433,7 +435,7 @@ html::-webkit-scrollbar {
 /* ---- scroll-scrubbed statement --------------------------------------- */
 
 .ed-statement {
-  font-family: var(--ed-font);
+  font-family: var(--ed-font-heading);
   font-weight: 500;
   line-height: 1.35;
   letter-spacing: -0.005em;
@@ -462,7 +464,7 @@ html::-webkit-scrollbar {
   align-items: center;
   gap: 34px;
   margin-right: 34px;
-  font-family: var(--ed-font);
+  font-family: var(--ed-font-heading);
   font-weight: 500;
   font-size: clamp(1rem, 1.8vw, 1.4rem);
   color: rgba(255, 255, 255, 0.55);
@@ -493,7 +495,7 @@ html::-webkit-scrollbar {
 }
 
 .ed-figure-value {
-  font-family: var(--ed-font);
+  font-family: var(--ed-font-heading);
   font-weight: 600;
   font-size: clamp(2.2rem, 3.6vw, 3.4rem);
   line-height: 1;
@@ -567,7 +569,7 @@ html::-webkit-scrollbar {
 }
 
 .ed-showcase-title {
-  font-family: var(--ed-font);
+  font-family: var(--ed-font-heading);
   font-weight: 600;
   font-size: clamp(1.4rem, 2.1vw, 2rem);
   line-height: 1.2;
