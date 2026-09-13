@@ -21,12 +21,12 @@ const SolutionHero: React.FC = () => {
       <Reveal direction="up" delay={0.15}>
         <p className="ed-lede">
           Running a successful sports venue requires more than managing
-          bookings. VenueGlide OS provides complete business solutions that
-          help sports facilities automate operations, improve member
-          experiences, increase revenue and reduce administration. Whether you
-          manage an indoor cricket centre, padel club, tennis academy or
-          multi-sport venue, VenueGlide delivers the technology to help your
-          business thrive.
+          bookings. VenueGlide OS is indoor sports facility software that
+          helps venues across Melbourne and Australia automate operations,
+          improve member experiences, increase revenue and reduce
+          administration. Whether you manage an indoor cricket centre, padel
+          club, tennis academy or multi-sport venue, VenueGlide delivers the
+          technology to help your business thrive.
         </p>
       </Reveal>
 

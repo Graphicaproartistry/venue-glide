@@ -20,8 +20,8 @@ const PlatformPage: React.FC = () => {
   return (
     <Fragment>
       <Seo
-        title="VenueGlide OS Platform | Sports Venue Management System"
-        description="VenueGlide OS platform: online bookings, memberships, POS, coaching and reporting for sports venues in Melbourne, across Australia and worldwide."
+        title="VenueGlide OS | Indoor Sports Facility Software Platform"
+        description="VenueGlide OS is indoor sports facility software with online bookings, memberships, POS, coaching and reporting for sports venues in Melbourne, across Australia and worldwide."
         path="/platform"
         breadcrumbs={[{ name: "Platform", path: "/platform" }]}
       />

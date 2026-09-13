@@ -8,7 +8,7 @@ interface FAQItem {
   answer: string;
 }
 
-const faqData: FAQItem[] = [
+export const faqData: FAQItem[] = [
   {
     id: 1,
     question: "Which sports venues can use VenueGlide?",
@@ -31,6 +31,18 @@ const faqData: FAQItem[] = [
     question: "Is VenueGlide suitable for growing businesses?",
     answer:
       "Yes. The platform is scalable and supports businesses from a single venue through to enterprise operators managing multiple locations.",
+  },
+  {
+    id: 5,
+    question: "What is indoor sports facility software?",
+    answer:
+      "Indoor sports facility software is a platform that runs the day-to-day operations of an indoor venue — court and lane bookings, memberships, point-of-sale, coaching schedules and reporting — from one system instead of separate spreadsheets and tools. VenueGlide is indoor sports facility software built specifically for Australian venues, used by indoor cricket centres, padel and tennis clubs, football and futsal facilities, and multi-sport complexes.",
+  },
+  {
+    id: 6,
+    question: "Is VenueGlide indoor sports facility software available across Australia?",
+    answer:
+      "Yes. VenueGlide is built and supported in Melbourne, and venues across Australia use it as their indoor sports facility software — whether they operate a single site or manage multiple locations.",
   },
 ];
 
