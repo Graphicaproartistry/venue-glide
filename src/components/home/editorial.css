@@ -584,6 +584,35 @@ html::-webkit-scrollbar {
   margin: 0;
 }
 
+/* Scroll-linked cricket ball overlay (VenueShowcase) — a small styled ball,
+   not a photo, so it reads clearly against the photograph at any scroll
+   position instead of blending into it. */
+.ed-cricket-ball {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff6b5b 0%, #b3211a 55%, #7a1510 100%);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  z-index: 3;
+}
+
+.ed-cricket-ball::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    115deg,
+    transparent 46%,
+    rgba(255, 255, 255, 0.55) 48%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 52%
+  );
+}
+
 /* ---- big closing CTA -------------------------------------------------- */
 
 .ed-cta {
