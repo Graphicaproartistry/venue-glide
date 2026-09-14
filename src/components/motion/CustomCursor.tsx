@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
+import cricketBall from "../../images/cursor/cricket-ball-cursor.png";
 
 /**
- * Desktop-only custom cursor: a small ring that follows the pointer with a
- * short spring lag, and enlarges with a label when hovering an element
- * marked `data-cursor="view"` / `data-cursor="explore"` (or any link/button,
- * which gets a plain enlargement with no label).
+ * Desktop-only custom cursor: a spinning VenueGlide cricket ball that
+ * follows the pointer with a short spring lag, and enlarges with a label
+ * when hovering an element marked `data-cursor="view"` / `data-cursor="explore"`
+ * (or any link/button, which gets a plain enlargement with no label). The
+ * spin is a continuous CSS animation on the PNG rather than a GIF — same
+ * "rotating icon" effect with no loop-compression artifacts and a much
+ * smaller file.
  *
  * Skipped entirely on touch devices (`pointer: coarse`) and for
  * prefers-reduced-motion, so neither group ever loses the native cursor.
@@ -79,6 +83,7 @@ const CustomCursor: React.FC = () => {
       className={`ed-cursor ${active ? "is-active" : ""}`}
       aria-hidden="true"
     >
+      <img src={cricketBall} alt="" className="ed-cursor-ball" draggable={false} />
       {label && <span className="ed-cursor-label">{label}</span>}
     </div>
   );
